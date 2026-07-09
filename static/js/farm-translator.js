@@ -211,21 +211,34 @@
       if (!navigator.onLine) {
         // Offline: we can only use what's cached. Leave the rest as-is.
         failed = missing.length;
-      } else if (cfg.backends.includes("server") && cfg.endpoint) {
-        try {
-          const got = await translateBatchServer(missing, lang);
-          for (const t of missing) {
-            if (got[t] != null && got[t] !== "") { map[t] = got[t]; cache[t] = got[t]; }
-            else failed++;
-          }
-        } catch { failed += missing.length; }
       } else {
-        const out = await pool(missing, cfg.concurrency, (t) => translateOneClient(t, lang));
-        missing.forEach((t, k) => {
-          const v = out[k];
-          if (v != null && v !== "") { map[t] = v; cache[t] = v; }
-          else failed++;
-        });
+        // 1) Try the server backend first (higher quality, shared cache).
+        let remaining = missing;
+        if (cfg.backends.includes("server") && cfg.endpoint) {
+          try {
+            const got = await translateBatchServer(remaining, lang);
+            const still = [];
+            for (const t of remaining) {
+              if (got[t] != null && got[t] !== "") { map[t] = got[t]; cache[t] = got[t]; }
+              else still.push(t);
+            }
+            remaining = still;
+          } catch { /* server down/blocked -> fall through to client backends */ }
+        }
+        // 2) Anything the server couldn't do falls back to translating
+        //    directly from the farmer's browser (their own connection is
+        //    rarely blocked, unlike a cloud server's shared IP).
+        const hasClientBackends = cfg.backends.some((b) => backends[b]);
+        if (remaining.length && hasClientBackends) {
+          const out = await pool(remaining, cfg.concurrency, (t) => translateOneClient(t, lang));
+          remaining.forEach((t, k) => {
+            const v = out[k];
+            if (v != null && v !== "") { map[t] = v; cache[t] = v; }
+            else failed++;
+          });
+        } else {
+          failed += remaining.length;
+        }
       }
       saveCache(lang.code, cache);
     }

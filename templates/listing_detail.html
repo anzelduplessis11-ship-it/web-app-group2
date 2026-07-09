@@ -23,6 +23,22 @@
         <span class="unit">asking per kg</span>
       </span>
 
+      {% if listing['photo_url'] %}
+        <div class="listing-photo-wrap" style="margin-top:14px;">
+          <img class="listing-photo listing-photo-lg" src="{{ listing['photo_url'] }}"
+               alt="Photo of {{ listing['crop'] }}">
+          {% if listing['quality_score'] is not none %}
+            <span class="quality-badge">AI quality {{ "%.0f"|format(listing['quality_score']) }}/10</span>
+          {% endif %}
+        </div>
+        {% if listing['quality_score'] is not none %}
+          <p class="muted" style="margin-top:8px;font-size:0.9rem;">
+            🔎 <strong>AI quality check:</strong> {{ "%.0f"|format(listing['quality_score']) }}/10{% if listing['quality_note'] %} — {{ listing['quality_note'] }}{% endif %}
+            <br><span style="font-size:0.8rem;">Automatic rating from the farmer's photo — always inspect produce before paying.</span>
+          </p>
+        {% endif %}
+      {% endif %}
+
       {% if listing['description'] %}
         <p style="margin-top:14px;">{{ listing['description'] }}</p>
       {% endif %}

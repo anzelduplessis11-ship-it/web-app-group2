@@ -6,7 +6,7 @@
   <p class="eyebrow">List your harvest</p>
   <h1>Sell a crop</h1>
 
-  <form method="post" class="card" style="margin-top:18px;">
+  <form method="post" class="card" style="margin-top:18px;" enctype="multipart/form-data">
     <div class="field">
       <label>What are you selling?</label>
       <div class="row-2">
@@ -86,12 +86,26 @@
     </div>
 
     <div class="field" style="margin-top:16px;">
+      <label for="photo">Photo of your produce (optional, but recommended)</label>
+      <input id="photo" name="photo" type="file" accept="image/png,image/jpeg,image/webp">
+      <div class="hint">
+        Our AI inspector checks the photo and gives buyers an honest 0–10
+        quality score — listings with a photo and a good score sell faster.
+        JPG, PNG or WEBP, up to 10&nbsp;MB.
+      </div>
+      <div id="photoPreviewWrap" style="display:none;margin-top:10px;">
+        <img id="photoPreview" alt="Your photo preview"
+             style="max-width:220px;max-height:160px;border-radius:10px;border:1px solid var(--line);">
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:16px;">
       <label for="description">Description (optional)</label>
       <textarea id="description" name="description" rows="3"
         placeholder="Grade A, freshly harvested, ready this week…">{{ form.get('description', '') }}</textarea>
     </div>
 
-    <button class="btn btn-green" type="submit">Post to the market</button>
+    <button class="btn btn-green" type="submit" id="postBtn">Post to the market</button>
   </form>
 </section>
 
@@ -113,6 +127,25 @@ document.querySelectorAll('input[name="category"]').forEach(function (radio) {
 window.addEventListener('DOMContentLoaded', function () {
   const checked = document.querySelector('input[name="category"]:checked');
   if (checked) checked.dispatchEvent(new Event('change'));
+});
+
+// Show a small preview of the chosen photo, and tell the farmer what's
+// happening while the AI inspects it after submit (takes a few seconds).
+document.getElementById('photo').addEventListener('change', function () {
+  const wrap = document.getElementById('photoPreviewWrap');
+  const img = document.getElementById('photoPreview');
+  if (this.files && this.files[0]) {
+    img.src = URL.createObjectURL(this.files[0]);
+    wrap.style.display = '';
+  } else {
+    wrap.style.display = 'none';
+  }
+});
+document.querySelector('form').addEventListener('submit', function () {
+  const btn = document.getElementById('postBtn');
+  const hasPhoto = document.getElementById('photo').files.length > 0;
+  btn.disabled = true;
+  btn.textContent = hasPhoto ? 'Checking photo quality…' : 'Posting…';
 });
 </script>
 <script>

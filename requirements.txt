@@ -18,3 +18,6 @@ python-dotenv==1.2.1
 
 # Page + message translation
 deep-translator==1.11.4
+
+# Listing photo processing (downscale before AI quality check + storage)
+Pillow==11.3.0

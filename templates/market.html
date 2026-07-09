@@ -52,6 +52,14 @@
     <div class="grid grid-3">
       {% for l in listings %}
         <a class="card listing-card" href="{{ url_for('listing_detail', listing_id=l['id']) }}" style="text-decoration:none;color:inherit;">
+          {% if l['photo_url'] %}
+            <div class="listing-photo-wrap">
+              <img class="listing-photo" src="{{ l['photo_url'] }}" alt="Photo of {{ l['crop'] }}" loading="lazy">
+              {% if l['quality_score'] is not none %}
+                <span class="quality-badge">AI quality {{ "%.0f"|format(l['quality_score']) }}/10</span>
+              {% endif %}
+            </div>
+          {% endif %}
           <div class="crop">{{ l['crop'] }}</div>
           <div class="meta">{{ l['region'] }} · {{ l['quantity_kg'] | int }} kg available</div>
           {% set d = distance_to(l['region']) %}
@@ -115,6 +123,14 @@
       <div class="grid grid-3" style="margin-top:12px;">
         {% for l in nearby_listings %}
           <a class="card listing-card" href="{{ url_for('listing_detail', listing_id=l['id']) }}" style="text-decoration:none;color:inherit;">
+            {% if l['photo_url'] %}
+              <div class="listing-photo-wrap">
+                <img class="listing-photo" src="{{ l['photo_url'] }}" alt="Photo of {{ l['crop'] }}" loading="lazy">
+                {% if l['quality_score'] is not none %}
+                  <span class="quality-badge">AI quality {{ "%.0f"|format(l['quality_score']) }}/10</span>
+                {% endif %}
+              </div>
+            {% endif %}
             <div class="crop">{{ l['crop'] }}</div>
             <div class="meta">{{ l['region'] }} · {{ l['quantity_kg'] | int }} kg available</div>
             {% set d = distance_to(l['region']) %}

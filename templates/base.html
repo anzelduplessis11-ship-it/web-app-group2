@@ -79,7 +79,10 @@
     window.addEventListener("DOMContentLoaded", function () {
       FarmTranslator.init({
         position: "bottom-right",
-        backends: ["server"],
+        // Server first (quality + shared cache); if it is down or its IP is
+        // blocked by the translation provider, fall back to translating
+        // directly from the visitor's browser.
+        backends: ["server", "google", "mymemory"],
         endpoint: "{{ url_for('translate.api_translate') }}",
         onReady: function () {
           // Never chosen a language before (not even "English") -> ask now,

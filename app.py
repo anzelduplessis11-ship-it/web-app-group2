@@ -24,6 +24,7 @@ from flask import (
 from werkzeug.security import generate_password_hash, check_password_hash
 
 import config
+import crop_quality
 import db
 import currency
 import geo
@@ -38,6 +39,8 @@ app.register_blueprint(translate_bp)
 # The secret key signs the login cookie. It comes from the FLASK_SECRET_KEY
 # environment variable (see .env.example); the fallback is for local dev only.
 app.secret_key = config.FLASK_SECRET_KEY
+# Hard cap on any upload (listing/community photos) before it hits memory.
+app.config["MAX_CONTENT_LENGTH"] = 12 * 1024 * 1024
 
 # Load the trained AI pricing model once, when the server starts.
 # If it hasn't been trained yet, the price tool is simply disabled.
@@ -347,21 +350,56 @@ def new_listing():
         price = request.form.get("price_per_kg", "")
         description = request.form.get("description", "").strip()
 
-        try:
-            quantity = float(quantity)
-            price = float(price)
-            assert quantity > 0 and price > 0
-        except (ValueError, AssertionError):
-            flash("Quantity and price must be positive numbers.", "error")
+        def form_error(message):
+            flash(message, "error")
             return render_template(
                 "new_listing.html", crops=CROPS, livestock=LIVESTOCK, regions=REGIONS,
                 pricing_available=PRICING is not None, form=request.form,
             )
 
+        try:
+            quantity = float(quantity)
+            price = float(price)
+            assert quantity > 0 and price > 0
+        except (ValueError, AssertionError):
+            return form_error("Quantity and price must be positive numbers.")
+
+        # Optional crop photo: verify it shows the declared crop, rate its
+        # quality 0-10 for buyers, then store it in Supabase Storage.
+        photo_url = quality_score = quality_note = None
+        photo = request.files.get("photo")
+        if photo and photo.filename:
+            if not crop_quality.allowed_photo(photo.filename):
+                return form_error("Photos must be a JPG, PNG or WEBP image.")
+            raw = photo.read()
+            if len(raw) > crop_quality.MAX_UPLOAD_BYTES:
+                return form_error("That photo is too large — please keep it under 10 MB.")
+            try:
+                jpeg = crop_quality.prepare_image(raw)
+            except ValueError as e:
+                return form_error(str(e))
+
+            rating = crop_quality.rate_photo(jpeg, crop)
+            if rating is not None and not rating["is_match"]:
+                return form_error(
+                    f"Our quality checker couldn't see {crop} in that photo "
+                    f"({rating['note'] or 'it appears to show something else'}). "
+                    "Please upload a clear photo of the actual produce."
+                )
+            try:
+                photo_url = crop_quality.upload_photo(jpeg)
+            except Exception:
+                return form_error("We couldn't save your photo right now — please try again.")
+            if rating is not None:
+                quality_score = rating["score"]
+                quality_note = rating["note"]
+
         lid = db.execute(
             "INSERT INTO listings (farmer_id, crop, category, region, quantity_kg, "
-            "price_per_kg, description) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id",
-            (me["id"], crop, category, region, quantity, price, description),
+            "price_per_kg, description, photo_url, quality_score, quality_note) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id",
+            (me["id"], crop, category, region, quantity, price, description,
+             photo_url, quality_score, quality_note),
         )
         flash("Your listing is now live on the market.", "success")
         return redirect(url_for("listing_detail", listing_id=lid))
