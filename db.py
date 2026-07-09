@@ -39,18 +39,47 @@ def _dsn() -> str:
     return dsn
 
 
-def get_db():
-    """Open one Postgres connection per web request and reuse it within it."""
-    if "db" not in g:
-        import psycopg2
+# A small shared pool of Postgres connections. Opening a fresh TLS connection
+# to Supabase costs hundreds of milliseconds per request; reusing warm
+# connections makes every page load noticeably faster.
+import threading
+
+_pool = None
+_pool_lock = threading.Lock()
+_POOL_MAX = 10  # a few more than gunicorn's thread count
+
+
+def _get_pool():
+    global _pool
+    if _pool is None:
         import psycopg2.extras
-        conn = psycopg2.connect(_dsn(), cursor_factory=psycopg2.extras.RealDictCursor)
+        from psycopg2.pool import ThreadedConnectionPool
+        with _pool_lock:
+            if _pool is None:
+                _pool = ThreadedConnectionPool(
+                    minconn=1, maxconn=_POOL_MAX, dsn=_dsn(),
+                    cursor_factory=psycopg2.extras.RealDictCursor,
+                    # TCP keepalives so pooled connections aren't silently
+                    # dropped by the network while idle.
+                    keepalives=1, keepalives_idle=30,
+                    keepalives_interval=10, keepalives_count=3,
+                )
+    return _pool
+
+
+def get_db():
+    """Check out one pooled connection per web request and reuse it within it."""
+    if "db" not in g:
+        conn = _get_pool().getconn()
+        if conn.closed:            # the pool handed us a dead connection
+            _get_pool().putconn(conn, close=True)
+            conn = _get_pool().getconn()
         g.db = conn
     return g.db
 
 
 def close_db(exception=None):
-    """Close the connection when the request finishes."""
+    """Return the connection to the pool when the request finishes."""
     db = g.pop("db", None)
     if db is not None:
         try:
@@ -58,8 +87,13 @@ def close_db(exception=None):
                 db.commit()
             else:
                 db.rollback()
+        except Exception:
+            pass
         finally:
-            db.close()
+            try:
+                _get_pool().putconn(db, close=db.closed)
+            except Exception:
+                db.close()
 
 
 def init_db():

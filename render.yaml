@@ -6,6 +6,9 @@ services:
     name: farmconnect
     runtime: python
     plan: free
+    # Frankfurt sits ~25ms from the Supabase database in Ireland (eu-west-1).
+    # The default (Oregon, US) adds ~140ms to EVERY database query.
+    region: frankfurt
     # Install dependencies, then train the AI pricing model (the .joblib is
     # gitignored, so it is built fresh on every deploy - takes ~1 minute).
     buildCommand: pip install -r requirements.txt && python train_model.py
@@ -30,7 +33,16 @@ services:
         sync: false
       - key: HF_TOKEN
         sync: false
+      # Chatbot model: Llama 3.3 70B served by Groq (via the HF router) —
+      # answers in under a second and is free on the HF tier.
+      - key: HF_CHAT_MODEL
+        value: meta-llama/Llama-3.3-70B-Instruct
+      - key: HF_PROVIDER
+        value: groq
+      # Retrieval runs on the built-in local engine (fast, no extra API calls,
+      # matches the local dev setup). Switch to "supabase" only after running
+      # ingest_kb.py to populate the pgvector store.
       - key: FARMCONNECT_RAG_BACKEND
-        value: supabase
+        value: local
       - key: FARMCONNECT_LLM_BACKEND
         value: hf

@@ -68,11 +68,20 @@ def allowed_photo(filename):
 # Helpers: who is logged in, and gates for protected pages
 # ---------------------------------------------------------------------------
 def current_user():
-    """Return the logged-in user's row, or None."""
+    """Return the logged-in user's row, or None.
+
+    Cached per request in `g`: templates call this many times per page (e.g.
+    once per listing card for currency conversion), and without the cache each
+    call was a separate query to the remote database.
+    """
+    from flask import g
     uid = session.get("user_id")
     if uid is None:
         return None
-    return db.query_one("SELECT * FROM users WHERE id = ?", (uid,))
+    if getattr(g, "_current_user_id", None) != uid:
+        g._current_user = db.query_one("SELECT * FROM users WHERE id = ?", (uid,))
+        g._current_user_id = uid
+    return g._current_user
 
 
 @app.context_processor
@@ -229,16 +238,16 @@ def index():
         return redirect(url_for("dashboard"))
 
     # Live headline numbers for the cover page, from real data.
-    stats = {
-        "farmers": db.query_one(
-            "SELECT COUNT(*) AS n FROM users WHERE role = 'farmer'")["n"],
-        "listings": db.query_one(
-            "SELECT COUNT(*) AS n FROM listings WHERE status = 'active'")["n"],
-        "sold": db.query_one(
-            "SELECT COUNT(*) AS n FROM listings WHERE status = 'sold'")["n"],
-        "regions": db.query_one(
-            "SELECT COUNT(DISTINCT region) AS n FROM users")["n"],
-    }
+    # One combined query instead of four — each round-trip to the remote
+    # database costs real latency, so we batch them.
+    row = db.query_one(
+        "SELECT "
+        "(SELECT COUNT(*) FROM users WHERE role = 'farmer') AS farmers, "
+        "(SELECT COUNT(*) FROM listings WHERE status = 'active') AS listings, "
+        "(SELECT COUNT(*) FROM listings WHERE status = 'sold') AS sold, "
+        "(SELECT COUNT(DISTINCT region) FROM users) AS regions"
+    )
+    stats = dict(row)
     return render_template("index.html", stats=stats)
 
 

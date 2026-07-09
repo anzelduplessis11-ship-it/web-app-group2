@@ -38,8 +38,9 @@ SUPABASE_DB_URL = _get("SUPABASE_DB_URL")
 
 # --- Hugging Face -----------------------------------------------------------
 HF_TOKEN = _get("HF_TOKEN")
-# Serverless instruct model used to write the final answer.
-HF_CHAT_MODEL = _get("HF_CHAT_MODEL", "Qwen/Qwen2.5-7B-Instruct")
+# Serverless instruct model used to write the final answer. Llama 3.3 70B via
+# the Groq provider answers in well under a second and is free on the HF tier.
+HF_CHAT_MODEL = _get("HF_CHAT_MODEL", "meta-llama/Llama-3.3-70B-Instruct")
 # Embedding model — its output dimension MUST match the vector(N) column in the
 # kb_chunks table (all-MiniLM-L6-v2 -> 384). Change both together.
 HF_EMBED_MODEL = _get("HF_EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
