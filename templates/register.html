@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}Join{% endblock %}
+{% block content %}
+<section class="section form-narrow">
+
+  <div id="join-step-language" class="card">
+    <p class="eyebrow">Step 1 of 2</p>
+    <h1>What is your language?</h1>
+    <p class="muted" style="margin-top:6px;">
+      Pick the language you'd like to use. We'll translate the rest of
+      sign-up — and the whole app afterwards, including messages — for you.
+    </p>
+    <div class="ft-search-wrap" style="padding:14px 0 6px;">
+      <input class="ft-search" id="join-lang-search" type="search"
+             placeholder="Search language…" autocomplete="off">
+    </div>
+    <ul class="ft-list" id="join-lang-list" role="listbox" aria-label="Choose your language"
+        style="max-height:340px;border:1px solid var(--line);border-radius:var(--radius-sm,11px);"></ul>
+    <button class="btn btn-green" type="button" id="join-lang-continue" style="margin-top:14px;">
+      Continue
+    </button>
+  </div>
+
+  <div id="join-step-form" class="card" hidden style="margin-top:18px;">
+    <p class="eyebrow">Step 2 of 2</p>
+    <h1>Create your account</h1>
+    {% if preselect_role == 'farmer' %}
+      <p class="muted">Great — let's get your first crop listed so buyers can find you.</p>
+    {% elif preselect_role == 'buyer' %}
+      <p class="muted">Great — let's get you set up to buy straight from local farmers.</p>
+    {% endif %}
+    <form method="post" style="margin-top:18px;">
+      <div class="field">
+        <label>I am a…</label>
+        <div class="row-2">
+          <label class="role-pill">
+            <input type="radio" name="role" value="farmer" required {% if preselect_role == 'farmer' %}checked{% endif %}>
+            <span class="role-icon">🌾</span>
+            <span class="role-label">Farmer</span>
+            <span class="role-sub">I sell crops</span>
+          </label>
+          <label class="role-pill">
+            <input type="radio" name="role" value="buyer" required {% if preselect_role == 'buyer' %}checked{% endif %}>
+            <span class="role-icon">🧺</span>
+            <span class="role-label">Buyer</span>
+            <span class="role-sub">I purchase crops</span>
+          </label>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" required>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="field">
+          <label for="region">Region</label>
+          <select id="region" name="region" required>
+            <option value="" disabled selected>Choose…</option>
+            {% for r in regions %}<option value="{{ r }}">{{ r }}</option>{% endfor %}
+          </select>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required>
+          <div class="hint">At least 6 characters.</div>
+        </div>
+      </div>
+      <button class="btn btn-green" type="submit">Create account</button>
+      <p class="muted" style="margin-top:12px;">
+        Already have an account? <a href="{{ url_for('login') }}">Log in</a>.
+      </p>
+    </form>
+  </div>
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+  // Registration deliberately starts with a language step every time,
+  // even for a returning visitor who already picked one elsewhere on the
+  // site (their current choice is just pre-selected, one click to keep it).
+  const stepLanguage = document.getElementById("join-step-language");
+  const stepForm = document.getElementById("join-step-form");
+  const list = document.getElementById("join-lang-list");
+  const search = document.getElementById("join-lang-search");
+  const continueBtn = document.getElementById("join-lang-continue");
+
+  if (!window.FarmTranslator) { stepLanguage.hidden = true; stepForm.hidden = false; return; }
+
+  let chosen = FarmTranslator.current || "en";
+
+  function render(filter) {
+    const q = (filter || "").trim().toLowerCase();
+    list.innerHTML = "";
+    FarmTranslator.languages
+      .filter((l) => !q || l.name.toLowerCase().includes(q) || l.native.toLowerCase().includes(q))
+      .forEach((l) => {
+        const active = l.code === chosen;
+        const li = document.createElement("li");
+        li.className = "ft-item" + (l.original ? " ft-original" : "") + (active ? " ft-active" : "");
+        li.setAttribute("role", "option");
+        li.setAttribute("aria-selected", active ? "true" : "false");
+        li.innerHTML =
+          '<span class="ft-flag">' + l.flag + "</span>" +
+          '<span class="ft-names"><span class="ft-native">' + l.native + "</span>" +
+          '<span class="ft-en">' + (l.original ? "English" : l.name) + "</span></span>" +
+          (active ? '<span class="ft-check">✓</span>' : "");
+        li.addEventListener("click", () => { chosen = l.code; render(search.value); });
+        list.appendChild(li);
+      });
+  }
+
+  render();
+  search.addEventListener("input", () => render(search.value));
+
+  continueBtn.addEventListener("click", function () {
+    stepLanguage.hidden = true;
+    stepForm.hidden = false;
+    if (chosen !== FarmTranslator.current) FarmTranslator.setLanguage(chosen);
+  });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Community{% endblock %}
+{% block content %}
+
+<section class="section">
+  <p class="eyebrow">Farmer community</p>
+  <h1>Talk with other farmers</h1>
+  <p class="muted">A shared board for farmers to share tips, ask questions,
+  and help each other out. Only farmers can see and post here.</p>
+
+  <form method="post" enctype="multipart/form-data" class="card" style="margin:18px 0;">
+    <div class="field" style="margin:0;">
+      <label for="body">Share something with other farmers</label>
+      <textarea id="body" name="body" rows="3"
+        placeholder="e.g. Anyone else seeing good rain in Kano this week?"></textarea>
+    </div>
+    <div class="field">
+      <label for="photo">Add a photo (optional)</label>
+      <input id="photo" name="photo" type="file"
+        accept="image/png,image/jpeg,image/gif,image/webp">
+    </div>
+    <div style="margin-top:14px;">
+      <button class="btn btn-sm btn-green" type="submit">Post</button>
+    </div>
+  </form>
+
+  {% if posts %}
+    <div class="grid grid-1" style="gap:14px;">
+      {% for p in posts %}
+        <div class="card">
+          <div class="meta">
+            <strong>{{ p['author_name'] }}</strong>
+            {% if p['author_region'] %} · {{ p['author_region'] }}{% endif %}
+            · {{ p['created_at'] }}
+          </div>
+          {% if p['body'] %}<p style="margin-top:8px;">{{ p['body'] }}</p>{% endif %}
+          {% if p['photo_path'] %}
+            <img src="{{ url_for('static', filename='uploads/community/' + p['photo_path']) }}"
+                 alt="Photo from {{ p['author_name'] }}"
+                 style="margin-top:10px;max-width:100%;border-radius:10px;">
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="card">
+      <h3>No posts yet</h3>
+      <p class="muted">Be the first farmer to post something here.</p>
+    </div>
+  {% endif %}
+</section>
+
+{% endblock %}

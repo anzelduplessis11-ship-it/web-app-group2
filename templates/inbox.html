@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Messages{% endblock %}
+{% block content %}
+
+<section class="section">
+  <p class="eyebrow">Your conversations</p>
+  <h1>Messages</h1>
+
+  {% if conversations %}
+    <div class="convo-list" style="margin-top:16px;">
+      {% for c in conversations %}
+        <a href="{{ url_for('conversation', other_id=c['other_id']) }}">
+          <span class="avatar">{{ c['other_name'][0] | upper }}</span>
+          <span style="flex:1;">
+            <strong>{{ c['other_name'] }}</strong>
+            <span class="pill" style="margin-left:6px;">{{ c['other_role'] }}</span><br>
+            <span class="muted" style="font-size:0.85rem;">Last message {{ c['last_time'] }}</span>
+          </span>
+          {% if c['unread'] and c['unread'] > 0 %}
+            <span class="badge">{{ c['unread'] }}</span>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="card" style="margin-top:16px;">
+      <h3>No messages yet</h3>
+      <p class="muted">When you message a farmer or buyer, the conversation
+      shows up here.</p>
+      <a class="btn btn-sm btn-green" href="{{ url_for('market') }}">Browse the market</a>
+    </div>
+  {% endif %}
+</section>
+
+{% endblock %}

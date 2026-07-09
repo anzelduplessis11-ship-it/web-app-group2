@@ -1,0 +1,12 @@
+.DS_Store
+farmconnect/.DS_Store
+data/farmconnect.db
+data/*.joblib
+.venv/
+__pycache__/
+*.pyc
+.env
+rag/.cache/
+translator/translation_cache.json
+static/uploads/community/*
+!static/uploads/community/.gitkeep

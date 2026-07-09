@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}FarmConnect{% endblock %} · FarmConnect</title>
+  <!-- Fonts: Bricolage Grotesque (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/farm-translator.css') }}">
+</head>
+<body>
+  <div class="weave"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="{{ url_for('index') }}" data-no-translate>Farm<span>Connect</span></a>
+      <div class="nav-links">
+        <a href="{{ url_for('market') }}" class="{{ 'active' if request.endpoint == 'market' }}">Market</a>
+        {% if user %}
+          <a href="{{ url_for('assistant') }}" class="{{ 'active' if request.endpoint == 'assistant' }}">🤖 Ask AI</a>
+          <a href="{{ url_for('market_trends') }}" class="{{ 'active' if request.endpoint == 'market_trends' }}">Trends</a>
+          {% if user['role'] == 'farmer' %}
+            <a href="{{ url_for('new_listing') }}" class="{{ 'active' if request.endpoint == 'new_listing' }}">Sell a crop</a>
+            <a href="{{ url_for('community') }}" class="{{ 'active' if request.endpoint == 'community' }}">Community</a>
+          {% endif %}
+          <a href="{{ url_for('inbox') }}" class="{{ 'active' if request.endpoint in ('inbox', 'conversation') }}">Messages{% if unread_count %}<span class="badge">{{ unread_count }}</span>{% endif %}</a>
+          <a href="{{ url_for('dashboard') }}" class="{{ 'active' if request.endpoint == 'dashboard' }}">Dashboard</a>
+          <a href="{{ url_for('logout') }}">Log out</a>
+        {% else %}
+          <a href="{{ url_for('login') }}" class="{{ 'active' if request.endpoint == 'login' }}">Log in</a>
+          <a class="btn btn-sm btn-green" href="{{ url_for('register') }}">Join free</a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>FarmConnect</strong> — direct trade between African farmers and buyers.
+      No middlemen. Fair prices.
+    </div>
+  </footer>
+
+  <!-- First-visit language onboarding: shown once, before anything else,
+       until a language (including "Continue in English") is chosen. -->
+  <div id="ft-onboarding" class="ft-onboarding" hidden data-no-translate>
+    <div class="ft-onboarding-card">
+      <div class="ft-onboarding-head">
+        <span class="ft-onboarding-mark">🌍</span>
+        <h2>Choose your language</h2>
+        <p>We'll translate the whole app for you automatically — every page, and every message you send or receive.</p>
+      </div>
+      <div class="ft-search-wrap">
+        <input class="ft-search" id="ft-onboarding-search" type="search"
+               placeholder="Search language…" autocomplete="off">
+      </div>
+      <ul class="ft-list" id="ft-onboarding-list" role="listbox" aria-label="Choose your language"></ul>
+    </div>
+  </div>
+
+  {% if user and request.endpoint != 'assistant' %}
+    <a href="{{ url_for('assistant') }}" class="ai-float-btn" title="Ask the Farm Expert" data-no-translate>🤖 Ask AI</a>
+  {% endif %}
+
+  <script src="{{ url_for('static', filename='js/farm-translator.js') }}"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      FarmTranslator.init({
+        position: "bottom-right",
+        backends: ["server"],
+        endpoint: "{{ url_for('translate.api_translate') }}",
+        onReady: function () {
+          // Never chosen a language before (not even "English") -> ask now,
+          // before the farmer/buyer does anything else on the site. Skip on
+          // /register - that page always asks as step 1 of its own form,
+          // so showing this generic overlay there too would just stack two
+          // language pickers on top of each other.
+          const onRegister = window.location.pathname === "{{ url_for('register') }}";
+          if (!onRegister && !localStorage.getItem("ft_lang")) showLanguageOnboarding();
+        },
+      });
+    });
+
+    function showLanguageOnboarding() {
+      const modal = document.getElementById("ft-onboarding");
+      const list = document.getElementById("ft-onboarding-list");
+      const search = document.getElementById("ft-onboarding-search");
+
+      function render(filter) {
+        const q = (filter || "").trim().toLowerCase();
+        list.innerHTML = "";
+        FarmTranslator.languages
+          .filter((l) => !q || l.name.toLowerCase().includes(q) || l.native.toLowerCase().includes(q))
+          .forEach((l) => {
+            const li = document.createElement("li");
+            li.className = "ft-item" + (l.original ? " ft-original" : "");
+            li.setAttribute("role", "option");
+            li.innerHTML =
+              '<span class="ft-flag">' + l.flag + "</span>" +
+              '<span class="ft-names"><span class="ft-native">' + l.native + "</span>" +
+              '<span class="ft-en">' + (l.original ? "Continue in English" : l.name) + "</span></span>";
+            li.addEventListener("click", () => {
+              modal.hidden = true;
+              FarmTranslator.setLanguage(l.code);
+            });
+            list.appendChild(li);
+          });
+      }
+
+      render();
+      search.addEventListener("input", () => render(search.value));
+      modal.hidden = false;
+      setTimeout(() => search.focus(), 50);
+    }
+  </script>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmConnect — direct farm-to-buyer trade across Africa</title>
+  <meta name="description" content="FarmConnect links African farmers directly with buyers — no middlemen. AI fair-pricing, a farming expert in your language, and a marketplace that works offline.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/farm-translator.css') }}">
+</head>
+<body class="lp">
+  <div class="weave"></div>
+
+  <!-- ---------------- nav ---------------- -->
+  <header class="lp-nav" id="lpNav">
+    <a class="lp-brand" href="#top">Farm<span>Connect</span></a>
+    <nav class="lp-navlinks">
+      <a href="#ai" data-nav>AI expert</a>
+    </nav>
+    <div class="lp-navcta">
+      <a class="btn btn-ghost btn-sm" href="{{ url_for('login') }}">Log in</a>
+      <a class="btn btn-green btn-sm" href="{{ url_for('register') }}">Join free</a>
+    </div>
+  </header>
+
+  <main>
+  <!-- ---------------- hero ---------------- -->
+  <section class="lp-hero" id="top">
+    <div class="lp-hero-copy">
+      <p class="eyebrow">Direct farm-to-buyer trade</p>
+      <h1>Connecting African farmers directly to <em>the world.</em></h1>
+      <p class="lead">No middlemen taking a cut. Get an AI-suggested fair price, ask a
+        farming expert in your own language, and sell straight to the people who buy.</p>
+      <div class="lp-hero-stats">
+        <div><div class="n">0%</div><div class="l">middleman fees</div></div>
+        <div><div class="n">AI</div><div class="l">fair-price guidance</div></div>
+        <div><div class="n">20+</div><div class="l">African languages</div></div>
+      </div>
+    </div>
+    <div class="lp-hero-media">
+      <img class="lp-hero-photo" src="{{ url_for('static', filename='img/photos/farmers-planting.jpg') }}"
+           alt="Farmers planting in a field">
+      <div class="lp-hero-badge"><span class="dot"></span> Live market · farmers near you</div>
+    </div>
+  </section>
+
+  <!-- ---------------- messaging ---------------- -->
+  <section class="lp-section lp-messaging" id="messaging">
+    <div class="lp-msg-copy reveal">
+      <span class="kicker">Talk directly</span>
+      <h2>Message the farmer. No broker listening in.</h2>
+      <p>Agree the price, the pickup time and the payment — cash or mobile money —
+        directly with the person who grew your food.</p>
+    </div>
+    <div class="lp-phone" aria-hidden="true">
+      <div class="lp-phone-notch"></div>
+      <div class="lp-phone-head"><span class="fc-av">B</span><div><b>Baraka O.</b><small>🌾 Arusha · online</small></div></div>
+      <div class="lp-phone-body" id="chatBody">
+        <div class="lp-pbub them">Hi! Are the tomatoes still available? 🍅</div>
+        <div class="lp-pbub me">Yes — Grade A, freshly picked. How many kg?</div>
+        <div class="lp-pbub them">20 kg. Can I collect on Friday morning?</div>
+        <div class="lp-pbub me">Perfect. Mobile money on pickup works 👍</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- offline ---------------- -->
+  <section class="lp-section">
+    <div class="lp-head reveal">
+      <span class="kicker">Built for real Africa</span>
+      <h2>No signal? It still works.</h2>
+      <p>Browse, build a cart and write messages with no network — it syncs the moment you reconnect.</p>
+    </div>
+    <div class="lp-offline-steps reveal" id="offlineSteps">
+      <div class="card lp-ostep"><div class="lp-signal on"><i></i><i></i><i></i><i></i></div><b>Online</b></div>
+      <div class="card lp-ostep"><div class="lp-signal off"><i></i><i></i><i></i><i></i></div><b>Signal drops</b></div>
+      <div class="card lp-ostep"><div class="ic">✅</div><b>App keeps working</b></div>
+      <div class="card lp-ostep"><div class="ic spin">🔄</div><b>Queued to sync</b></div>
+      <div class="card lp-ostep"><div class="ic">📶</div><b>Reconnect → sync</b></div>
+    </div>
+  </section>
+
+  <!-- ---------------- AI ---------------- -->
+  <section class="lp-section lp-ai" id="ai">
+    <div class="lp-head reveal">
+      <span class="kicker">The intelligence</span>
+      <h2>An AI that knows African farming</h2>
+      <p>Grounded in a real agronomy knowledge base — it answers in your language and never invents prices or facts.</p>
+    </div>
+    <div class="lp-ai-grid reveal">
+      <article class="card lp-ai-card"><span class="ic">🤖</span><b>Ask the Farm Expert</b><p>Crops, pests, soil, weather &amp; markets — grounded, cited advice.</p></article>
+      <article class="card lp-ai-card"><span class="ic">🌍</span><b>Speaks your language</b><p>Ask in 20+ African languages; it answers back in yours.</p></article>
+      <article class="card lp-ai-card"><span class="ic">💰</span><b>Fair AI pricing</b><p>Transparent prices from real market data — every figure explained.</p></article>
+      <article class="card lp-ai-card"><span class="ic">📶</span><b>Works offline</b><p>A local model &amp; knowledge base — private, and useful with no internet.</p></article>
+    </div>
+  </section>
+
+  <!-- ---------------- stats ---------------- -->
+  <section class="lp-section lp-stats">
+    <div class="lp-stat-row reveal">
+      <div class="lp-stat"><span class="n counter" data-target="{{ stats.farmers }}">0</span><span class="l">Farmers onboard</span></div>
+      <div class="lp-stat"><span class="n counter" data-target="{{ stats.listings }}">0</span><span class="l">Fresh listings</span></div>
+      <div class="lp-stat"><span class="n counter" data-target="{{ stats.sold }}">0</span><span class="l">Deals closed</span></div>
+      <div class="lp-stat"><span class="n counter" data-target="{{ stats.regions }}">0</span><span class="l">Regions covered</span></div>
+    </div>
+    <p class="lp-stats-note reveal">Africa has over <b>60 million</b> smallholder farms. This is just the beginning. 🌍</p>
+  </section>
+
+  </main>
+
+  <!-- ---------------- footer ---------------- -->
+  <footer class="lp-footer">
+    <div class="brand">Farm<span>Connect</span></div>
+    <p>Direct trade between African farmers and buyers · Pickup-only · Payment arranged directly (cash / mobile money)</p>
+    <p class="muted">No middlemen. Fair prices. Works in your language, even offline.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/landing.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/farm-translator.js') }}"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      FarmTranslator.init({
+        position: "bottom-right",
+        backends: ["server"],
+        endpoint: "{{ url_for('translate.api_translate') }}",
+      });
+    });
+  </script>
+</body>
+</html>

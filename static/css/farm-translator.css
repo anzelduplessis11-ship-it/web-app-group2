@@ -1,0 +1,178 @@
+/* ============================================================
+   FarmConnect AI — Farm Translator widget styles
+   Self-contained: reuses the app's CSS variables when present,
+   falls back to the earthy theme values otherwise. All classes
+   are prefixed .ft- to avoid clashing with the app.
+   ============================================================ */
+.ft-root {
+  --ft-green-900: var(--green-900, #081C15);
+  --ft-green-800: var(--green-800, #1B4332);
+  --ft-green-700: var(--green-700, #2D6A4F);
+  --ft-green-100: var(--green-100, #D8F3DC);
+  --ft-gold-400:  var(--gold-400, #F2C94C);
+  --ft-gold-500:  var(--gold-500, #E9B44C);
+  --ft-cream:     var(--cream, #FDF8EF);
+  --ft-paper:     var(--paper, #FFFFFF);
+  --ft-ink:       var(--ink, #22301C);
+  --ft-ink-soft:  var(--ink-soft, #5A6B54);
+  --ft-line:      var(--line, #E7DFCD);
+  --ft-radius:    var(--radius, 16px);
+  --ft-radius-sm: var(--radius-sm, 11px);
+  --ft-shadow:    var(--shadow, 0 8px 28px rgba(27,67,50,.14));
+  --ft-shadow-lg: var(--shadow-lg, 0 18px 50px rgba(27,67,50,.20));
+  --ft-ease:      var(--ease, cubic-bezier(.22,1,.36,1));
+  --ft-font:      var(--font, "Segoe UI", system-ui, -apple-system, Roboto, sans-serif);
+  font-family: var(--ft-font);
+  position: fixed;
+  z-index: 900;
+}
+.ft-bottom-right { right: 1rem; bottom: 1rem; }
+.ft-bottom-left  { left: 1rem;  bottom: 1rem; }
+.ft-top-right    { right: 1rem; top: 1rem; }
+.ft-top-left     { left: 1rem;  top: 1rem; }
+
+/* inline mount (e.g. inside a nav bar) */
+.ft-root.ft-inline { position: static; z-index: auto; }
+
+/* ---------------- launcher pill ---------------- */
+.ft-launcher {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: linear-gradient(135deg, var(--ft-green-700), var(--ft-green-800));
+  color: #fff; border: none; cursor: pointer;
+  font: inherit; font-weight: 650; font-size: .9rem;
+  padding: .6rem .95rem; border-radius: 999px;
+  box-shadow: var(--ft-shadow);
+  transition: transform .16s var(--ft-ease), box-shadow .2s, filter .2s;
+}
+.ft-launcher:hover { transform: translateY(-2px); box-shadow: var(--ft-shadow-lg); filter: brightness(1.06); }
+.ft-launcher:active { transform: translateY(0) scale(.97); }
+.ft-launcher:disabled { opacity: .7; cursor: progress; }
+.ft-launcher-globe { font-size: 1.15rem; line-height: 1; }
+.ft-launcher-label { max-width: 12ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ft-launcher-caret { font-size: .7rem; opacity: .8; transition: transform .2s var(--ft-ease); }
+.ft-open .ft-launcher-caret { transform: rotate(180deg); }
+.ft-is-translated .ft-launcher { box-shadow: var(--ft-shadow), 0 0 0 2px var(--ft-gold-400); }
+
+/* ---------------- panel ---------------- */
+.ft-panel {
+  position: absolute; bottom: calc(100% + .6rem); right: 0;
+  width: 300px; max-width: min(92vw, 340px);
+  background: var(--ft-paper); color: var(--ft-ink);
+  border: 1px solid var(--ft-line); border-radius: var(--ft-radius);
+  box-shadow: var(--ft-shadow-lg); overflow: hidden;
+  animation: ft-pop .22s var(--ft-ease);
+}
+.ft-top-right .ft-panel, .ft-top-left .ft-panel { bottom: auto; top: calc(100% + .6rem); }
+.ft-bottom-left .ft-panel, .ft-top-left .ft-panel { right: auto; left: 0; }
+.ft-inline .ft-panel { position: absolute; }
+
+@keyframes ft-pop { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+
+.ft-panel-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .85rem 1rem; color: #fff;
+  background: linear-gradient(135deg, var(--ft-green-700), var(--ft-green-800));
+}
+.ft-panel-title { font-weight: 700; font-size: .98rem; }
+.ft-close {
+  background: rgba(255,255,255,.15); color: #fff; border: none; cursor: pointer;
+  width: 26px; height: 26px; border-radius: 50%; font-size: .8rem; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center; transition: background .2s;
+}
+.ft-close:hover { background: rgba(255,255,255,.3); }
+
+.ft-search-wrap { padding: .7rem .8rem .4rem; }
+.ft-search {
+  width: 100%; font: inherit; font-size: .9rem;
+  padding: .55rem .8rem; border: 1px solid var(--ft-line);
+  border-radius: var(--ft-radius-sm); background: var(--ft-cream); color: var(--ft-ink);
+  outline: none; transition: border-color .2s, box-shadow .2s;
+}
+.ft-search:focus { border-color: var(--ft-green-700); box-shadow: 0 0 0 3px var(--ft-green-100); }
+
+/* progress bar while translating */
+.ft-progress { height: 3px; background: var(--ft-green-100); overflow: hidden; }
+.ft-progress-bar { display: block; height: 100%; width: 40%;
+  background: linear-gradient(90deg, var(--ft-gold-400), var(--ft-green-700));
+  animation: ft-slide 1s linear infinite; }
+@keyframes ft-slide { from { transform: translateX(-100%); } to { transform: translateX(320%); } }
+
+/* ---------------- language list ---------------- */
+.ft-list { list-style: none; margin: 0; padding: .3rem; max-height: 46vh; overflow-y: auto; }
+.ft-item {
+  display: flex; align-items: center; gap: .7rem;
+  padding: .55rem .6rem; border-radius: var(--ft-radius-sm);
+  cursor: pointer; transition: background .15s; user-select: none;
+}
+.ft-item:hover { background: var(--ft-green-100); }
+.ft-item.ft-active { background: var(--ft-green-100); }
+.ft-flag { font-size: 1.3rem; width: 1.7rem; text-align: center; flex: none; }
+.ft-names { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.ft-native { font-weight: 650; font-size: .95rem; }
+.ft-en { font-size: .74rem; color: var(--ft-ink-soft); }
+.ft-check { margin-left: auto; color: var(--ft-green-700); font-weight: 800; }
+.ft-item.ft-original { border-bottom: 1px dashed var(--ft-line); margin-bottom: .2rem; padding-bottom: .6rem; }
+
+.ft-foot {
+  padding: .55rem 1rem .7rem; font-size: .72rem; color: var(--ft-ink-soft);
+  border-top: 1px solid var(--ft-line); text-align: center; background: var(--ft-cream);
+}
+
+/* ---------------- fallback toast (only if app toast absent) ---------------- */
+#ft-toast { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%);
+  z-index: 950; display: flex; flex-direction: column; gap: .5rem; align-items: center; }
+.ft-toast-item {
+  background: var(--green-800, #1B4332); color: #fff; padding: .7rem 1.1rem;
+  border-radius: 11px; box-shadow: 0 8px 28px rgba(27,67,50,.2); font-size: .9rem;
+  max-width: 90vw; animation: ft-pop .25s var(--ease, ease); font-family: var(--font, sans-serif);
+}
+.ft-toast-error { background: var(--danger, #C1462F); }
+.ft-toast-item.ft-hide { opacity: 0; transform: translateY(10px); transition: .35s; }
+
+/* ---------------- right-to-left support (Arabic) ---------------- */
+html.ft-rtl body { direction: rtl; }
+html.ft-rtl .ft-root { direction: ltr; }   /* keep the widget itself LTR */
+
+/* ---------------- mobile: panel becomes a bottom sheet ---------------- */
+@media (max-width: 560px) {
+  .ft-root:not(.ft-inline) { right: .8rem; bottom: calc(var(--bottom-h, 66px) + .8rem); }
+  .ft-panel {
+    position: fixed; left: 0; right: 0; bottom: 0; top: auto;
+    width: 100%; max-width: 100%; border-radius: 18px 18px 0 0;
+    animation: ft-sheet .28s var(--ft-ease);
+  }
+  .ft-list { max-height: 50vh; }
+}
+@keyframes ft-sheet { from { transform: translateY(100%); } to { transform: none; } }
+
+/* ---------------- reduced motion ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ft-launcher, .ft-panel, .ft-toast-item, .ft-progress-bar, .ft-launcher-caret { animation: none !important; transition: none !important; }
+}
+
+/* ---------------- first-visit language onboarding modal ---------------- */
+.ft-onboarding {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(8, 28, 21, .55); backdrop-filter: blur(2px);
+  display: flex; align-items: center; justify-content: center; padding: 1rem;
+  font-family: var(--font, "Segoe UI", system-ui, -apple-system, Roboto, sans-serif);
+}
+/* Author CSS setting `display` unconditionally beats the browser's default
+   `[hidden] { display: none }` UA rule - without this, toggling the
+   `hidden` attribute in JS has no visible effect. */
+.ft-onboarding[hidden] { display: none; }
+.ft-onboarding-card {
+  background: var(--paper, #fff); color: var(--ink, #22301C);
+  width: 100%; max-width: 420px; max-height: 86vh;
+  display: flex; flex-direction: column;
+  border-radius: var(--radius, 16px); box-shadow: var(--shadow-lg, 0 18px 50px rgba(27,67,50,.2));
+  overflow: hidden; animation: ft-pop .22s var(--ease, cubic-bezier(.22,1,.36,1));
+}
+.ft-onboarding-head {
+  text-align: center; padding: 1.3rem 1.3rem 1.1rem; color: #fff;
+  background: linear-gradient(135deg, var(--green-700, #2D6A4F), var(--green-800, #1B4332));
+}
+.ft-onboarding-mark { font-size: 2rem; }
+.ft-onboarding-head h2 { color: #fff; margin: .3rem 0 .35rem; font-size: 1.2rem; }
+.ft-onboarding-head p { color: var(--green-100, #D8F3DC); font-size: .86rem; margin: 0; line-height: 1.45; }
+.ft-onboarding .ft-list { flex: 1; overflow-y: auto; }

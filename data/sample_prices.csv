@@ -1,0 +1,4043 @@
+crop,region,month,quantity_kg,price_per_kg
+Maize,Maputo,8,100.0,35.77
+Maize,Lusaka,3,10.0,9.65
+Irish Potato,Maputo,9,500.0,41.28
+Cocoa,Casablanca,7,50.0,79.91
+Irish Potato,Harare,5,500.0,1691.3
+Beans,Arusha,2,100.0,3701.09
+Cocoa,Kinshasa,4,250.0,9408.89
+Irish Potato,Dakar,1,1000.0,455.45
+Onion,Maputo,10,25.0,60.55
+Beans,Nairobi,7,25.0,156.18
+Coffee,Kigali,5,1000.0,4248.82
+Coffee,Dakar,1,100.0,2324.01
+Beans,Kumasi,9,100.0,22.19
+Plantain,Lusaka,12,100.0,11.89
+Irish Potato,Kinshasa,6,500.0,886.2
+Cocoa,Lagos,3,250.0,7433.28
+Cocoa,Kampala,10,10.0,4524.44
+Irish Potato,Lusaka,6,250.0,9.02
+Plantain,Casablanca,7,100.0,8.68
+Cassava,Kumasi,6,250.0,5.21
+Cocoa,Johannesburg,1,500.0,88.82
+Plantain,Johannesburg,2,100.0,13.23
+Onion,Nairobi,5,100.0,102.6
+Cassava,Cairo,12,500.0,9.23
+Cocoa,Kano,11,25.0,6371.24
+Beans,Lusaka,2,100.0,36.73
+Coffee,Lusaka,5,50.0,191.87
+Rice,Kampala,5,10.0,4427.89
+Irish Potato,Kigali,9,100.0,322.23
+Coffee,Tunis,12,25.0,26.95
+Beans,Cairo,2,50.0,47.93
+Onion,Harare,8,50.0,2485.86
+Rice,Kumasi,5,1000.0,19.04
+Beans,Lusaka,6,25.0,31.83
+Cassava,Maputo,4,500.0,28.48
+Irish Potato,Lagos,1,10.0,1060.1
+Tomato,Casablanca,9,25.0,9.62
+Cocoa,Johannesburg,7,25.0,107.44
+Maize,Maputo,6,500.0,36.57
+Rice,Harare,2,250.0,5277.94
+Onion,Kano,10,50.0,804.41
+Tomato,Casablanca,3,50.0,7.07
+Onion,Kumasi,3,250.0,11.83
+Cassava,Luanda,12,250.0,142.28
+Onion,Johannesburg,4,10.0,9.3
+Beans,Casablanca,6,500.0,15.42
+Cassava,Casablanca,9,100.0,5.61
+Tomato,Johannesburg,7,100.0,14.77
+Coffee,Addis Ababa,7,100.0,412.18
+Cassava,Nairobi,5,500.0,44.05
+Plantain,Kumasi,4,100.0,9.33
+Onion,Lusaka,2,25.0,11.11
+Irish Potato,Kigali,12,500.0,376.05
+Onion,Luanda,12,25.0,370.58
+Tomato,Johannesburg,7,50.0,14.09
+Beans,Kinshasa,12,50.0,4206.85
+Onion,Lagos,8,100.0,995.28
+Coffee,Luanda,3,25.0,4202.65
+Cassava,Cairo,12,1000.0,9.07
+Maize,Kigali,11,1000.0,347.49
+Tomato,Tunis,6,50.0,2.95
+Rice,Lusaka,5,50.0,32.74
+Irish Potato,Kigali,5,25.0,313.31
+Coffee,Arusha,1,10.0,9083.14
+Cocoa,Kampala,9,25.0,5024.53
+Irish Potato,Yaounde,1,25.0,488.21
+Coffee,Maputo,4,1000.0,493.94
+Beans,Kumasi,12,10.0,28.86
+Cassava,Kumasi,1,250.0,3.86
+Cassava,Tunis,12,250.0,1.72
+Beans,Kampala,11,500.0,4748.13
+Maize,Kigali,10,10.0,380.8
+Coffee,Addis Ababa,2,100.0,415.98
+Rice,Khartoum,7,50.0,1575.85
+Beans,Nairobi,8,100.0,160.9
+Cocoa,Kumasi,9,10.0,56.96
+Maize,Khartoum,2,250.0,559.77
+Irish Potato,Kinshasa,6,100.0,910.5
+Cocoa,Nairobi,8,10.0,355.98
+Cassava,Maputo,6,25.0,31.91
+Irish Potato,Harare,12,1000.0,1950.87
+Cassava,Cairo,2,50.0,12.32
+Tomato,Lusaka,12,1000.0,12.96
+Plantain,Arusha,4,25.0,1094.63
+Cocoa,Kinshasa,12,10.0,7520.08
+Beans,Johannesburg,5,25.0,32.07
+Rice,Addis Ababa,12,25.0,92.46
+Plantain,Kampala,2,25.0,1406.03
+Beans,Kumasi,7,10.0,20.85
+Tomato,Kampala,10,10.0,2640.27
+Plantain,Lusaka,10,50.0,10.69
+Coffee,Tunis,9,1000.0,22.87
+Plantain,Nairobi,6,25.0,80.12
+Cassava,Arusha,8,100.0,766.81
+Cassava,Nairobi,1,50.0,39.3
+Cocoa,Kumasi,2,500.0,50.23
+Beans,Luanda,9,10.0,982.11
+Cocoa,Luanda,3,1000.0,2925.61
+Plantain,Maputo,8,250.0,45.17
+Irish Potato,Kumasi,10,100.0,11.66
+Coffee,Yaounde,11,100.0,2141.34
+Onion,Harare,3,25.0,2069.52
+Beans,Casablanca,2,50.0,21.28
+Rice,Dakar,7,50.0,802.92
+Beans,Dakar,3,250.0,834.02
+Irish Potato,Luanda,9,1000.0,309.41
+Irish Potato,Addis Ababa,6,100.0,28.33
+Beans,Lusaka,3,500.0,32.12
+Irish Potato,Harare,1,50.0,2249.87
+Maize,Arusha,8,250.0,810.33
+Coffee,Harare,8,10.0,25600.8
+Plantain,Kano,7,1000.0,472.99
+Coffee,Khartoum,3,500.0,7362.22
+Beans,Maputo,12,500.0,118.55
+Maize,Lagos,9,250.0,689.12
+Plantain,Harare,3,25.0,2560.73
+Maize,Johannesburg,6,100.0,6.7
+Irish Potato,Maputo,12,500.0,51.65
+Cassava,Johannesburg,2,1000.0,8.23
+Irish Potato,Kumasi,9,10.0,11.36
+Irish Potato,Cairo,12,500.0,17.41
+Irish Potato,Addis Ababa,9,1000.0,24.01
+Onion,Lagos,10,50.0,911.29
+Rice,Kampala,12,25.0,4088.33
+Plantain,Cairo,9,50.0,21.32
+Tomato,Johannesburg,12,1000.0,12.11
+Onion,Casablanca,2,50.0,6.35
+Maize,Kigali,11,1000.0,359.25
+Cassava,Yaounde,11,250.0,129.91
+Beans,Johannesburg,1,250.0,35.0
+Maize,Casablanca,9,500.0,5.51
+Coffee,Casablanca,4,100.0,104.02
+Plantain,Luanda,9,500.0,257.9
+Rice,Khartoum,1,1000.0,1365.27
+Irish Potato,Kinshasa,1,10.0,1221.56
+Onion,Kano,9,1000.0,732.56
+Cassava,Arusha,6,25.0,844.66
+Cocoa,Kampala,1,1000.0,3692.1
+Coffee,Nairobi,1,10.0,522.56
+Cocoa,Harare,12,500.0,12846.73
+Cassava,Kinshasa,3,10.0,766.58
+Coffee,Luanda,2,500.0,4011.24
+Cocoa,Kinshasa,6,10.0,10368.92
+Tomato,Kumasi,9,100.0,15.62
+Plantain,Harare,2,500.0,2086.71
+Cocoa,Kigali,1,25.0,3106.47
+Maize,Kigali,7,1000.0,293.09
+Plantain,Kano,1,250.0,607.63
+Cassava,Yaounde,6,250.0,195.14
+Rice,Kano,10,25.0,1225.85
+Plantain,Casablanca,7,500.0,8.19
+Cocoa,Johannesburg,6,25.0,129.04
+Plantain,Addis Ababa,6,250.0,41.69
+Cassava,Harare,6,1000.0,1118.96
+Beans,Tunis,9,50.0,6.4
+Tomato,Kumasi,12,10.0,13.01
+Maize,Addis Ababa,8,50.0,25.23
+Beans,Harare,12,50.0,6420.22
+Cocoa,Arusha,12,250.0,3180.54
+Coffee,Nairobi,4,50.0,632.77
+Tomato,Arusha,2,250.0,1243.63
+Plantain,Kigali,7,250.0,433.9
+Onion,Addis Ababa,3,500.0,46.4
+Tomato,Cairo,7,250.0,24.14
+Coffee,Tunis,10,500.0,24.59
+Tomato,Luanda,11,100.0,481.79
+Cassava,Maputo,3,50.0,29.3
+Rice,Casablanca,1,10.0,16.97
+Cocoa,Kinshasa,10,10.0,8792.27
+Plantain,Addis Ababa,6,25.0,42.89
+Maize,Kigali,11,10.0,369.76
+Irish Potato,Yaounde,5,50.0,440.0
+Cassava,Harare,9,10.0,949.72
+Plantain,Khartoum,1,1000.0,642.68
+Beans,Addis Ababa,10,250.0,76.61
+Irish Potato,Dakar,12,250.0,495.15
+Onion,Arusha,10,100.0,1380.97
+Irish Potato,Kampala,6,500.0,1905.64
+Coffee,Johannesburg,3,500.0,158.21
+Onion,Kumasi,7,100.0,14.93
+Rice,Kano,11,500.0,1289.08
+Beans,Casablanca,12,25.0,20.51
+Cassava,Luanda,12,10.0,146.1
+Tomato,Lagos,3,100.0,781.15
+Irish Potato,Casablanca,1,10.0,6.17
+Cocoa,Kinshasa,11,250.0,8076.14
+Beans,Lusaka,10,500.0,34.57
+Irish Potato,Dakar,9,100.0,454.54
+Coffee,Kinshasa,4,100.0,12911.48
+Onion,Yaounde,5,100.0,455.84
+Rice,Johannesburg,2,500.0,23.54
+Plantain,Casablanca,11,100.0,8.41
+Maize,Dakar,12,1000.0,367.85
+Rice,Kampala,1,50.0,4232.56
+Cassava,Nairobi,8,1000.0,35.91
+Beans,Addis Ababa,2,250.0,82.81
+Beans,Lagos,3,250.0,1712.51
+Irish Potato,Khartoum,10,250.0,600.75
+Coffee,Maputo,8,1000.0,395.28
+Cassava,Khartoum,8,500.0,360.01
+Maize,Kumasi,7,500.0,8.29
+Onion,Johannesburg,12,250.0,10.45
+Tomato,Khartoum,2,50.0,802.24
+Coffee,Kigali,8,50.0,4065.52
+Cassava,Nairobi,7,500.0,38.89
+Cocoa,Khartoum,11,100.0,4749.71
+Cassava,Cairo,1,500.0,10.99
+Cassava,Johannesburg,7,500.0,9.37
+Beans,Kinshasa,3,10.0,3223.07
+Coffee,Nairobi,5,10.0,613.72
+Irish Potato,Kigali,8,500.0,281.84
+Irish Potato,Kigali,5,500.0,313.62
+Coffee,Arusha,2,250.0,8295.15
+Beans,Nairobi,12,100.0,186.84
+Plantain,Nairobi,10,50.0,61.73
+Onion,Lusaka,4,25.0,10.76
+Plantain,Addis Ababa,10,500.0,33.57
+Irish Potato,Johannesburg,6,50.0,9.32
+Plantain,Yaounde,11,25.0,343.41
+Onion,Addis Ababa,6,500.0,53.13
+Plantain,Khartoum,8,50.0,619.61
+Plantain,Kumasi,2,250.0,9.09
+Maize,Dakar,6,1000.0,362.9
+Rice,Kumasi,2,50.0,19.66
+Rice,Arusha,7,10.0,3366.77
+Coffee,Harare,11,50.0,19528.64
+Cocoa,Khartoum,12,500.0,4416.31
+Coffee,Lagos,5,1000.0,3358.84
+Plantain,Addis Ababa,11,1000.0,32.35
+Coffee,Kigali,3,250.0,4572.35
+Maize,Lagos,11,25.0,853.66
+Tomato,Kampala,5,1000.0,1934.89
+Maize,Johannesburg,4,500.0,6.79
+Onion,Cairo,11,100.0,18.45
+Plantain,Lusaka,4,500.0,11.65
+Cassava,Maputo,6,25.0,33.44
+Rice,Kumasi,6,250.0,19.75
+Irish Potato,Tunis,12,100.0,2.4
+Coffee,Khartoum,9,10.0,6428.23
+Maize,Arusha,7,10.0,857.13
+Cassava,Tunis,10,50.0,1.87
+Cocoa,Kumasi,8,50.0,61.84
+Cocoa,Lusaka,6,25.0,138.25
+Beans,Dakar,3,50.0,874.04
+Cassava,Kumasi,5,1000.0,4.59
+Tomato,Tunis,4,100.0,2.4
+Beans,Cairo,7,500.0,37.16
+Plantain,Lagos,3,50.0,652.89
+Coffee,Casablanca,11,250.0,82.63
+Irish Potato,Addis Ababa,3,1000.0,24.71
+Beans,Casablanca,11,250.0,19.95
+Onion,Nairobi,4,10.0,96.09
+Maize,Nairobi,12,25.0,70.31
+Tomato,Kumasi,9,250.0,15.01
+Maize,Johannesburg,3,250.0,6.77
+Beans,Nairobi,4,500.0,163.23
+Beans,Kampala,11,500.0,4337.46
+Cassava,Lagos,3,1000.0,248.78
+Coffee,Harare,11,1000.0,17965.64
+Irish Potato,Kinshasa,2,50.0,1190.68
+Tomato,Harare,4,25.0,2719.65
+Onion,Addis Ababa,10,10.0,56.36
+Irish Potato,Addis Ababa,5,10.0,27.1
+Onion,Kigali,11,250.0,552.92
+Cocoa,Addis Ababa,2,1000.0,253.32
+Cassava,Kumasi,10,25.0,3.99
+Maize,Kampala,10,100.0,1028.28
+Cassava,Nairobi,12,10.0,40.31
+Plantain,Johannesburg,5,10.0,12.47
+Maize,Yaounde,5,100.0,383.16
+Tomato,Lagos,9,10.0,947.78
+Tomato,Lagos,5,250.0,734.08
+Tomato,Nairobi,1,250.0,90.54
+Cocoa,Yaounde,11,25.0,1211.78
+Tomato,Johannesburg,7,50.0,14.97
+Plantain,Kigali,10,100.0,414.23
+Irish Potato,Khartoum,2,50.0,647.95
+Coffee,Nairobi,1,500.0,470.69
+Beans,Cairo,12,10.0,54.76
+Onion,Dakar,2,250.0,370.75
+Rice,Khartoum,4,25.0,2018.27
+Coffee,Yaounde,12,1000.0,1864.09
+Rice,Casablanca,11,500.0,13.73
+Onion,Dakar,5,100.0,466.5
+Onion,Kigali,7,500.0,579.63
+Beans,Kumasi,10,1000.0,20.18
+Cocoa,Maputo,7,10.0,483.62
+Beans,Kigali,6,10.0,1038.93
+Coffee,Dakar,10,500.0,1948.78
+Onion,Dakar,8,50.0,590.08
+Plantain,Johannesburg,5,50.0,12.83
+Plantain,Luanda,7,100.0,344.97
+Rice,Dakar,5,50.0,898.01
+Rice,Kampala,4,250.0,4107.36
+Maize,Khartoum,9,25.0,440.25
+Beans,Maputo,8,1000.0,91.63
+Beans,Arusha,12,25.0,4216.23
+Maize,Casablanca,6,25.0,6.77
+Maize,Casablanca,2,1000.0,6.91
+Onion,Casablanca,11,10.0,7.04
+Tomato,Lagos,4,500.0,733.19
+Irish Potato,Luanda,2,1000.0,311.08
+Rice,Khartoum,8,10.0,1583.54
+Coffee,Addis Ababa,3,100.0,372.01
+Cocoa,Kinshasa,9,250.0,8795.2
+Plantain,Kampala,1,25.0,1330.51
+Tomato,Yaounde,5,250.0,462.8
+Irish Potato,Lagos,11,50.0,998.35
+Tomato,Maputo,1,500.0,61.32
+Onion,Luanda,5,10.0,406.0
+Irish Potato,Kumasi,5,25.0,10.53
+Onion,Kampala,8,50.0,3029.61
+Tomato,Arusha,11,250.0,1506.94
+Plantain,Yaounde,9,50.0,305.63
+Irish Potato,Arusha,4,25.0,1382.38
+Maize,Luanda,1,1000.0,266.64
+Rice,Tunis,4,100.0,5.93
+Rice,Tunis,10,100.0,4.45
+Rice,Kumasi,3,1000.0,19.75
+Cocoa,Khartoum,2,25.0,5726.36
+Coffee,Arusha,2,25.0,9192.21
+Rice,Kumasi,2,1000.0,18.61
+Coffee,Harare,1,100.0,22316.6
+Plantain,Tunis,8,25.0,2.52
+Tomato,Kinshasa,10,500.0,1528.57
+Cocoa,Kampala,10,1000.0,3576.0
+Plantain,Kano,12,50.0,568.98
+Onion,Harare,1,500.0,1997.86
+Cocoa,Arusha,3,1000.0,3320.43
+Cassava,Harare,10,10.0,984.64
+Cassava,Lagos,11,10.0,261.16
+Irish Potato,Kumasi,6,25.0,10.49
+Beans,Dakar,2,1000.0,746.95
+Beans,Kigali,9,100.0,1076.84
+Onion,Johannesburg,1,100.0,9.6
+Plantain,Addis Ababa,7,25.0,40.37
+Coffee,Kinshasa,8,10.0,10908.6
+Cassava,Yaounde,9,500.0,159.62
+Beans,Tunis,10,250.0,6.19
+Rice,Luanda,9,50.0,839.59
+Rice,Cairo,11,100.0,37.88
+Plantain,Tunis,9,1000.0,2.48
+Tomato,Harare,5,50.0,2713.31
+Beans,Cairo,4,10.0,45.36
+Rice,Lusaka,2,250.0,30.8
+Rice,Nairobi,11,50.0,157.66
+Tomato,Maputo,12,1000.0,52.06
+Coffee,Lusaka,3,10.0,170.05
+Irish Potato,Kumasi,4,25.0,11.9
+Coffee,Luanda,9,25.0,4013.63
+Plantain,Kigali,10,1000.0,320.61
+Irish Potato,Lagos,4,250.0,952.05
+Irish Potato,Khartoum,7,50.0,483.83
+Plantain,Nairobi,7,50.0,66.49
+Coffee,Harare,5,100.0,27666.35
+Cocoa,Yaounde,4,50.0,1540.43
+Irish Potato,Casablanca,6,250.0,4.9
+Cocoa,Arusha,5,1000.0,3946.96
+Rice,Kinshasa,12,1000.0,2492.66
+Coffee,Maputo,3,500.0,576.14
+Onion,Casablanca,9,25.0,7.78
+Onion,Lagos,4,25.0,852.91
+Rice,Cairo,4,25.0,46.0
+Cassava,Yaounde,7,25.0,183.75
+Maize,Addis Ababa,6,500.0,27.69
+Cassava,Kumasi,9,500.0,3.9
+Tomato,Dakar,6,1000.0,381.27
+Coffee,Kampala,1,50.0,12007.65
+Cocoa,Luanda,4,1000.0,3183.33
+Coffee,Kumasi,8,500.0,32.71
+Beans,Yaounde,3,250.0,841.5
+Irish Potato,Kinshasa,7,25.0,884.22
+Plantain,Johannesburg,3,100.0,13.83
+Irish Potato,Lusaka,1,1000.0,10.96
+Tomato,Kano,9,500.0,785.73
+Rice,Addis Ababa,4,100.0,109.65
+Cassava,Kano,5,250.0,245.62
+Rice,Maputo,9,500.0,84.61
+Coffee,Cairo,5,50.0,287.9
+Irish Potato,Kinshasa,3,100.0,1080.21
+Cassava,Kumasi,7,1000.0,4.43
+Rice,Kampala,4,100.0,4424.07
+Plantain,Kano,3,10.0,648.72
+Cocoa,Maputo,2,10.0,384.98
+Irish Potato,Kinshasa,5,25.0,989.02
+Maize,Yaounde,4,500.0,394.04
+Beans,Kinshasa,1,10.0,3837.28
+Plantain,Kigali,8,25.0,422.53
+Cassava,Tunis,7,500.0,2.23
+Rice,Dakar,5,25.0,876.31
+Onion,Maputo,12,10.0,54.79
+Rice,Kampala,2,25.0,4522.0
+Maize,Dakar,9,1000.0,319.15
+Coffee,Lusaka,3,100.0,171.02
+Tomato,Yaounde,12,1000.0,394.36
+Beans,Kampala,8,25.0,4150.64
+Coffee,Lagos,4,500.0,3635.0
+Irish Potato,Johannesburg,5,500.0,10.13
+Beans,Nairobi,7,10.0,144.42
+Rice,Casablanca,8,25.0,14.8
+Cassava,Maputo,2,500.0,26.14
+Tomato,Dakar,10,25.0,525.47
+Tomato,Addis Ababa,6,100.0,44.44
+Cocoa,Kano,5,10.0,7205.82
+Plantain,Yaounde,10,250.0,314.96
+Cocoa,Yaounde,2,100.0,1386.39
+Cocoa,Luanda,6,10.0,4434.93
+Beans,Johannesburg,6,25.0,26.6
+Maize,Arusha,11,10.0,931.31
+Tomato,Cairo,7,25.0,22.0
+Onion,Yaounde,3,50.0,405.19
+Cassava,Kano,7,50.0,248.46
+Coffee,Harare,6,25.0,25497.17
+Maize,Luanda,9,10.0,245.98
+Maize,Kumasi,6,250.0,9.09
+Tomato,Yaounde,12,500.0,520.65
+Onion,Tunis,2,1000.0,1.62
+Cassava,Cairo,1,50.0,10.76
+Maize,Johannesburg,11,500.0,6.34
+Cocoa,Khartoum,4,100.0,6100.44
+Cocoa,Dakar,10,250.0,3766.77
+Onion,Addis Ababa,3,25.0,51.13
+Irish Potato,Yaounde,1,250.0,535.33
+Onion,Cairo,6,100.0,18.28
+Rice,Luanda,10,1000.0,632.03
+Irish Potato,Addis Ababa,4,100.0,31.13
+Rice,Casablanca,4,250.0,17.53
+Rice,Addis Ababa,12,50.0,88.49
+Plantain,Kano,4,25.0,675.56
+Coffee,Dakar,11,25.0,1947.95
+Irish Potato,Maputo,7,25.0,38.18
+Coffee,Luanda,3,250.0,4278.1
+Coffee,Kano,8,1000.0,2940.08
+Tomato,Luanda,12,250.0,452.9
+Onion,Nairobi,12,250.0,93.02
+Maize,Nairobi,5,500.0,53.29
+Cassava,Casablanca,3,100.0,6.09
+Plantain,Maputo,12,50.0,52.42
+Coffee,Dakar,11,100.0,1986.72
+Onion,Kampala,6,500.0,2242.64
+Cassava,Tunis,3,1000.0,1.74
+Irish Potato,Yaounde,11,25.0,444.37
+Coffee,Yaounde,7,50.0,2350.14
+Rice,Kinshasa,7,100.0,3199.96
+Onion,Khartoum,9,250.0,857.91
+Coffee,Dakar,2,50.0,2194.76
+Cocoa,Maputo,3,500.0,388.09
+Irish Potato,Addis Ababa,9,1000.0,23.49
+Coffee,Tunis,7,100.0,32.18
+Plantain,Kampala,8,250.0,1119.26
+Irish Potato,Harare,2,10.0,2163.39
+Coffee,Tunis,12,25.0,26.2
+Plantain,Kampala,6,50.0,1213.87
+Plantain,Luanda,3,50.0,410.24
+Beans,Khartoum,3,10.0,1817.75
+Coffee,Yaounde,11,250.0,2033.02
+Tomato,Cairo,5,10.0,19.54
+Rice,Khartoum,6,1000.0,1491.65
+Cassava,Kigali,7,50.0,304.35
+Rice,Nairobi,4,1000.0,150.27
+Coffee,Kumasi,4,10.0,42.39
+Coffee,Kampala,9,100.0,10184.27
+Cocoa,Johannesburg,9,50.0,102.97
+Coffee,Kano,3,1000.0,3280.55
+Irish Potato,Kampala,7,50.0,1685.83
+Tomato,Kano,9,1000.0,721.53
+Plantain,Kinshasa,2,1000.0,1008.13
+Rice,Luanda,8,10.0,851.49
+Rice,Tunis,5,100.0,5.81
+Cassava,Khartoum,6,250.0,372.75
+Beans,Casablanca,11,50.0,18.71
+Tomato,Dakar,2,10.0,399.73
+Plantain,Maputo,9,100.0,42.84
+Cocoa,Harare,2,10.0,17111.4
+Cocoa,Arusha,4,1000.0,3779.73
+Rice,Tunis,8,1000.0,3.97
+Maize,Arusha,7,10.0,889.07
+Coffee,Kano,2,25.0,3633.76
+Rice,Luanda,4,100.0,996.87
+Irish Potato,Arusha,7,500.0,1233.75
+Onion,Yaounde,8,1000.0,490.39
+Tomato,Kano,6,25.0,737.32
+Onion,Luanda,11,50.0,403.73
+Tomato,Tunis,6,25.0,3.13
+Tomato,Lusaka,3,250.0,14.03
+Cocoa,Arusha,10,500.0,3749.97
+Irish Potato,Luanda,10,25.0,335.93
+Plantain,Casablanca,7,100.0,8.76
+Coffee,Cairo,4,1000.0,205.89
+Plantain,Casablanca,12,50.0,9.5
+Irish Potato,Johannesburg,3,25.0,10.98
+Onion,Kano,8,1000.0,802.43
+Beans,Yaounde,4,100.0,865.61
+Cocoa,Kinshasa,9,250.0,8868.7
+Coffee,Cairo,6,250.0,277.23
+Irish Potato,Harare,4,50.0,1899.24
+Irish Potato,Lusaka,12,1000.0,9.46
+Plantain,Cairo,8,500.0,19.62
+Maize,Kigali,6,100.0,357.5
+Plantain,Kigali,5,10.0,520.3
+Rice,Harare,2,500.0,5084.78
+Irish Potato,Lagos,7,10.0,740.6
+Cocoa,Kampala,4,25.0,5025.41
+Rice,Tunis,3,1000.0,5.02
+Tomato,Kigali,11,25.0,641.33
+Irish Potato,Casablanca,10,25.0,5.91
+Cassava,Addis Ababa,5,10.0,26.12
+Cocoa,Kigali,2,10.0,3160.33
+Cassava,Maputo,7,500.0,29.54
+Cassava,Cairo,6,500.0,11.57
+Rice,Dakar,3,25.0,891.24
+Rice,Dakar,9,25.0,736.46
+Tomato,Addis Ababa,3,25.0,39.99
+Maize,Cairo,9,50.0,14.18
+Coffee,Arusha,7,500.0,8250.42
+Rice,Casablanca,8,250.0,13.59
+Onion,Khartoum,6,250.0,762.57
+Cocoa,Luanda,7,500.0,3777.73
+Irish Potato,Kano,9,10.0,697.19
+Beans,Casablanca,6,50.0,16.13
+Irish Potato,Johannesburg,8,500.0,9.7
+Irish Potato,Arusha,3,500.0,1253.5
+Irish Potato,Khartoum,9,1000.0,468.39
+Tomato,Addis Ababa,2,50.0,41.8
+Cocoa,Harare,8,1000.0,14324.89
+Coffee,Johannesburg,8,50.0,154.6
+Cassava,Kampala,9,10.0,703.66
+Irish Potato,Cairo,1,500.0,16.93
+Onion,Kampala,9,25.0,2945.54
+Coffee,Lagos,12,1000.0,2898.81
+Cassava,Lusaka,12,500.0,5.6
+Coffee,Lagos,5,1000.0,3701.75
+Maize,Cairo,12,100.0,18.25
+Irish Potato,Maputo,8,500.0,39.13
+Irish Potato,Kinshasa,11,25.0,1107.46
+Plantain,Johannesburg,5,1000.0,10.66
+Cassava,Arusha,11,100.0,657.86
+Irish Potato,Kano,2,50.0,824.66
+Tomato,Dakar,3,25.0,378.87
+Plantain,Cairo,6,100.0,21.52
+Plantain,Harare,9,250.0,1765.24
+Tomato,Cairo,8,50.0,23.35
+Maize,Arusha,12,500.0,967.04
+Coffee,Kano,5,100.0,3705.66
+Tomato,Kampala,5,100.0,2255.72
+Tomato,Maputo,3,1000.0,45.85
+Onion,Lagos,8,25.0,1006.56
+Cassava,Kumasi,1,1000.0,3.9
+Coffee,Arusha,5,500.0,9517.35
+Cassava,Nairobi,2,25.0,41.07
+Beans,Maputo,2,25.0,124.05
+Onion,Yaounde,3,500.0,422.72
+Plantain,Kano,11,1000.0,445.64
+Maize,Harare,7,500.0,1467.19
+Tomato,Maputo,2,1000.0,45.11
+Coffee,Cairo,1,1000.0,187.9
+Coffee,Kigali,1,500.0,3451.3
+Beans,Kumasi,12,25.0,26.97
+Onion,Tunis,7,250.0,2.46
+Cocoa,Maputo,12,1000.0,316.43
+Irish Potato,Kigali,4,250.0,335.27
+Irish Potato,Kampala,5,500.0,1695.65
+Maize,Kigali,10,1000.0,371.86
+Rice,Dakar,5,250.0,948.51
+Maize,Khartoum,3,10.0,586.88
+Onion,Yaounde,2,25.0,384.58
+Onion,Dakar,8,1000.0,439.0
+Irish Potato,Addis Ababa,3,500.0,26.22
+Cassava,Harare,4,250.0,1198.1
+Coffee,Nairobi,6,25.0,549.38
+Rice,Johannesburg,8,100.0,23.42
+Beans,Addis Ababa,10,1000.0,74.29
+Cocoa,Dakar,5,1000.0,3739.95
+Rice,Kigali,7,25.0,980.74
+Cassava,Kigali,9,1000.0,222.47
+Plantain,Tunis,5,500.0,3.57
+Irish Potato,Arusha,5,10.0,1262.53
+Beans,Kigali,2,250.0,996.61
+Coffee,Tunis,2,100.0,28.28
+Maize,Harare,4,25.0,1827.95
+Cocoa,Kinshasa,1,50.0,8672.48
+Tomato,Kumasi,4,1000.0,9.96
+Onion,Luanda,10,50.0,441.42
+Cassava,Arusha,2,10.0,709.31
+Rice,Kano,1,1000.0,1371.56
+Maize,Kumasi,7,500.0,8.58
+Maize,Maputo,1,250.0,43.32
+Rice,Harare,6,100.0,5072.6
+Beans,Cairo,9,50.0,43.46
+Maize,Kampala,6,500.0,1038.67
+Beans,Kampala,10,25.0,4787.36
+Onion,Addis Ababa,12,250.0,46.49
+Cocoa,Kano,11,500.0,5729.33
+Irish Potato,Arusha,6,250.0,1184.55
+Tomato,Lagos,12,100.0,915.74
+Rice,Johannesburg,4,250.0,31.83
+Tomato,Harare,12,10.0,2760.6
+Onion,Lusaka,7,250.0,12.95
+Irish Potato,Cairo,1,50.0,17.62
+Coffee,Arusha,4,100.0,10882.66
+Irish Potato,Arusha,11,500.0,1338.1
+Maize,Maputo,12,100.0,46.15
+Maize,Harare,9,1000.0,1258.51
+Coffee,Tunis,8,250.0,30.34
+Tomato,Kano,5,100.0,579.56
+Plantain,Luanda,5,100.0,386.55
+Coffee,Khartoum,7,100.0,7398.9
+Beans,Arusha,2,10.0,3939.19
+Onion,Cairo,5,500.0,14.79
+Irish Potato,Nairobi,3,100.0,60.29
+Tomato,Luanda,12,25.0,467.31
+Tomato,Addis Ababa,5,250.0,42.11
+Cassava,Maputo,2,25.0,29.96
+Coffee,Tunis,2,500.0,28.48
+Rice,Khartoum,10,25.0,1413.84
+Rice,Lagos,9,25.0,1545.0
+Irish Potato,Khartoum,1,1000.0,587.63
+Rice,Harare,9,1000.0,4203.82
+Rice,Arusha,5,100.0,3649.0
+Cassava,Addis Ababa,12,100.0,22.47
+Beans,Khartoum,12,1000.0,1785.56
+Coffee,Lagos,1,50.0,3620.06
+Maize,Johannesburg,3,100.0,7.72
+Beans,Cairo,9,500.0,41.52
+Beans,Addis Ababa,7,10.0,77.22
+Plantain,Yaounde,12,100.0,311.84
+Tomato,Maputo,12,100.0,62.43
+Coffee,Addis Ababa,2,25.0,414.45
+Cocoa,Lagos,9,10.0,7807.21
+Coffee,Johannesburg,10,10.0,144.55
+Tomato,Kampala,7,250.0,2451.99
+Onion,Cairo,5,10.0,18.5
+Onion,Yaounde,2,10.0,395.23
+Plantain,Luanda,5,100.0,368.74
+Cocoa,Arusha,10,250.0,3645.87
+Tomato,Johannesburg,12,1000.0,10.89
+Plantain,Addis Ababa,12,100.0,43.39
+Irish Potato,Arusha,9,10.0,1433.13
+Beans,Kigali,5,10.0,903.12
+Plantain,Harare,3,250.0,2362.22
+Plantain,Kinshasa,3,250.0,1229.34
+Cocoa,Casablanca,8,250.0,63.55
+Tomato,Nairobi,11,25.0,90.67
+Tomato,Cairo,1,25.0,18.95
+Plantain,Luanda,6,25.0,361.77
+Plantain,Nairobi,4,1000.0,62.05
+Plantain,Nairobi,11,500.0,60.52
+Tomato,Luanda,3,1000.0,348.67
+Irish Potato,Kano,1,500.0,926.15
+Coffee,Harare,6,50.0,26954.06
+Plantain,Kampala,8,500.0,1017.96
+Irish Potato,Kigali,3,500.0,361.57
+Irish Potato,Tunis,7,50.0,1.73
+Tomato,Kigali,1,50.0,574.44
+Rice,Arusha,9,100.0,2992.4
+Plantain,Kigali,2,25.0,556.02
+Onion,Dakar,3,500.0,359.41
+Plantain,Harare,6,1000.0,1806.27
+Maize,Lusaka,8,1000.0,6.67
+Beans,Kano,9,250.0,1403.39
+Rice,Kano,5,100.0,1658.64
+Tomato,Lagos,7,50.0,888.04
+Irish Potato,Tunis,4,500.0,2.05
+Cocoa,Khartoum,4,250.0,5761.49
+Rice,Yaounde,9,100.0,771.25
+Cassava,Kampala,3,250.0,790.32
+Plantain,Lagos,6,10.0,631.39
+Onion,Cairo,7,100.0,18.79
+Beans,Nairobi,9,250.0,153.0
+Rice,Lusaka,10,10.0,25.23
+Beans,Arusha,5,100.0,3364.33
+Irish Potato,Kinshasa,1,50.0,1190.69
+Cassava,Johannesburg,2,10.0,9.48
+Irish Potato,Addis Ababa,11,50.0,28.52
+Maize,Maputo,11,1000.0,35.36
+Coffee,Harare,3,500.0,23263.89
+Irish Potato,Maputo,7,250.0,37.48
+Coffee,Khartoum,9,10.0,6467.22
+Coffee,Tunis,7,25.0,28.56
+Maize,Khartoum,3,10.0,548.14
+Tomato,Kinshasa,7,50.0,1605.36
+Tomato,Khartoum,4,100.0,729.35
+Irish Potato,Luanda,12,25.0,385.5
+Maize,Kano,7,50.0,645.26
+Irish Potato,Tunis,12,1000.0,1.99
+Cocoa,Tunis,9,1000.0,16.65
+Tomato,Lagos,5,500.0,782.64
+Rice,Tunis,11,1000.0,3.95
+Irish Potato,Addis Ababa,3,10.0,30.96
+Plantain,Arusha,9,250.0,909.41
+Plantain,Lusaka,5,25.0,12.85
+Beans,Addis Ababa,4,500.0,69.54
+Onion,Dakar,2,500.0,363.11
+Cassava,Arusha,1,1000.0,582.32
+Irish Potato,Nairobi,7,100.0,52.1
+Coffee,Arusha,9,500.0,7767.71
+Cassava,Kinshasa,11,1000.0,463.84
+Tomato,Kigali,5,250.0,498.52
+Beans,Addis Ababa,7,25.0,75.21
+Cocoa,Tunis,10,25.0,20.99
+Rice,Nairobi,1,1000.0,138.45
+Cassava,Nairobi,12,10.0,33.33
+Rice,Lagos,10,10.0,1454.79
+Cassava,Kampala,11,50.0,646.86
+Coffee,Addis Ababa,5,50.0,478.51
+Onion,Nairobi,3,25.0,90.33
+Plantain,Khartoum,5,1000.0,626.0
+Irish Potato,Tunis,12,50.0,2.36
+Maize,Maputo,9,500.0,34.49
+Tomato,Cairo,2,500.0,18.31
+Irish Potato,Addis Ababa,1,1000.0,26.09
+Coffee,Khartoum,6,500.0,6554.21
+Cassava,Lusaka,2,10.0,6.94
+Irish Potato,Maputo,10,250.0,42.87
+Rice,Kano,10,25.0,1320.41
+Cocoa,Nairobi,8,100.0,368.07
+Coffee,Dakar,11,50.0,1991.22
+Tomato,Lagos,11,1000.0,816.62
+Irish Potato,Addis Ababa,9,100.0,26.39
+Beans,Lagos,5,100.0,1578.79
+Irish Potato,Dakar,8,100.0,425.79
+Beans,Kinshasa,12,25.0,4506.45
+Maize,Maputo,6,1000.0,31.89
+Tomato,Kumasi,12,100.0,13.27
+Cassava,Kinshasa,4,250.0,742.4
+Tomato,Luanda,12,10.0,478.55
+Rice,Kigali,4,10.0,1156.0
+Tomato,Kinshasa,1,10.0,1570.93
+Cassava,Lagos,1,250.0,257.32
+Rice,Luanda,4,1000.0,886.49
+Cassava,Addis Ababa,2,250.0,23.38
+Beans,Cairo,6,25.0,37.97
+Irish Potato,Khartoum,10,100.0,616.34
+Cassava,Casablanca,10,1000.0,4.78
+Cocoa,Kumasi,8,1000.0,48.46
+Rice,Addis Ababa,4,50.0,101.41
+Irish Potato,Cairo,4,25.0,16.66
+Cocoa,Lagos,6,250.0,8660.35
+Plantain,Nairobi,2,250.0,82.5
+Plantain,Lusaka,6,10.0,11.14
+Cocoa,Kigali,5,1000.0,3273.69
+Cocoa,Addis Ababa,12,50.0,254.94
+Beans,Lagos,11,10.0,1837.95
+Plantain,Lagos,8,50.0,524.1
+Onion,Lagos,4,250.0,797.42
+Cassava,Addis Ababa,9,100.0,21.8
+Maize,Dakar,4,250.0,437.93
+Cassava,Tunis,2,1000.0,1.84
+Rice,Kano,9,100.0,1408.75
+Plantain,Khartoum,10,100.0,681.09
+Beans,Johannesburg,1,10.0,36.13
+Maize,Tunis,1,500.0,2.21
+Plantain,Harare,12,250.0,2044.44
+Plantain,Kinshasa,7,1000.0,864.26
+Maize,Johannesburg,9,25.0,7.02
+Irish Potato,Harare,6,50.0,1590.08
+Cocoa,Addis Ababa,9,250.0,269.68
+Onion,Kano,6,1000.0,678.34
+Maize,Kampala,4,50.0,1299.33
+Tomato,Kigali,8,250.0,650.91
+Onion,Lagos,9,10.0,890.78
+Onion,Nairobi,11,10.0,105.54
+Coffee,Luanda,4,500.0,4322.94
+Cassava,Casablanca,11,100.0,4.63
+Irish Potato,Tunis,7,100.0,1.87
+Onion,Yaounde,8,1000.0,440.99
+Rice,Dakar,1,25.0,838.98
+Tomato,Lagos,4,25.0,782.3
+Cocoa,Casablanca,8,1000.0,64.21
+Coffee,Kano,1,50.0,3475.89
+Cassava,Lagos,5,1000.0,268.54
+Tomato,Kampala,2,250.0,1835.18
+Cocoa,Johannesburg,2,50.0,105.26
+Rice,Kumasi,9,50.0,18.18
+Cassava,Yaounde,10,50.0,165.21
+Onion,Kano,4,25.0,764.38
+Plantain,Kigali,12,50.0,493.65
+Maize,Kano,12,1000.0,605.41
+Maize,Kano,4,10.0,720.78
+Plantain,Yaounde,9,25.0,292.38
+Irish Potato,Cairo,4,500.0,16.69
+Maize,Tunis,11,1000.0,2.02
+Plantain,Kinshasa,12,10.0,1128.18
+Maize,Yaounde,2,250.0,463.11
+Irish Potato,Lagos,10,50.0,1037.18
+Rice,Tunis,4,100.0,6.36
+Onion,Addis Ababa,10,25.0,48.7
+Maize,Kumasi,10,1000.0,9.17
+Plantain,Kumasi,6,250.0,8.64
+Maize,Arusha,6,25.0,944.02
+Tomato,Nairobi,4,500.0,89.15
+Cassava,Nairobi,5,500.0,45.55
+Cocoa,Johannesburg,5,500.0,96.48
+Plantain,Nairobi,4,250.0,70.98
+Coffee,Lagos,5,25.0,4627.02
+Rice,Johannesburg,8,250.0,24.38
+Onion,Maputo,6,1000.0,47.34
+Cassava,Arusha,7,100.0,802.43
+Cocoa,Addis Ababa,7,1000.0,296.03
+Coffee,Khartoum,6,50.0,7876.61
+Coffee,Casablanca,5,10.0,113.87
+Coffee,Tunis,2,10.0,30.49
+Irish Potato,Kumasi,2,25.0,12.79
+Cocoa,Kano,2,1000.0,5000.42
+Tomato,Kano,1,250.0,646.25
+Cassava,Maputo,1,500.0,26.84
+Cocoa,Johannesburg,6,50.0,124.71
+Tomato,Khartoum,1,250.0,777.5
+Beans,Cairo,9,500.0,39.21
+Beans,Kampala,1,25.0,4965.43
+Rice,Casablanca,11,250.0,13.95
+Beans,Cairo,11,250.0,51.19
+Rice,Lusaka,8,500.0,26.19
+Cassava,Maputo,10,250.0,26.2
+Maize,Harare,10,10.0,1696.8
+Cocoa,Tunis,12,1000.0,14.89
+Rice,Kano,5,250.0,1478.6
+Maize,Kigali,11,500.0,406.21
+Coffee,Johannesburg,4,50.0,171.79
+Cocoa,Yaounde,1,500.0,1158.26
+Cassava,Dakar,4,10.0,194.44
+Rice,Kampala,2,50.0,4160.72
+Rice,Tunis,12,25.0,4.63
+Cassava,Addis Ababa,1,500.0,20.76
+Cocoa,Maputo,10,500.0,343.75
+Tomato,Cairo,3,10.0,17.86
+Coffee,Yaounde,8,100.0,2422.53
+Onion,Arusha,9,500.0,1485.36
+Tomato,Nairobi,8,250.0,103.28
+Beans,Kinshasa,9,25.0,3440.99
+Plantain,Luanda,8,1000.0,264.34
+Irish Potato,Harare,11,100.0,1884.97
+Cocoa,Kumasi,4,10.0,55.39
+Rice,Kinshasa,5,25.0,3388.92
+Coffee,Tunis,12,25.0,25.78
+Rice,Johannesburg,10,50.0,21.85
+Cassava,Luanda,6,25.0,196.19
+Maize,Luanda,12,500.0,285.73
+Plantain,Harare,8,250.0,1903.43
+Plantain,Nairobi,1,1000.0,60.13
+Tomato,Maputo,2,50.0,57.48
+Cocoa,Tunis,4,100.0,22.79
+Plantain,Addis Ababa,10,25.0,37.33
+Cocoa,Dakar,1,1000.0,3038.06
+Onion,Addis Ababa,12,50.0,52.59
+Cassava,Casablanca,2,250.0,5.03
+Rice,Lagos,7,250.0,1743.32
+Cassava,Lagos,4,100.0,325.78
+Cocoa,Harare,8,250.0,19161.04
+Cassava,Tunis,9,250.0,1.9
+Beans,Nairobi,9,10.0,171.96
+Maize,Khartoum,5,10.0,512.47
+Onion,Maputo,6,500.0,56.28
+Tomato,Harare,4,250.0,2773.56
+Coffee,Kumasi,2,1000.0,29.64
+Cassava,Kinshasa,5,10.0,836.38
+Rice,Nairobi,8,100.0,162.32
+Cassava,Kampala,3,100.0,811.05
+Cocoa,Maputo,8,1000.0,363.71
+Cocoa,Kumasi,10,50.0,50.9
+Beans,Kano,5,50.0,1408.61
+Plantain,Khartoum,6,50.0,688.5
+Plantain,Casablanca,9,500.0,7.22
+Tomato,Kumasi,6,250.0,11.36
+Irish Potato,Lusaka,1,50.0,11.99
+Coffee,Kinshasa,7,100.0,12384.64
+Maize,Lagos,2,100.0,969.9
+Rice,Yaounde,7,500.0,829.79
+Rice,Yaounde,11,1000.0,731.44
+Plantain,Luanda,11,100.0,333.3
+Irish Potato,Johannesburg,5,50.0,10.21
+Onion,Arusha,12,10.0,1316.85
+Cocoa,Yaounde,7,250.0,1520.32
+Tomato,Cairo,3,100.0,18.85
+Cassava,Kinshasa,5,25.0,846.02
+Cocoa,Maputo,12,250.0,344.63
+Cassava,Lagos,10,1000.0,240.75
+Coffee,Maputo,1,250.0,463.51
+Maize,Khartoum,3,50.0,597.46
+Rice,Kigali,1,100.0,1106.11
+Cassava,Dakar,5,100.0,209.82
+Irish Potato,Arusha,4,500.0,1298.52
+Coffee,Dakar,7,25.0,2347.14
+Plantain,Kinshasa,5,1000.0,982.52
+Irish Potato,Johannesburg,5,100.0,10.31
+Plantain,Cairo,4,50.0,23.26
+Rice,Johannesburg,3,100.0,29.29
+Irish Potato,Kinshasa,9,500.0,897.81
+Onion,Kinshasa,7,500.0,1328.17
+Maize,Johannesburg,8,25.0,6.38
+Rice,Arusha,9,250.0,3049.45
+Beans,Tunis,2,1000.0,5.23
+Maize,Yaounde,3,1000.0,407.47
+Plantain,Nairobi,12,50.0,72.3
+Cocoa,Lusaka,9,100.0,115.23
+Irish Potato,Kinshasa,7,250.0,928.93
+Plantain,Yaounde,4,25.0,376.13
+Plantain,Harare,10,1000.0,1533.64
+Rice,Arusha,10,10.0,3188.2
+Coffee,Arusha,4,100.0,9262.64
+Beans,Nairobi,6,100.0,141.54
+Coffee,Kinshasa,4,50.0,12371.05
+Beans,Kampala,4,500.0,3842.15
+Rice,Kumasi,2,50.0,20.53
+Cocoa,Nairobi,9,50.0,361.94
+Maize,Addis Ababa,7,25.0,27.0
+Irish Potato,Kampala,1,100.0,2580.94
+Maize,Johannesburg,12,10.0,7.56
+Plantain,Kampala,3,500.0,1442.01
+Beans,Maputo,3,25.0,117.89
+Irish Potato,Casablanca,12,10.0,6.86
+Maize,Kigali,7,500.0,324.95
+Plantain,Yaounde,5,500.0,366.19
+Plantain,Lusaka,7,250.0,10.83
+Beans,Lusaka,10,1000.0,32.8
+Plantain,Addis Ababa,1,10.0,45.66
+Plantain,Cairo,2,250.0,25.36
+Cocoa,Khartoum,4,25.0,6108.72
+Cassava,Yaounde,2,10.0,175.33
+Onion,Dakar,8,250.0,495.43
+Tomato,Lagos,7,10.0,971.61
+Irish Potato,Kumasi,2,250.0,13.23
+Rice,Arusha,10,250.0,2802.99
+Irish Potato,Tunis,7,1000.0,1.52
+Plantain,Kinshasa,9,10.0,846.1
+Cassava,Khartoum,10,500.0,334.71
+Plantain,Harare,11,50.0,1900.72
+Irish Potato,Maputo,5,1000.0,40.61
+Onion,Kano,6,250.0,739.52
+Cassava,Arusha,8,50.0,801.99
+Irish Potato,Kampala,11,25.0,2193.23
+Cassava,Yaounde,3,250.0,181.55
+Beans,Nairobi,6,100.0,143.64
+Irish Potato,Johannesburg,4,100.0,10.75
+Irish Potato,Lagos,9,250.0,897.32
+Cocoa,Khartoum,12,1000.0,4136.63
+Maize,Casablanca,3,25.0,7.45
+Plantain,Kigali,2,25.0,535.98
+Plantain,Casablanca,3,500.0,10.28
+Rice,Harare,12,250.0,4733.17
+Plantain,Dakar,8,10.0,309.67
+Rice,Cairo,7,100.0,43.56
+Irish Potato,Arusha,5,250.0,1358.49
+Plantain,Kano,1,500.0,570.72
+Onion,Dakar,4,100.0,408.57
+Beans,Addis Ababa,7,500.0,65.83
+Beans,Lusaka,12,100.0,41.24
+Coffee,Cairo,9,100.0,226.29
+Plantain,Kumasi,5,50.0,10.27
+Cocoa,Cairo,8,100.0,174.43
+Cassava,Nairobi,10,250.0,32.24
+Maize,Nairobi,6,25.0,59.44
+Cocoa,Arusha,2,25.0,3811.81
+Rice,Tunis,7,10.0,5.14
+Tomato,Kano,4,100.0,649.02
+Beans,Tunis,4,25.0,5.65
+Beans,Luanda,5,10.0,845.78
+Tomato,Kumasi,11,1000.0,12.64
+Onion,Harare,7,1000.0,2095.35
+Rice,Khartoum,5,25.0,1711.86
+Plantain,Cairo,2,50.0,26.35
+Rice,Kumasi,6,1000.0,17.89
+Onion,Harare,4,1000.0,1953.42
+Beans,Luanda,5,100.0,790.38
+Cocoa,Kumasi,7,100.0,63.47
+Tomato,Casablanca,4,25.0,7.91
+Cassava,Yaounde,11,10.0,143.62
+Irish Potato,Khartoum,7,10.0,502.4
+Tomato,Lusaka,8,10.0,16.73
+Cassava,Lusaka,5,250.0,8.99
+Rice,Lusaka,7,250.0,28.99
+Coffee,Johannesburg,9,1000.0,126.92
+Irish Potato,Casablanca,9,50.0,5.24
+Coffee,Arusha,8,10.0,7812.52
+Cocoa,Arusha,2,500.0,3464.94
+Onion,Lagos,9,50.0,1004.45
+Plantain,Maputo,1,1000.0,47.17
+Coffee,Kampala,2,500.0,10398.44
+Beans,Luanda,10,100.0,932.14
+Onion,Kampala,7,10.0,2743.32
+Onion,Khartoum,11,10.0,799.93
+Tomato,Lagos,12,100.0,903.12
+Cocoa,Lagos,2,250.0,7342.87
+Cassava,Casablanca,3,250.0,5.95
+Cassava,Luanda,12,100.0,146.99
+Tomato,Lusaka,9,250.0,19.91
+Onion,Yaounde,3,250.0,414.74
+Irish Potato,Kano,9,250.0,821.23
+Irish Potato,Arusha,6,10.0,1222.32
+Coffee,Kampala,3,250.0,10913.91
+Coffee,Kinshasa,2,50.0,12128.77
+Cocoa,Johannesburg,1,100.0,92.36
+Tomato,Arusha,11,1000.0,1332.11
+Onion,Kinshasa,8,250.0,1233.53
+Cassava,Kigali,1,10.0,273.16
+Onion,Johannesburg,7,10.0,12.34
+Irish Potato,Maputo,4,50.0,46.34
+Beans,Maputo,6,250.0,98.28
+Cocoa,Kigali,10,1000.0,2680.97
+Plantain,Addis Ababa,6,25.0,40.3
+Rice,Kigali,8,100.0,939.53
+Tomato,Addis Ababa,5,10.0,45.01
+Cocoa,Yaounde,1,250.0,1220.7
+Beans,Maputo,5,10.0,105.82
+Rice,Arusha,2,1000.0,3037.82
+Irish Potato,Harare,11,10.0,2071.66
+Plantain,Harare,11,50.0,1936.67
+Onion,Maputo,6,100.0,56.03
+Rice,Harare,9,1000.0,4513.59
+Cassava,Yaounde,6,10.0,191.57
+Maize,Maputo,8,250.0,32.93
+Tomato,Kampala,11,25.0,2484.69
+Cassava,Johannesburg,10,100.0,9.02
+Tomato,Yaounde,4,50.0,461.21
+Coffee,Cairo,8,25.0,261.41
+Maize,Cairo,4,10.0,19.63
+Maize,Kinshasa,7,500.0,722.56
+Maize,Luanda,8,50.0,223.64
+Maize,Harare,10,25.0,1730.43
+Cassava,Kumasi,3,250.0,4.65
+Cocoa,Maputo,7,50.0,435.98
+Beans,Casablanca,9,100.0,18.87
+Rice,Yaounde,3,1000.0,739.25
+Rice,Khartoum,2,100.0,1734.95
+Cassava,Kano,4,50.0,256.57
+Coffee,Khartoum,3,25.0,7062.27
+Irish Potato,Maputo,4,250.0,46.53
+Plantain,Addis Ababa,9,250.0,35.53
+Maize,Luanda,4,50.0,304.55
+Rice,Kigali,8,250.0,1028.24
+Beans,Harare,2,25.0,5992.33
+Cocoa,Lagos,12,25.0,6632.76
+Coffee,Addis Ababa,10,50.0,393.81
+Maize,Kampala,9,25.0,1006.73
+Cassava,Kumasi,8,250.0,4.27
+Tomato,Cairo,3,1000.0,14.79
+Onion,Nairobi,4,500.0,88.67
+Plantain,Kinshasa,7,10.0,988.94
+Maize,Dakar,1,50.0,458.46
+Beans,Khartoum,1,10.0,2017.69
+Beans,Harare,1,500.0,6204.16
+Tomato,Yaounde,4,25.0,474.25
+Tomato,Johannesburg,4,50.0,13.27
+Rice,Kampala,6,50.0,4333.45
+Cocoa,Kano,10,1000.0,5905.52
+Irish Potato,Khartoum,2,1000.0,553.19
+Maize,Kigali,1,250.0,420.66
+Cassava,Kano,1,25.0,242.81
+Cocoa,Harare,4,1000.0,15208.84
+Tomato,Kigali,7,1000.0,497.54
+Rice,Nairobi,2,1000.0,154.49
+Onion,Nairobi,1,100.0,91.97
+Irish Potato,Lagos,10,100.0,888.26
+Maize,Kano,12,10.0,798.59
+Tomato,Yaounde,2,25.0,492.23
+Cassava,Kampala,8,10.0,731.18
+Beans,Lusaka,3,250.0,34.24
+Cassava,Johannesburg,7,10.0,9.97
+Plantain,Luanda,7,500.0,316.27
+Cocoa,Luanda,9,250.0,3506.2
+Cocoa,Cairo,2,10.0,162.03
+Cassava,Kumasi,12,10.0,4.49
+Tomato,Kigali,12,500.0,597.03
+Onion,Kumasi,11,500.0,12.53
+Onion,Nairobi,10,25.0,102.36
+Cocoa,Lagos,7,500.0,7721.91
+Cassava,Lusaka,3,10.0,7.49
+Coffee,Lusaka,6,25.0,178.95
+Rice,Casablanca,3,100.0,20.19
+Tomato,Tunis,5,10.0,2.69
+Maize,Kumasi,6,1000.0,8.78
+Cassava,Dakar,9,50.0,169.07
+Coffee,Johannesburg,9,1000.0,117.73
+Tomato,Kumasi,11,100.0,13.82
+Cassava,Kinshasa,8,1000.0,622.53
+Tomato,Khartoum,7,100.0,857.91
+Coffee,Casablanca,9,10.0,84.8
+Maize,Kumasi,10,50.0,10.26
+Tomato,Nairobi,1,10.0,84.82
+Cassava,Kano,1,100.0,205.0
+Maize,Arusha,6,25.0,949.69
+Rice,Khartoum,4,10.0,1987.05
+Rice,Johannesburg,3,250.0,28.75
+Plantain,Kigali,7,500.0,437.2
+Beans,Tunis,2,50.0,6.25
+Onion,Lusaka,6,10.0,13.76
+Tomato,Kano,2,25.0,633.92
+Maize,Harare,2,50.0,1906.79
+Tomato,Cairo,6,50.0,19.61
+Irish Potato,Johannesburg,7,100.0,9.31
+Maize,Khartoum,5,500.0,448.46
+Cocoa,Casablanca,2,10.0,64.92
+Beans,Addis Ababa,6,25.0,71.88
+Coffee,Kano,3,10.0,3973.36
+Rice,Kano,2,1000.0,1329.8
+Plantain,Tunis,10,250.0,2.96
+Beans,Kano,3,500.0,1491.61
+Maize,Kano,10,50.0,673.56
+Coffee,Cairo,10,250.0,195.13
+Plantain,Harare,3,500.0,2268.64
+Maize,Kinshasa,11,100.0,860.85
+Maize,Luanda,6,25.0,282.88
+Maize,Arusha,6,50.0,900.76
+Rice,Tunis,7,1000.0,4.25
+Coffee,Tunis,3,50.0,29.85
+Rice,Kampala,3,10.0,4505.27
+Beans,Lusaka,10,500.0,36.08
+Cocoa,Maputo,4,50.0,420.35
+Plantain,Kumasi,11,10.0,9.35
+Cassava,Casablanca,4,50.0,6.28
+Coffee,Casablanca,7,250.0,92.32
+Cocoa,Addis Ababa,3,50.0,306.26
+Cocoa,Johannesburg,2,50.0,97.72
+Plantain,Lusaka,4,250.0,12.6
+Rice,Cairo,1,1000.0,33.94
+Cocoa,Yaounde,1,25.0,1261.38
+Irish Potato,Cairo,8,10.0,15.2
+Plantain,Casablanca,4,1000.0,9.21
+Tomato,Yaounde,6,1000.0,460.33
+Plantain,Arusha,7,250.0,945.84
+Coffee,Luanda,7,100.0,4214.89
+Cocoa,Kumasi,5,250.0,62.25
+Onion,Nairobi,3,500.0,87.93
+Cocoa,Kano,9,10.0,6929.2
+Beans,Harare,11,10.0,6742.09
+Beans,Tunis,6,1000.0,4.26
+Cocoa,Kinshasa,5,100.0,10188.0
+Cocoa,Tunis,9,10.0,20.7
+Coffee,Kumasi,7,100.0,36.0
+Beans,Lagos,8,25.0,1532.88
+Maize,Maputo,9,10.0,40.11
+Cassava,Yaounde,6,50.0,190.06
+Tomato,Cairo,5,25.0,20.56
+Onion,Kano,11,1000.0,662.83
+Beans,Kinshasa,9,100.0,3412.2
+Coffee,Khartoum,6,25.0,8207.3
+Tomato,Johannesburg,12,50.0,14.11
+Beans,Nairobi,8,250.0,157.52
+Irish Potato,Kampala,1,10.0,2270.84
+Tomato,Yaounde,2,50.0,479.84
+Onion,Maputo,4,50.0,49.11
+Maize,Lusaka,10,100.0,8.8
+Maize,Nairobi,2,1000.0,62.23
+Cassava,Luanda,3,1000.0,159.03
+Maize,Maputo,4,100.0,41.1
+Rice,Nairobi,5,50.0,179.27
+Maize,Maputo,1,250.0,42.4
+Beans,Addis Ababa,10,1000.0,70.46
+Plantain,Cairo,10,100.0,21.48
+Rice,Johannesburg,9,100.0,20.8
+Beans,Luanda,3,1000.0,831.96
+Cassava,Cairo,5,250.0,12.01
+Coffee,Johannesburg,7,250.0,167.22
+Irish Potato,Arusha,8,100.0,1154.27
+Coffee,Nairobi,12,500.0,395.98
+Rice,Kumasi,7,500.0,17.46
+Irish Potato,Maputo,5,50.0,46.43
+Coffee,Cairo,12,100.0,208.58
+Onion,Harare,12,500.0,1964.77
+Irish Potato,Casablanca,6,500.0,4.99
+Beans,Lagos,7,1000.0,1402.84
+Tomato,Khartoum,3,1000.0,584.86
+Cocoa,Maputo,11,250.0,365.91
+Maize,Tunis,10,500.0,2.04
+Onion,Yaounde,11,10.0,470.39
+Irish Potato,Tunis,12,100.0,2.42
+Coffee,Kampala,5,500.0,12443.58
+Beans,Nairobi,12,10.0,180.0
+Maize,Kampala,8,250.0,997.21
+Onion,Arusha,9,250.0,1383.71
+Cassava,Addis Ababa,5,1000.0,23.84
+Plantain,Yaounde,6,25.0,328.09
+Onion,Casablanca,6,100.0,8.04
+Tomato,Kumasi,3,500.0,10.9
+Onion,Johannesburg,4,50.0,9.82
+Cassava,Lagos,1,500.0,241.33
+Plantain,Luanda,7,250.0,318.85
+Plantain,Kigali,8,100.0,406.58
+Cocoa,Kampala,4,1000.0,4468.0
+Irish Potato,Yaounde,1,100.0,523.82
+Cassava,Addis Ababa,3,500.0,22.55
+Cassava,Addis Ababa,11,100.0,19.42
+Plantain,Dakar,2,500.0,357.69
+Irish Potato,Kigali,2,10.0,382.44
+Onion,Maputo,8,50.0,68.57
+Rice,Luanda,11,500.0,740.15
+Tomato,Casablanca,9,500.0,8.94
+Beans,Kinshasa,1,50.0,3944.15
+Beans,Kano,4,10.0,1527.45
+Plantain,Yaounde,9,1000.0,259.55
+Cassava,Cairo,9,50.0,11.05
+Maize,Tunis,12,25.0,2.37
+Irish Potato,Nairobi,7,25.0,45.86
+Onion,Kampala,4,25.0,2494.53
+Rice,Addis Ababa,7,250.0,89.97
+Coffee,Harare,7,250.0,25293.18
+Rice,Kampala,11,50.0,3430.85
+Plantain,Harare,3,25.0,2525.36
+Tomato,Kinshasa,5,250.0,1531.19
+Irish Potato,Yaounde,3,250.0,445.08
+Tomato,Kampala,3,10.0,2101.74
+Plantain,Johannesburg,10,50.0,10.11
+Rice,Kano,7,500.0,1292.55
+Cassava,Kinshasa,7,100.0,721.19
+Irish Potato,Nairobi,2,500.0,57.27
+Beans,Kano,9,500.0,1324.2
+Cassava,Dakar,4,25.0,209.2
+Irish Potato,Lagos,12,25.0,1054.71
+Plantain,Arusha,10,50.0,982.46
+Plantain,Kampala,11,50.0,1216.38
+Plantain,Kano,3,25.0,683.89
+Beans,Yaounde,3,250.0,844.24
+Cassava,Cairo,5,25.0,13.5
+Coffee,Dakar,2,250.0,2491.72
+Cocoa,Harare,9,50.0,16793.4
+Coffee,Maputo,10,1000.0,432.08
+Coffee,Johannesburg,4,25.0,164.14
+Maize,Kigali,1,25.0,437.53
+Irish Potato,Casablanca,2,25.0,6.75
+Plantain,Addis Ababa,5,1000.0,39.37
+Rice,Dakar,9,10.0,678.78
+Onion,Kano,10,100.0,788.11
+Coffee,Cairo,4,50.0,248.97
+Beans,Nairobi,1,100.0,185.71
+Maize,Arusha,6,250.0,968.0
+Plantain,Kano,1,25.0,606.2
+Cassava,Lusaka,10,100.0,5.98
+Irish Potato,Yaounde,3,500.0,477.35
+Plantain,Maputo,11,500.0,49.33
+Rice,Kigali,5,500.0,1139.33
+Plantain,Casablanca,2,250.0,9.86
+Onion,Yaounde,2,100.0,420.33
+Irish Potato,Maputo,11,1000.0,38.67
+Plantain,Kigali,2,500.0,462.45
+Cassava,Luanda,6,250.0,199.75
+Coffee,Kampala,9,1000.0,9040.37
+Beans,Kigali,12,500.0,1236.92
+Onion,Arusha,6,25.0,1375.09
+Cocoa,Tunis,1,10.0,18.16
+Cassava,Lagos,11,1000.0,216.78
+Plantain,Arusha,11,10.0,995.02
+Irish Potato,Casablanca,2,500.0,5.65
+Rice,Addis Ababa,6,25.0,100.69
+Maize,Luanda,3,25.0,290.62
+Beans,Addis Ababa,5,10.0,70.1
+Cocoa,Kano,6,500.0,7522.35
+Cassava,Addis Ababa,3,250.0,23.9
+Onion,Luanda,5,1000.0,354.24
+Onion,Kinshasa,6,500.0,1419.72
+Beans,Kigali,8,10.0,1054.71
+Tomato,Khartoum,8,10.0,960.72
+Cassava,Luanda,6,25.0,191.42
+Onion,Luanda,3,1000.0,314.06
+Coffee,Addis Ababa,8,250.0,380.37
+Onion,Addis Ababa,1,10.0,47.13
+Tomato,Johannesburg,2,250.0,12.05
+Beans,Maputo,8,50.0,110.01
+Tomato,Nairobi,4,25.0,80.72
+Plantain,Kampala,4,10.0,1451.0
+Beans,Lusaka,10,250.0,36.85
+Cassava,Maputo,12,100.0,25.93
+Cocoa,Johannesburg,3,10.0,108.93
+Rice,Dakar,12,50.0,747.26
+Tomato,Lusaka,10,500.0,16.41
+Beans,Harare,2,100.0,5925.95
+Plantain,Kigali,5,100.0,474.41
+Tomato,Addis Ababa,10,1000.0,40.17
+Onion,Casablanca,6,250.0,6.99
+Plantain,Casablanca,4,50.0,9.88
+Irish Potato,Lusaka,12,10.0,11.24
+Beans,Lagos,5,250.0,1510.59
+Plantain,Lusaka,1,250.0,11.78
+Rice,Kigali,8,250.0,880.9
+Maize,Lagos,7,50.0,746.42
+Coffee,Dakar,11,50.0,2101.1
+Cassava,Arusha,5,500.0,849.33
+Onion,Kigali,6,10.0,516.93
+Cocoa,Nairobi,11,250.0,322.26
+Cassava,Luanda,7,50.0,187.83
+Maize,Lagos,2,250.0,926.62
+Tomato,Dakar,11,25.0,524.7
+Cocoa,Kumasi,7,1000.0,51.83
+Cassava,Nairobi,2,1000.0,34.09
+Cocoa,Cairo,5,500.0,175.86
+Beans,Kigali,11,100.0,1198.33
+Plantain,Khartoum,2,500.0,746.96
+Beans,Lagos,7,10.0,1525.78
+Beans,Tunis,9,100.0,6.07
+Coffee,Harare,9,50.0,22342.16
+Cocoa,Kumasi,7,25.0,62.59
+Irish Potato,Kinshasa,10,250.0,1005.35
+Tomato,Dakar,7,250.0,457.45
+Beans,Yaounde,7,100.0,899.03
+Tomato,Tunis,1,100.0,2.92
+Cassava,Dakar,7,50.0,180.59
+Beans,Tunis,12,100.0,6.73
+Irish Potato,Cairo,6,25.0,14.05
+Tomato,Addis Ababa,4,1000.0,34.59
+Rice,Johannesburg,3,100.0,28.8
+Maize,Kumasi,2,1000.0,10.24
+Irish Potato,Johannesburg,3,100.0,11.1
+Onion,Casablanca,1,25.0,5.59
+Cassava,Harare,5,100.0,1387.35
+Rice,Kano,12,25.0,1392.57
+Rice,Harare,10,25.0,4503.64
+Rice,Arusha,9,10.0,3171.88
+Cocoa,Lagos,2,50.0,6766.38
+Onion,Luanda,10,500.0,432.09
+Maize,Johannesburg,3,1000.0,6.72
+Onion,Kumasi,1,50.0,12.96
+Plantain,Kumasi,2,250.0,9.7
+Coffee,Addis Ababa,5,10.0,481.27
+Tomato,Cairo,1,25.0,18.72
+Plantain,Kumasi,12,100.0,9.91
+Plantain,Kano,8,25.0,507.26
+Onion,Kumasi,9,100.0,14.95
+Rice,Kano,8,100.0,1342.99
+Cassava,Arusha,1,50.0,682.34
+Beans,Arusha,2,100.0,3621.54
+Beans,Khartoum,11,1000.0,1673.31
+Irish Potato,Kano,11,50.0,791.64
+Cassava,Nairobi,9,10.0,43.8
+Irish Potato,Addis Ababa,2,25.0,30.5
+Cassava,Dakar,12,500.0,164.63
+Rice,Tunis,7,25.0,4.68
+Irish Potato,Kampala,5,25.0,1937.25
+Cassava,Lagos,12,25.0,267.85
+Plantain,Nairobi,6,100.0,71.75
+Onion,Lagos,10,100.0,947.12
+Rice,Kigali,11,25.0,913.08
+Beans,Addis Ababa,6,1000.0,60.55
+Cassava,Luanda,6,250.0,188.43
+Onion,Casablanca,8,1000.0,6.91
+Tomato,Dakar,10,250.0,489.72
+Cocoa,Kumasi,1,50.0,52.19
+Cocoa,Kinshasa,7,50.0,10926.52
+Cocoa,Cairo,7,500.0,178.86
+Onion,Luanda,10,100.0,423.78
+Onion,Arusha,5,25.0,1351.28
+Maize,Kigali,6,1000.0,348.54
+Tomato,Tunis,6,100.0,3.08
+Rice,Kinshasa,3,50.0,3507.86
+Tomato,Dakar,6,500.0,413.13
+Irish Potato,Kigali,10,25.0,333.01
+Cassava,Kumasi,2,500.0,4.4
+Irish Potato,Lusaka,10,1000.0,9.12
+Irish Potato,Dakar,5,250.0,445.92
+Coffee,Kampala,2,10.0,11003.29
+Beans,Harare,6,250.0,4618.58
+Coffee,Casablanca,3,50.0,100.08
+Cassava,Kigali,2,50.0,295.68
+Cocoa,Luanda,4,100.0,3518.7
+Tomato,Kano,9,25.0,847.78
+Irish Potato,Maputo,7,500.0,34.68
+Tomato,Arusha,3,50.0,1207.28
+Tomato,Harare,5,250.0,2645.66
+Beans,Lagos,8,250.0,1544.64
+Beans,Addis Ababa,4,1000.0,67.29
+Coffee,Kigali,1,500.0,3958.63
+Beans,Tunis,4,50.0,5.81
+Cocoa,Maputo,8,100.0,429.35
+Rice,Lagos,11,250.0,1410.13
+Coffee,Addis Ababa,7,100.0,411.5
+Plantain,Maputo,8,1000.0,40.88
+Beans,Khartoum,8,25.0,1717.72
+Cocoa,Casablanca,7,500.0,72.27
+Onion,Kigali,10,250.0,515.67
+Tomato,Tunis,2,100.0,2.59
+Tomato,Tunis,1,500.0,2.46
+Tomato,Maputo,8,50.0,68.51
+Irish Potato,Nairobi,1,50.0,69.97
+Beans,Lagos,1,10.0,1882.2
+Irish Potato,Cairo,1,50.0,19.57
+Beans,Casablanca,9,250.0,18.01
+Beans,Luanda,1,10.0,998.14
+Cassava,Arusha,8,100.0,767.91
+Plantain,Yaounde,4,50.0,382.79
+Maize,Arusha,9,10.0,891.17
+Rice,Tunis,8,100.0,4.65
+Cassava,Kigali,4,1000.0,267.88
+Irish Potato,Maputo,2,100.0,53.71
+Plantain,Khartoum,12,250.0,665.99
+Tomato,Kigali,10,10.0,618.48
+Rice,Casablanca,6,1000.0,15.23
+Onion,Kumasi,11,10.0,13.54
+Coffee,Casablanca,3,10.0,89.83
+Coffee,Johannesburg,8,500.0,144.38
+Coffee,Tunis,12,10.0,26.64
+Onion,Kampala,11,10.0,2535.74
+Maize,Kinshasa,11,10.0,998.49
+Maize,Kigali,11,500.0,391.03
+Onion,Kano,7,100.0,849.61
+Irish Potato,Lusaka,3,50.0,11.64
+Cassava,Kumasi,7,100.0,4.68
+Maize,Lusaka,5,10.0,8.92
+Cassava,Lusaka,6,25.0,7.69
+Irish Potato,Addis Ababa,6,25.0,26.08
+Plantain,Yaounde,9,250.0,277.68
+Coffee,Johannesburg,5,25.0,165.64
+Onion,Nairobi,6,500.0,97.95
+Irish Potato,Kano,7,25.0,692.28
+Cocoa,Yaounde,6,100.0,1618.45
+Onion,Maputo,12,500.0,45.02
+Beans,Tunis,7,500.0,4.87
+Beans,Yaounde,4,10.0,956.86
+Onion,Kinshasa,4,50.0,1177.35
+Tomato,Kampala,6,100.0,2469.63
+Onion,Kano,11,10.0,711.83
+Plantain,Khartoum,12,25.0,655.11
+Irish Potato,Yaounde,6,25.0,377.87
+Coffee,Lusaka,9,100.0,157.87
+Beans,Kinshasa,7,500.0,2947.69
+Plantain,Khartoum,6,100.0,668.52
+Irish Potato,Yaounde,2,25.0,499.02
+Plantain,Cairo,12,500.0,20.88
+Plantain,Kigali,12,10.0,436.05
+Tomato,Harare,10,10.0,3286.28
+Coffee,Kampala,11,1000.0,7781.24
+Plantain,Khartoum,11,250.0,671.38
+Cassava,Kano,3,10.0,262.03
+Plantain,Kinshasa,5,50.0,1011.37
+Tomato,Johannesburg,12,100.0,13.33
+Cocoa,Casablanca,4,250.0,78.78
+Rice,Dakar,9,10.0,740.05
+Rice,Johannesburg,3,50.0,27.72
+Maize,Harare,1,100.0,1961.29
+Cassava,Lagos,10,500.0,245.36
+Beans,Harare,6,1000.0,4351.45
+Maize,Yaounde,10,50.0,419.38
+Coffee,Johannesburg,1,250.0,131.39
+Cocoa,Arusha,11,100.0,3721.07
+Maize,Kigali,5,500.0,397.62
+Coffee,Kumasi,8,1000.0,28.52
+Cocoa,Casablanca,1,500.0,60.5
+Cassava,Nairobi,12,10.0,36.84
+Plantain,Kinshasa,11,10.0,960.92
+Plantain,Kigali,5,1000.0,423.99
+Beans,Yaounde,9,100.0,949.09
+Plantain,Kampala,12,10.0,1273.29
+Plantain,Kano,6,1000.0,453.52
+Cocoa,Khartoum,7,50.0,5853.06
+Onion,Kigali,9,25.0,568.37
+Coffee,Lusaka,11,1000.0,116.22
+Rice,Casablanca,10,250.0,13.15
+Irish Potato,Cairo,1,25.0,19.92
+Beans,Tunis,2,25.0,5.81
+Cassava,Kampala,6,500.0,791.9
+Irish Potato,Yaounde,3,10.0,462.36
+Irish Potato,Addis Ababa,4,25.0,31.33
+Tomato,Kinshasa,7,1000.0,1433.64
+Plantain,Kampala,10,500.0,1038.4
+Plantain,Arusha,2,500.0,1097.56
+Cassava,Lusaka,1,50.0,6.36
+Onion,Kampala,6,500.0,2566.44
+Cocoa,Maputo,9,500.0,412.31
+Plantain,Nairobi,8,25.0,66.73
+Coffee,Johannesburg,7,1000.0,136.35
+Rice,Yaounde,10,25.0,825.33
+Onion,Kano,9,500.0,789.29
+Onion,Lagos,12,500.0,789.04
+Coffee,Nairobi,4,10.0,578.85
+Cassava,Addis Ababa,8,25.0,22.3
+Cassava,Arusha,5,250.0,848.82
+Plantain,Kampala,7,10.0,1169.26
+Cassava,Nairobi,12,50.0,37.63
+Cocoa,Kinshasa,2,50.0,9680.66
+Maize,Johannesburg,10,500.0,6.51
+Rice,Lagos,5,50.0,1937.54
+Cassava,Addis Ababa,2,1000.0,19.73
+Plantain,Kumasi,11,100.0,8.76
+Beans,Casablanca,4,100.0,17.91
+Tomato,Kinshasa,7,1000.0,1497.54
+Cocoa,Lusaka,4,100.0,114.51
+Onion,Kumasi,9,250.0,14.15
+Irish Potato,Kinshasa,9,50.0,979.38
+Rice,Addis Ababa,3,1000.0,89.38
+Cocoa,Kampala,8,25.0,4768.28
+Coffee,Khartoum,11,25.0,6111.49
+Coffee,Lagos,1,250.0,3565.93
+Coffee,Casablanca,2,250.0,85.33
+Cocoa,Arusha,8,500.0,3553.16
+Beans,Casablanca,11,250.0,19.42
+Irish Potato,Arusha,5,1000.0,1156.8
+Rice,Maputo,3,10.0,120.27
+Irish Potato,Tunis,12,100.0,2.36
+Cassava,Khartoum,9,10.0,393.81
+Maize,Dakar,12,100.0,405.57
+Cassava,Yaounde,2,500.0,163.57
+Onion,Casablanca,10,250.0,6.67
+Maize,Kumasi,6,50.0,9.63
+Cocoa,Kampala,5,500.0,5082.65
+Irish Potato,Johannesburg,10,100.0,10.39
+Coffee,Kumasi,8,10.0,34.96
+Onion,Cairo,11,50.0,17.35
+Coffee,Arusha,9,10.0,8492.64
+Coffee,Maputo,12,500.0,466.0
+Maize,Johannesburg,1,500.0,6.92
+Cocoa,Arusha,12,100.0,3476.92
+Onion,Addis Ababa,8,250.0,54.1
+Plantain,Tunis,2,10.0,3.71
+Beans,Yaounde,9,10.0,1028.13
+Coffee,Nairobi,3,10.0,576.83
+Onion,Casablanca,2,50.0,6.05
+Irish Potato,Khartoum,3,25.0,583.01
+Beans,Lagos,3,10.0,1797.19
+Cassava,Nairobi,6,250.0,43.53
+Tomato,Kigali,11,500.0,532.08
+Rice,Nairobi,5,250.0,195.54
+Coffee,Arusha,1,25.0,8103.4
+Maize,Kampala,7,250.0,1015.93
+Cassava,Nairobi,8,100.0,42.51
+Plantain,Addis Ababa,2,1000.0,37.82
+Irish Potato,Dakar,6,500.0,397.42
+Rice,Kinshasa,12,10.0,3260.41
+Plantain,Kano,9,250.0,487.45
+Coffee,Kinshasa,9,1000.0,9676.42
+Plantain,Maputo,1,100.0,55.85
+Maize,Harare,3,1000.0,1594.09
+Cocoa,Casablanca,12,500.0,56.69
+Beans,Arusha,2,1000.0,3203.12
+Cassava,Kampala,11,50.0,655.56
+Beans,Harare,5,1000.0,4013.86
+Rice,Lusaka,5,250.0,28.77
+Coffee,Yaounde,11,25.0,2279.09
+Tomato,Khartoum,2,1000.0,653.31
+Maize,Lusaka,9,100.0,8.59
+Plantain,Lagos,7,10.0,652.26
+Plantain,Cairo,8,100.0,21.84
+Onion,Luanda,10,250.0,409.48
+Plantain,Kumasi,8,250.0,8.47
+Cocoa,Addis Ababa,6,25.0,333.92
+Rice,Lagos,2,100.0,1714.07
+Plantain,Lagos,9,250.0,510.74
+Cocoa,Addis Ababa,1,250.0,258.36
+Coffee,Arusha,7,25.0,9211.75
+Maize,Casablanca,6,10.0,6.79
+Plantain,Khartoum,9,1000.0,536.97
+Irish Potato,Addis Ababa,11,100.0,28.9
+Plantain,Kinshasa,6,10.0,913.68
+Irish Potato,Yaounde,5,1000.0,345.91
+Coffee,Johannesburg,6,25.0,161.53
+Cocoa,Luanda,5,100.0,4126.73
+Beans,Johannesburg,2,50.0,35.63
+Coffee,Addis Ababa,5,1000.0,395.47
+Onion,Kampala,6,50.0,2735.87
+Cocoa,Lagos,1,250.0,6660.3
+Maize,Kumasi,5,10.0,10.9
+Irish Potato,Yaounde,9,1000.0,368.73
+Rice,Maputo,5,500.0,109.21
+Cassava,Casablanca,6,500.0,6.08
+Maize,Casablanca,9,25.0,6.18
+Irish Potato,Yaounde,6,50.0,415.14
+Beans,Cairo,3,100.0,45.61
+Cocoa,Maputo,6,1000.0,431.78
+Irish Potato,Addis Ababa,11,50.0,30.33
+Cocoa,Lagos,10,10.0,7334.44
+Beans,Kampala,1,50.0,4960.07
+Beans,Arusha,4,250.0,3377.48
+Beans,Johannesburg,1,25.0,39.44
+Beans,Johannesburg,1,100.0,35.53
+Beans,Cairo,3,100.0,46.73
+Coffee,Harare,10,10.0,19930.03
+Irish Potato,Kinshasa,4,25.0,1158.41
+Irish Potato,Cairo,2,50.0,17.45
+Tomato,Addis Ababa,8,25.0,48.89
+Rice,Kigali,10,250.0,818.35
+Rice,Kumasi,4,250.0,23.02
+Maize,Arusha,6,500.0,854.28
+Plantain,Kano,3,10.0,639.16
+Plantain,Harare,5,1000.0,1802.42
+Coffee,Kampala,3,100.0,10848.81
+Tomato,Casablanca,10,1000.0,7.5
+Beans,Cairo,8,1000.0,36.8
+Coffee,Luanda,4,100.0,4443.6
+Beans,Luanda,10,100.0,934.69
+Onion,Lagos,7,250.0,888.38
+Irish Potato,Arusha,7,250.0,1129.12
+Cassava,Dakar,8,10.0,168.35
+Coffee,Nairobi,10,10.0,453.07
+Beans,Kano,10,25.0,1642.6
+Plantain,Addis Ababa,8,1000.0,32.88
+Cassava,Johannesburg,5,1000.0,10.03
+Tomato,Addis Ababa,9,500.0,49.69
+Tomato,Lusaka,6,100.0,16.33
+Irish Potato,Lagos,12,1000.0,895.11
+Cassava,Kampala,12,25.0,647.8
+Onion,Kinshasa,7,500.0,1273.32
+Tomato,Arusha,6,10.0,1357.98
+Beans,Kinshasa,12,500.0,3709.72
+Irish Potato,Johannesburg,6,100.0,9.52
+Tomato,Tunis,3,250.0,2.39
+Rice,Luanda,8,50.0,827.32
+Cassava,Arusha,9,100.0,743.29
+Coffee,Johannesburg,5,500.0,164.52
+Beans,Lusaka,5,250.0,31.2
+Cassava,Cairo,11,25.0,10.24
+Cocoa,Maputo,10,1000.0,350.64
+Maize,Lagos,1,250.0,941.47
+Tomato,Addis Ababa,9,500.0,50.67
+Beans,Nairobi,10,10.0,170.47
+Maize,Yaounde,6,50.0,392.69
+Onion,Cairo,4,50.0,15.75
+Plantain,Kumasi,2,250.0,9.87
+Irish Potato,Maputo,1,25.0,47.77
+Maize,Kinshasa,4,10.0,946.71
+Tomato,Luanda,7,100.0,484.77
+Onion,Nairobi,7,25.0,108.81
+Tomato,Yaounde,4,25.0,480.45
+Cocoa,Lusaka,11,10.0,100.12
+Rice,Arusha,3,100.0,3864.65
+Rice,Cairo,7,25.0,44.63
+Cassava,Johannesburg,9,100.0,9.18
+Irish Potato,Arusha,7,250.0,1165.35
+Cocoa,Dakar,8,25.0,4645.89
+Irish Potato,Harare,5,50.0,1685.56
+Tomato,Kinshasa,10,10.0,1950.15
+Cocoa,Dakar,8,1000.0,4006.48
+Coffee,Lagos,6,100.0,4023.08
+Onion,Lusaka,3,100.0,10.72
+Coffee,Tunis,8,1000.0,24.53
+Irish Potato,Casablanca,8,50.0,5.33
+Cocoa,Yaounde,2,250.0,1204.69
+Rice,Yaounde,7,10.0,905.41
+Beans,Arusha,10,10.0,4085.19
+Maize,Dakar,11,1000.0,334.17
+Maize,Kinshasa,5,500.0,889.11
+Plantain,Luanda,2,50.0,385.08
+Irish Potato,Lagos,7,1000.0,713.12
+Tomato,Addis Ababa,11,25.0,54.01
+Rice,Kigali,5,50.0,1149.99
+Cocoa,Harare,8,500.0,17097.58
+Beans,Harare,8,25.0,4906.73
+Cocoa,Kigali,12,250.0,2971.33
+Rice,Yaounde,5,10.0,934.78
+Onion,Khartoum,12,100.0,742.05
+Maize,Johannesburg,6,500.0,6.12
+Onion,Lusaka,7,25.0,13.22
+Onion,Arusha,11,1000.0,1054.04
+Coffee,Arusha,6,1000.0,7404.88
+Maize,Dakar,9,500.0,349.55
+Irish Potato,Kampala,1,100.0,2209.72
+Cassava,Arusha,5,10.0,914.22
+Maize,Addis Ababa,7,10.0,25.44
+Plantain,Harare,10,10.0,1883.01
+Onion,Yaounde,12,250.0,424.87
+Maize,Casablanca,7,25.0,6.12
+Rice,Luanda,2,1000.0,723.51
+Onion,Addis Ababa,10,25.0,56.7
+Tomato,Addis Ababa,8,250.0,47.49
+Cassava,Luanda,4,10.0,194.39
+Rice,Yaounde,4,250.0,908.66
+Onion,Johannesburg,4,25.0,9.79
+Coffee,Casablanca,12,50.0,86.23
+Rice,Arusha,7,250.0,3438.95
+Onion,Kampala,12,10.0,2507.11
+Onion,Maputo,9,250.0,64.43
+Cocoa,Cairo,3,25.0,180.5
+Maize,Arusha,12,500.0,929.29
+Maize,Lagos,11,100.0,835.06
+Beans,Harare,12,100.0,6500.59
+Rice,Kinshasa,7,1000.0,2800.1
+Rice,Harare,4,250.0,6209.89
+Beans,Addis Ababa,9,250.0,77.14
+Tomato,Nairobi,11,500.0,93.55
+Irish Potato,Tunis,4,250.0,2.16
+Rice,Yaounde,10,25.0,745.27
+Coffee,Maputo,2,25.0,517.88
+Tomato,Addis Ababa,7,50.0,45.74
+Tomato,Khartoum,8,25.0,954.64
+Coffee,Kampala,8,1000.0,9989.39
+Cocoa,Cairo,6,100.0,216.73
+Plantain,Kinshasa,7,25.0,967.78
+Irish Potato,Tunis,12,250.0,2.32
+Plantain,Kampala,9,25.0,1067.29
+Beans,Kumasi,3,1000.0,19.81
+Coffee,Harare,1,50.0,22558.7
+Cassava,Tunis,5,50.0,2.55
+Cassava,Casablanca,12,100.0,4.74
+Onion,Arusha,5,100.0,1278.21
+Tomato,Addis Ababa,11,500.0,43.57
+Beans,Johannesburg,6,50.0,28.14
+Cocoa,Luanda,1,50.0,3171.01
+Coffee,Cairo,9,1000.0,186.68
+Cocoa,Cairo,1,500.0,136.47
+Beans,Dakar,2,1000.0,768.7
+Maize,Lusaka,11,250.0,9.3
+Coffee,Yaounde,3,100.0,2751.02
+Onion,Nairobi,11,250.0,105.26
+Cassava,Casablanca,11,25.0,5.08
+Plantain,Tunis,9,500.0,2.7
+Beans,Harare,10,500.0,5543.34
+Maize,Kumasi,1,1000.0,10.41
+Cocoa,Maputo,12,10.0,350.34
+Onion,Harare,7,50.0,2525.56
+Cassava,Johannesburg,10,100.0,8.44
+Onion,Cairo,2,25.0,15.26
+Plantain,Khartoum,3,50.0,835.32
+Onion,Arusha,4,100.0,1311.2
+Plantain,Kano,3,10.0,642.51
+Rice,Kinshasa,9,250.0,2978.19
+Plantain,Addis Ababa,9,1000.0,29.15
+Rice,Kinshasa,1,1000.0,2429.58
+Plantain,Yaounde,10,25.0,329.35
+Tomato,Kano,12,100.0,722.92
+Tomato,Kano,5,10.0,702.91
+Plantain,Johannesburg,4,100.0,12.23
+Coffee,Khartoum,6,1000.0,6589.32
+Cocoa,Cairo,8,250.0,161.96
+Plantain,Dakar,4,500.0,374.64
+Onion,Kigali,11,250.0,534.86
+Coffee,Nairobi,9,25.0,528.03
+Cassava,Kampala,8,10.0,761.92
+Coffee,Tunis,6,250.0,31.19
+Plantain,Nairobi,3,250.0,81.09
+Tomato,Yaounde,4,10.0,468.51
+Beans,Yaounde,4,250.0,898.14
+Cassava,Lusaka,9,10.0,6.53
+Tomato,Yaounde,2,1000.0,399.2
+Cassava,Addis Ababa,9,500.0,21.09
+Coffee,Lagos,9,25.0,3437.91
+Cassava,Casablanca,5,25.0,6.76
+Coffee,Kano,5,1000.0,3667.08
+Irish Potato,Kano,11,100.0,789.32
+Tomato,Khartoum,10,1000.0,786.98
+Plantain,Cairo,3,50.0,27.48
+Rice,Lagos,1,10.0,1963.28
+Rice,Johannesburg,11,10.0,22.23
+Beans,Casablanca,10,100.0,19.31
+Maize,Nairobi,5,25.0,67.25
+Coffee,Kinshasa,1,1000.0,9780.59
+Rice,Cairo,10,250.0,33.71
+Irish Potato,Kampala,5,10.0,2065.74
+Onion,Johannesburg,4,10.0,9.68
+Tomato,Addis Ababa,11,25.0,45.65
+Cocoa,Lusaka,1,100.0,101.59
+Plantain,Kumasi,9,500.0,7.91
+Onion,Kano,5,25.0,725.25
+Beans,Maputo,8,1000.0,88.43
+Rice,Cairo,10,50.0,35.46
+Coffee,Lusaka,4,250.0,178.13
+Cocoa,Yaounde,11,50.0,1229.93
+Irish Potato,Addis Ababa,11,1000.0,26.36
+Tomato,Casablanca,6,1000.0,6.99
+Plantain,Kinshasa,11,1000.0,850.69
+Coffee,Maputo,12,250.0,473.55
+Irish Potato,Kampala,7,500.0,1706.2
+Rice,Addis Ababa,12,1000.0,75.73
+Coffee,Kampala,10,10.0,10127.82
+Onion,Johannesburg,11,50.0,9.5
+Irish Potato,Addis Ababa,8,100.0,28.97
+Rice,Lusaka,12,500.0,25.27
+Cassava,Khartoum,8,25.0,405.84
+Cocoa,Kano,9,100.0,6339.82
+Irish Potato,Kigali,7,50.0,296.56
+Rice,Harare,1,1000.0,4580.96
+Coffee,Kampala,12,25.0,10325.22
+Coffee,Lagos,12,50.0,3379.78
+Onion,Addis Ababa,2,50.0,45.8
+Maize,Luanda,1,50.0,343.13
+Beans,Kano,10,250.0,1452.79
+Rice,Nairobi,5,25.0,182.43
+Coffee,Harare,4,1000.0,20653.79
+Tomato,Addis Ababa,8,500.0,44.28
+Cassava,Arusha,6,25.0,780.56
+Cassava,Maputo,4,250.0,30.23
+Cassava,Kinshasa,3,25.0,710.91
+Onion,Nairobi,8,1000.0,101.85
+Cocoa,Lagos,5,10.0,7554.44
+Irish Potato,Kigali,2,250.0,391.82
+Beans,Luanda,5,500.0,772.39
+Onion,Lusaka,10,1000.0,12.03
+Onion,Johannesburg,4,50.0,10.99
+Cassava,Kinshasa,5,250.0,745.22
+Cocoa,Kumasi,10,1000.0,45.14
+Beans,Khartoum,3,50.0,1818.26
+Maize,Kinshasa,1,50.0,1032.79
+Beans,Khartoum,10,10.0,1944.62
+Maize,Lusaka,7,250.0,8.11
+Irish Potato,Kigali,2,25.0,414.58
+Cassava,Arusha,10,250.0,678.25
+Coffee,Kampala,4,25.0,12371.0
+Onion,Kano,3,25.0,702.37
+Cassava,Luanda,3,100.0,181.27
+Cocoa,Khartoum,1,100.0,5405.31
+Onion,Cairo,4,50.0,17.55
+Rice,Lusaka,2,10.0,29.77
+Cassava,Arusha,8,50.0,740.18
+Tomato,Johannesburg,5,500.0,11.45
+Tomato,Kampala,10,25.0,2690.52
+Cocoa,Lagos,2,500.0,6396.76
+Plantain,Kampala,9,500.0,1107.59
+Rice,Nairobi,2,1000.0,149.25
+Maize,Dakar,12,50.0,459.74
+Irish Potato,Maputo,1,10.0,55.59
+Tomato,Harare,12,1000.0,2395.81
+Onion,Luanda,2,250.0,362.35
+Maize,Cairo,10,250.0,15.87
+Rice,Kigali,4,10.0,1153.58
+Beans,Arusha,1,1000.0,3482.19
+Maize,Kumasi,5,500.0,10.15
+Maize,Kigali,4,1000.0,371.57
+Cassava,Kinshasa,5,50.0,777.6
+Onion,Cairo,1,10.0,17.14
+Plantain,Kigali,11,25.0,456.71
+Onion,Tunis,3,25.0,2.15
+Beans,Kampala,2,10.0,4937.59
+Onion,Kumasi,1,10.0,13.25
+Cassava,Kano,4,500.0,241.21
+Beans,Kumasi,12,100.0,23.91
+Rice,Harare,8,10.0,4719.81
+Irish Potato,Arusha,11,250.0,1422.38
+Coffee,Arusha,2,100.0,9110.61
+Onion,Khartoum,10,10.0,800.27
+Rice,Dakar,12,50.0,773.57
+Cassava,Luanda,10,1000.0,131.55
+Onion,Cairo,8,500.0,18.43
+Coffee,Lusaka,11,25.0,135.64
+Beans,Yaounde,5,25.0,918.64
+Rice,Addis Ababa,3,10.0,102.84
+Cocoa,Kampala,8,100.0,5077.36
+Beans,Harare,5,1000.0,4810.11
+Maize,Kampala,6,50.0,1163.29
+Tomato,Johannesburg,6,10.0,13.61
+Maize,Casablanca,9,50.0,6.66
+Cassava,Khartoum,8,25.0,390.64
+Beans,Kumasi,8,100.0,20.43
+Cassava,Arusha,3,100.0,756.93
+Maize,Lagos,11,1000.0,714.42
+Tomato,Kampala,2,1000.0,1904.93
+Irish Potato,Addis Ababa,6,500.0,24.09
+Cocoa,Addis Ababa,5,500.0,298.77
+Beans,Lagos,3,250.0,1561.94
+Irish Potato,Nairobi,2,1000.0,56.28
+Maize,Johannesburg,6,250.0,6.28
+Plantain,Lagos,1,1000.0,529.21
+Irish Potato,Lusaka,2,100.0,11.3
+Coffee,Kano,4,50.0,3615.28
+Cassava,Lusaka,4,1000.0,6.82
+Plantain,Addis Ababa,5,250.0,41.75
+Cassava,Luanda,4,50.0,177.8
+Cassava,Kampala,12,1000.0,614.52
+Onion,Lusaka,11,25.0,12.5
+Plantain,Yaounde,1,25.0,377.53
+Onion,Tunis,5,1000.0,2.07
+Maize,Kumasi,2,1000.0,9.96
+Cassava,Yaounde,9,500.0,164.98
+Plantain,Dakar,8,50.0,301.41
+Irish Potato,Kigali,6,1000.0,260.09
+Maize,Lagos,7,100.0,776.23
+Beans,Cairo,8,500.0,42.47
+Plantain,Nairobi,11,100.0,65.53
+Onion,Luanda,1,50.0,382.47
+Plantain,Casablanca,12,100.0,9.69
+Cassava,Yaounde,6,1000.0,168.59
+Beans,Johannesburg,1,10.0,34.2
+Plantain,Cairo,4,250.0,25.97
+Beans,Kigali,10,50.0,1131.9
+Beans,Harare,11,25.0,6693.89
+Maize,Kinshasa,12,250.0,916.24
+Onion,Cairo,4,50.0,16.41
+Tomato,Harare,12,10.0,2853.23
+Rice,Kigali,8,500.0,901.7
+Onion,Addis Ababa,3,50.0,45.45
+Coffee,Cairo,2,10.0,221.85
+Beans,Lusaka,7,25.0,30.14
+Beans,Nairobi,3,100.0,169.26
+Tomato,Maputo,8,500.0,65.75
+Cassava,Harare,10,25.0,973.12
+Cocoa,Kano,12,100.0,5790.83
+Coffee,Yaounde,2,100.0,2649.61
+Tomato,Dakar,5,50.0,457.51
+Irish Potato,Luanda,10,500.0,323.45
+Irish Potato,Kigali,9,50.0,336.09
+Cassava,Tunis,2,10.0,2.04
+Coffee,Lusaka,12,25.0,148.84
+Rice,Lusaka,9,500.0,23.38
+Plantain,Yaounde,9,50.0,279.7
+Cassava,Tunis,8,1000.0,1.85
+Coffee,Johannesburg,4,500.0,168.29
+Cocoa,Yaounde,7,50.0,1564.33
+Irish Potato,Johannesburg,11,50.0,10.93
+Irish Potato,Kano,8,25.0,731.67
+Tomato,Yaounde,4,100.0,480.69
+Cassava,Tunis,7,500.0,2.22
+Tomato,Kumasi,8,1000.0,11.28
+Plantain,Kano,5,500.0,608.67
+Cocoa,Kano,12,500.0,5604.37
+Maize,Cairo,10,1000.0,13.12
+Irish Potato,Kano,8,250.0,710.11
+Cocoa,Johannesburg,4,1000.0,90.36
+Onion,Kumasi,5,25.0,14.39
+Cassava,Khartoum,2,10.0,399.3
+Irish Potato,Maputo,4,10.0,48.77
+Onion,Yaounde,12,500.0,414.53
+Irish Potato,Lusaka,12,50.0,11.76
+Rice,Lagos,2,25.0,1825.72
+Tomato,Lusaka,10,1000.0,15.11
+Beans,Khartoum,11,250.0,1923.85
+Maize,Luanda,3,50.0,300.29
+Maize,Harare,11,500.0,1649.02
+Rice,Lusaka,7,10.0,28.32
+Coffee,Khartoum,5,1000.0,7150.41
+Cassava,Nairobi,10,50.0,36.58
+Rice,Maputo,3,10.0,130.79
+Cassava,Kumasi,9,100.0,4.03
+Maize,Kano,9,10.0,646.8
+Rice,Kigali,5,1000.0,900.35
+Onion,Cairo,12,50.0,14.97
+Onion,Dakar,10,500.0,453.85
+Tomato,Yaounde,11,25.0,565.25
+Rice,Arusha,5,10.0,3982.33
+Onion,Tunis,5,500.0,2.25
+Rice,Khartoum,11,1000.0,1134.24
+Tomato,Yaounde,7,25.0,508.88
+Cocoa,Yaounde,12,500.0,1030.62
+Coffee,Casablanca,10,500.0,76.17
+Rice,Kumasi,3,10.0,21.56
+Tomato,Harare,8,100.0,3240.98
+Plantain,Lusaka,7,50.0,11.24
+Irish Potato,Harare,9,500.0,1678.91
+Onion,Tunis,5,500.0,2.23
+Irish Potato,Kinshasa,5,10.0,1004.91
+Cocoa,Tunis,10,10.0,19.56
+Plantain,Kigali,6,100.0,468.31
+Cassava,Addis Ababa,6,25.0,28.18
+Rice,Cairo,7,250.0,37.62
+Beans,Kigali,2,25.0,1247.29
+Beans,Kampala,6,250.0,3988.74
+Rice,Tunis,7,500.0,5.24
+Cocoa,Lagos,10,50.0,7293.48
+Onion,Tunis,3,10.0,1.92
+Cocoa,Tunis,11,100.0,19.33
+Cassava,Dakar,12,50.0,159.35
+Onion,Johannesburg,2,100.0,8.94
+Irish Potato,Luanda,11,25.0,310.89
+Coffee,Maputo,9,1000.0,394.91
+Tomato,Nairobi,12,25.0,91.48
+Onion,Kinshasa,11,250.0,1253.5
+Beans,Johannesburg,12,25.0,43.65
+Plantain,Nairobi,4,250.0,68.21
+Coffee,Lusaka,7,50.0,159.93
+Beans,Kigali,2,10.0,1250.09
+Onion,Harare,7,50.0,2325.7
+Beans,Kampala,1,25.0,4454.3
+Plantain,Harare,6,25.0,2226.36
+Coffee,Lagos,3,50.0,4019.05
+Beans,Maputo,9,1000.0,92.38
+Rice,Nairobi,5,25.0,183.65
+Irish Potato,Kinshasa,12,10.0,1227.41
+Cocoa,Johannesburg,4,100.0,104.7
+Plantain,Nairobi,9,500.0,46.04
+Tomato,Kinshasa,6,100.0,1572.06
+Cassava,Kinshasa,7,10.0,743.79
+Irish Potato,Maputo,10,100.0,46.05
+Plantain,Harare,2,250.0,2303.28
+Irish Potato,Kumasi,9,1000.0,10.7
+Plantain,Tunis,7,25.0,3.14
+Plantain,Johannesburg,8,500.0,9.65
+Irish Potato,Yaounde,3,50.0,453.11
+Irish Potato,Nairobi,2,500.0,61.34
+Rice,Johannesburg,6,25.0,28.89
+Irish Potato,Kinshasa,8,1000.0,791.71
+Tomato,Khartoum,8,25.0,918.43
+Plantain,Arusha,2,25.0,1170.03
+Maize,Arusha,7,50.0,871.85
+Coffee,Kinshasa,3,250.0,12534.31
+Irish Potato,Kumasi,5,500.0,9.83
+Beans,Lagos,3,10.0,1670.89
+Plantain,Dakar,10,250.0,314.34
+Cassava,Casablanca,7,100.0,5.95
+Plantain,Cairo,3,250.0,26.56
+Maize,Kano,6,250.0,602.01
+Cocoa,Nairobi,1,25.0,286.41
+Tomato,Addis Ababa,12,250.0,50.96
+Maize,Maputo,2,50.0,44.29
+Onion,Maputo,4,50.0,51.04
+Irish Potato,Tunis,6,1000.0,1.69
+Onion,Arusha,9,500.0,1220.52
+Cocoa,Kampala,1,250.0,4072.28
+Tomato,Tunis,4,500.0,2.54
+Onion,Lusaka,9,50.0,14.5
+Beans,Dakar,7,1000.0,710.88
+Onion,Kumasi,6,250.0,13.65
+Beans,Luanda,12,250.0,1038.39
+Irish Potato,Johannesburg,12,500.0,11.4
+Rice,Kinshasa,7,100.0,3318.85
+Plantain,Kano,2,100.0,627.0
+Coffee,Yaounde,5,500.0,3024.42
+Rice,Maputo,12,250.0,97.59
+Tomato,Harare,7,10.0,3249.66
+Coffee,Kampala,6,500.0,12077.65
+Irish Potato,Luanda,6,1000.0,264.99
+Irish Potato,Kumasi,8,1000.0,9.35
+Tomato,Yaounde,10,25.0,636.25
+Plantain,Luanda,3,25.0,420.2
+Maize,Casablanca,4,10.0,7.3
+Coffee,Khartoum,5,1000.0,6810.4
+Tomato,Lagos,9,25.0,1030.58
+Beans,Casablanca,10,10.0,19.38
+Cocoa,Khartoum,10,100.0,5455.0
+Cocoa,Dakar,7,10.0,4459.95
+Beans,Tunis,9,100.0,5.99
+Maize,Kinshasa,10,25.0,899.03
+Rice,Nairobi,12,10.0,160.22
+Cassava,Kinshasa,2,1000.0,603.38
+Cocoa,Cairo,4,25.0,182.07
+Cocoa,Addis Ababa,12,1000.0,199.7
+Irish Potato,Arusha,1,50.0,1599.55
+Rice,Luanda,1,10.0,887.5
+Maize,Kampala,2,500.0,1233.51
+Irish Potato,Harare,8,50.0,1583.05
+Tomato,Yaounde,1,25.0,506.76
+Tomato,Johannesburg,8,10.0,14.33
+Onion,Kinshasa,7,100.0,1485.22
+Cocoa,Addis Ababa,1,500.0,233.87
+Maize,Kumasi,1,250.0,9.92
+Tomato,Khartoum,9,50.0,909.03
+Maize,Tunis,1,250.0,2.5
+Plantain,Johannesburg,9,25.0,9.24
+Cassava,Kinshasa,9,100.0,613.66
+Cassava,Khartoum,1,10.0,427.47
+Coffee,Harare,8,10.0,23365.04
+Beans,Lagos,3,1000.0,1530.9
+Maize,Maputo,6,50.0,38.69
+Plantain,Yaounde,6,10.0,345.02
+Plantain,Dakar,2,250.0,346.82
+Coffee,Kano,3,50.0,3634.32
+Coffee,Tunis,1,10.0,28.67
+Rice,Harare,4,500.0,5670.22
+Cassava,Addis Ababa,11,25.0,20.84
+Onion,Kampala,11,25.0,2450.9
+Onion,Kampala,10,25.0,2921.23
+Beans,Harare,4,250.0,5434.45
+Rice,Maputo,9,50.0,97.4
+Cocoa,Kigali,10,500.0,2943.27
+Tomato,Dakar,12,25.0,477.86
+Cassava,Kano,7,100.0,252.24
+Cassava,Nairobi,4,1000.0,36.55
+Maize,Johannesburg,12,50.0,7.74
+Cassava,Yaounde,11,250.0,132.04
+Irish Potato,Casablanca,12,50.0,6.61
+Onion,Khartoum,5,50.0,761.4
+Irish Potato,Cairo,10,50.0,14.53
+Plantain,Kigali,8,50.0,450.41
+Coffee,Cairo,1,10.0,215.91
+Rice,Kinshasa,8,250.0,2887.95
+Maize,Kigali,1,500.0,416.88
+Irish Potato,Harare,10,250.0,1879.76
+Cassava,Kumasi,11,25.0,3.88
+Irish Potato,Nairobi,2,50.0,61.75
+Onion,Kumasi,12,100.0,14.51
+Maize,Tunis,6,100.0,2.27
+Beans,Kampala,4,25.0,4005.07
+Rice,Dakar,1,50.0,795.08
+Tomato,Kinshasa,7,10.0,1767.09
+Coffee,Arusha,4,25.0,9961.94
+Rice,Lusaka,5,25.0,30.62
+Beans,Cairo,11,25.0,53.52
+Maize,Kumasi,7,100.0,8.17
+Cocoa,Casablanca,2,50.0,73.32
+Beans,Cairo,6,1000.0,30.26
+Coffee,Kinshasa,10,25.0,9977.98
+Maize,Kano,8,50.0,616.68
+Maize,Kinshasa,6,100.0,889.56
+Maize,Kampala,6,10.0,1086.07
+Tomato,Kampala,7,10.0,2585.01
+Onion,Khartoum,5,250.0,733.49
+Tomato,Kinshasa,3,25.0,1355.7
+Rice,Dakar,4,1000.0,810.26
+Coffee,Lusaka,10,10.0,157.6
+Irish Potato,Arusha,2,1000.0,1303.39
+Onion,Kano,6,250.0,788.53
+Rice,Kinshasa,3,10.0,3407.54
+Beans,Nairobi,3,10.0,187.12
+Maize,Arusha,8,250.0,807.31
+Maize,Nairobi,5,500.0,62.11
+Onion,Lusaka,3,500.0,10.99
+Rice,Maputo,9,25.0,95.7
+Beans,Kano,12,500.0,1683.12
+Irish Potato,Tunis,3,1000.0,1.69
+Rice,Yaounde,7,500.0,883.41
+Cocoa,Luanda,12,1000.0,2544.53
+Tomato,Maputo,4,500.0,52.46
+Irish Potato,Lagos,6,1000.0,765.98
+Coffee,Casablanca,11,100.0,76.27
+Rice,Kigali,11,10.0,941.35
+Beans,Kinshasa,1,50.0,3526.56
+Cocoa,Kampala,4,500.0,4788.84
+Cocoa,Kampala,2,250.0,4314.77
+Maize,Tunis,5,250.0,2.32
+Onion,Harare,12,25.0,2217.53
+Irish Potato,Yaounde,4,10.0,404.66
+Rice,Kampala,11,500.0,3719.5
+Cassava,Cairo,1,25.0,11.31
+Maize,Khartoum,4,100.0,475.41
+Cocoa,Kigali,11,50.0,3284.43
+Plantain,Addis Ababa,6,25.0,43.04
+Plantain,Yaounde,12,1000.0,300.61
+Rice,Casablanca,5,25.0,17.86
+Coffee,Khartoum,6,500.0,7089.58
+Onion,Luanda,2,500.0,337.48
+Irish Potato,Lagos,11,100.0,923.96
+Beans,Luanda,2,100.0,1044.29
+Plantain,Addis Ababa,2,250.0,43.09
+Beans,Kumasi,12,1000.0,24.57
+Onion,Cairo,3,25.0,15.32
+Tomato,Kigali,6,1000.0,483.76
+Rice,Khartoum,4,250.0,1838.1
+Onion,Arusha,5,50.0,1282.27
+Cassava,Lagos,10,100.0,251.58
+Tomato,Yaounde,5,250.0,484.15
+Onion,Kampala,3,1000.0,1949.6
+Tomato,Kumasi,12,1000.0,10.62
+Beans,Kumasi,7,250.0,21.25
+Tomato,Kumasi,5,250.0,11.73
+Beans,Maputo,6,25.0,93.07
+Plantain,Kinshasa,11,25.0,1058.09
+Tomato,Nairobi,1,100.0,93.39
+Tomato,Kigali,8,1000.0,525.54
+Beans,Harare,2,25.0,6217.61
+Rice,Maputo,7,100.0,109.41
+Plantain,Tunis,12,25.0,3.43
+Rice,Arusha,2,1000.0,2969.76
+Tomato,Addis Ababa,8,100.0,52.11
+Beans,Maputo,4,10.0,111.79
+Cassava,Kumasi,3,50.0,5.17
+Coffee,Kumasi,12,50.0,32.1
+Rice,Kumasi,8,1000.0,18.64
+Onion,Dakar,2,100.0,388.22
+Cocoa,Yaounde,3,250.0,1210.85
+Onion,Luanda,8,500.0,450.66
+Cocoa,Arusha,1,25.0,3453.97
+Plantain,Casablanca,1,250.0,9.53
+Tomato,Lagos,1,25.0,896.36
+Beans,Lagos,4,250.0,1519.87
+Irish Potato,Casablanca,2,500.0,6.01
+Maize,Kigali,12,25.0,463.82
+Rice,Kigali,9,25.0,897.71
+Beans,Yaounde,5,25.0,775.25
+Onion,Khartoum,10,1000.0,669.62
+Maize,Harare,10,1000.0,1464.09
+Plantain,Kumasi,1,10.0,10.0
+Cassava,Cairo,6,25.0,14.12
+Onion,Maputo,2,100.0,45.11
+Irish Potato,Kigali,1,1000.0,339.9
+Coffee,Lagos,1,250.0,3487.45
+Cassava,Khartoum,5,25.0,460.48
+Rice,Kinshasa,7,25.0,3513.55
+Maize,Nairobi,8,100.0,49.34
+Tomato,Dakar,3,250.0,392.3
+Maize,Addis Ababa,4,250.0,29.72
+Coffee,Maputo,3,10.0,571.41
+Cassava,Nairobi,9,250.0,39.85
+Irish Potato,Maputo,1,25.0,55.52
+Cassava,Maputo,3,25.0,29.46
+Onion,Kigali,11,250.0,548.52
+Rice,Addis Ababa,1,1000.0,82.83
+Rice,Nairobi,11,25.0,155.55
+Tomato,Khartoum,3,50.0,685.76
+Maize,Tunis,3,10.0,2.53
+Beans,Khartoum,4,250.0,1536.24
+Plantain,Cairo,7,25.0,24.61
+Coffee,Johannesburg,1,100.0,138.27
+Cassava,Yaounde,3,25.0,190.62
+Irish Potato,Tunis,9,25.0,1.96
+Coffee,Nairobi,1,100.0,465.98
+Coffee,Lagos,4,1000.0,3774.29
+Maize,Kinshasa,12,10.0,1005.95
+Tomato,Dakar,6,500.0,443.13
+Plantain,Yaounde,8,25.0,312.3
+Beans,Dakar,2,10.0,876.14
+Plantain,Cairo,12,250.0,21.54
+Irish Potato,Tunis,8,250.0,1.82
+Cassava,Lusaka,1,100.0,6.52
+Cassava,Harare,5,100.0,1446.64
+Coffee,Maputo,5,1000.0,508.25
+Rice,Kinshasa,12,250.0,3214.11
+Cassava,Kampala,5,100.0,860.22
+Plantain,Nairobi,1,1000.0,54.49
+Rice,Tunis,9,25.0,5.1
+Beans,Cairo,4,500.0,43.88
+Cocoa,Lagos,5,10.0,8465.86
+Plantain,Nairobi,11,10.0,68.04
+Rice,Kampala,10,500.0,3414.41
+Onion,Yaounde,2,25.0,410.63
+Rice,Nairobi,6,500.0,158.99
+Beans,Tunis,2,10.0,6.66
+Irish Potato,Kumasi,4,50.0,12.52
+Coffee,Arusha,1,25.0,8209.31
+Rice,Lagos,3,10.0,1870.33
+Onion,Nairobi,3,1000.0,75.03
+Plantain,Johannesburg,5,25.0,12.88
+Onion,Lusaka,8,10.0,14.89
+Onion,Johannesburg,3,500.0,8.88
+Beans,Kumasi,12,250.0,26.91
+Maize,Dakar,8,10.0,331.94
+Plantain,Arusha,9,50.0,891.12
+Maize,Kano,1,10.0,764.26
+Coffee,Luanda,3,50.0,4211.13
+Plantain,Khartoum,8,250.0,594.07
+Cassava,Tunis,12,50.0,1.82
+Irish Potato,Khartoum,7,500.0,452.79
+Beans,Addis Ababa,9,1000.0,70.33
+Cocoa,Kinshasa,12,25.0,8315.89
+Irish Potato,Kinshasa,12,100.0,1216.69
+Cocoa,Kinshasa,1,50.0,8721.71
+Onion,Tunis,6,100.0,2.36
+Maize,Kumasi,5,100.0,10.62
+Onion,Nairobi,2,100.0,85.46
+Tomato,Yaounde,6,250.0,471.88
+Plantain,Arusha,4,50.0,1177.69
+Cocoa,Yaounde,5,100.0,1584.22
+Plantain,Casablanca,10,10.0,8.54
+Cocoa,Kinshasa,5,100.0,10369.73
+Irish Potato,Addis Ababa,6,10.0,26.03
+Plantain,Johannesburg,11,25.0,12.0
+Beans,Khartoum,1,10.0,1821.28
+Cocoa,Casablanca,6,25.0,79.41
+Plantain,Harare,6,25.0,2178.65
+Onion,Yaounde,11,50.0,465.55
+Maize,Harare,5,500.0,1399.28
+Beans,Kinshasa,7,250.0,2890.07
+Cocoa,Dakar,1,50.0,3555.49
+Maize,Kumasi,4,50.0,10.89
+Rice,Nairobi,4,25.0,188.22
+Maize,Johannesburg,8,500.0,5.42
+Irish Potato,Yaounde,3,500.0,458.88
+Onion,Khartoum,2,10.0,608.71
+Cassava,Maputo,5,50.0,35.99
+Tomato,Dakar,4,10.0,421.09
+Coffee,Kano,5,10.0,3719.8
+Maize,Tunis,10,100.0,2.15
+Tomato,Nairobi,6,25.0,92.98
+Plantain,Luanda,6,100.0,352.16
+Rice,Maputo,4,1000.0,105.25
+Cocoa,Arusha,12,10.0,3706.98
+Plantain,Luanda,12,250.0,335.29
+Cocoa,Harare,1,500.0,15613.85
+Beans,Kinshasa,4,50.0,3431.56
+Maize,Johannesburg,11,100.0,6.48
+Maize,Tunis,7,50.0,2.17
+Maize,Tunis,3,50.0,2.43
+Cassava,Dakar,1,50.0,180.24
+Cassava,Kano,7,250.0,237.03
+Maize,Casablanca,8,500.0,5.51
+Cassava,Kinshasa,5,50.0,900.81
+Maize,Kigali,8,250.0,334.95
+Tomato,Johannesburg,7,500.0,13.32
+Tomato,Johannesburg,12,25.0,13.8
+Rice,Lusaka,4,100.0,33.37
+Maize,Yaounde,4,500.0,403.26
+Maize,Khartoum,9,50.0,485.74
+Irish Potato,Kampala,8,50.0,1792.03
+Tomato,Kumasi,9,100.0,14.05
+Irish Potato,Harare,8,25.0,1546.88
+Maize,Khartoum,5,250.0,487.62
+Rice,Casablanca,6,10.0,18.43
+Rice,Johannesburg,9,10.0,24.49
+Irish Potato,Harare,2,500.0,2145.28
+Plantain,Harare,2,25.0,2233.02
+Cassava,Cairo,11,25.0,10.37
+Cassava,Harare,5,1000.0,1137.62
+Irish Potato,Kigali,7,1000.0,234.01
+Tomato,Addis Ababa,4,250.0,40.47
+Maize,Cairo,7,25.0,17.22
+Rice,Khartoum,11,50.0,1368.78
+Beans,Cairo,4,10.0,40.76
+Irish Potato,Arusha,3,50.0,1578.58
+Cassava,Kumasi,4,25.0,5.26
+Rice,Kano,2,50.0,1551.67
+Rice,Dakar,4,100.0,909.15
+Beans,Harare,9,100.0,5559.65
+Rice,Johannesburg,4,100.0,31.62
+Tomato,Arusha,6,100.0,1354.81
+Cocoa,Addis Ababa,9,250.0,303.94
+Coffee,Kano,11,250.0,2914.1
+Maize,Kinshasa,9,1000.0,678.42
+Cocoa,Cairo,9,25.0,158.8
+Beans,Harare,4,250.0,5675.41
+Coffee,Kano,10,25.0,3235.82
+Tomato,Kumasi,10,1000.0,11.95
+Cocoa,Harare,7,1000.0,17224.79
+Irish Potato,Tunis,9,250.0,1.8
+Maize,Casablanca,8,500.0,6.05
+Cocoa,Kinshasa,10,1000.0,7212.2
+Beans,Kigali,3,250.0,1032.59
+Beans,Kigali,1,500.0,1127.92
+Coffee,Addis Ababa,1,250.0,370.41
+Irish Potato,Johannesburg,8,500.0,8.65
+Plantain,Cairo,6,100.0,22.22
+Cassava,Kampala,5,25.0,895.58
+Tomato,Addis Ababa,1,1000.0,41.26
+Beans,Kigali,12,250.0,1210.47
+Onion,Harare,1,250.0,2001.25
+Cocoa,Johannesburg,8,10.0,110.57
+Cassava,Kigali,12,100.0,267.37
+Cassava,Johannesburg,12,50.0,8.29
+Cocoa,Kigali,12,500.0,2668.14
+Cocoa,Yaounde,12,250.0,1244.91
+Rice,Kumasi,11,250.0,16.32
+Maize,Casablanca,4,50.0,6.94
+Tomato,Dakar,3,1000.0,315.27
+Rice,Kampala,10,250.0,3305.52
+Onion,Kano,12,100.0,717.28
+Plantain,Johannesburg,10,100.0,10.62
+Cocoa,Dakar,9,25.0,3999.32
+Cassava,Johannesburg,10,10.0,8.71
+Cocoa,Kampala,10,500.0,4357.24
+Onion,Khartoum,1,1000.0,573.32
+Rice,Maputo,12,50.0,100.0
+Tomato,Johannesburg,10,10.0,15.51
+Plantain,Kano,12,10.0,590.55
+Irish Potato,Luanda,4,100.0,329.76
+Tomato,Kinshasa,11,500.0,1618.98
+Cocoa,Yaounde,7,500.0,1250.4
+Maize,Luanda,7,250.0,251.65
+Maize,Yaounde,9,100.0,344.1
+Tomato,Kano,4,10.0,645.06
+Plantain,Kano,12,1000.0,496.79
+Rice,Kigali,9,25.0,984.17
+Plantain,Dakar,7,10.0,345.07
+Maize,Johannesburg,7,1000.0,4.57
+Cocoa,Addis Ababa,12,100.0,269.49
+Maize,Lagos,8,250.0,659.62
+Cocoa,Nairobi,8,25.0,399.0
+Beans,Kumasi,7,25.0,21.08
+Tomato,Kumasi,10,500.0,13.19
+Cassava,Luanda,2,250.0,164.67
+Beans,Kano,6,25.0,1201.72
+Coffee,Khartoum,2,50.0,7402.54
+Beans,Tunis,6,50.0,4.66
+Rice,Arusha,7,50.0,3413.47
+Maize,Kumasi,1,50.0,10.55
+Cocoa,Kumasi,12,250.0,45.33
+Beans,Kampala,11,10.0,4870.1
+Tomato,Kano,5,50.0,698.03
+Cocoa,Kigali,7,1000.0,3066.21
+Maize,Kigali,2,250.0,435.45
+Onion,Addis Ababa,5,100.0,48.95
+Rice,Casablanca,10,25.0,13.2
+Rice,Kumasi,4,1000.0,19.96
+Cassava,Kinshasa,5,500.0,710.81
+Coffee,Harare,9,500.0,23062.76
+Cassava,Lagos,2,25.0,302.67
+Rice,Casablanca,9,250.0,13.66
+Beans,Maputo,11,250.0,122.25
+Onion,Casablanca,4,50.0,6.18
+Irish Potato,Nairobi,11,50.0,61.11
+Cocoa,Johannesburg,11,10.0,94.01
+Rice,Nairobi,12,250.0,139.93
+Tomato,Addis Ababa,6,25.0,47.27
+Plantain,Johannesburg,9,250.0,9.28
+Irish Potato,Kinshasa,8,1000.0,805.94
+Beans,Lusaka,11,25.0,37.52
+Irish Potato,Dakar,8,10.0,448.05
+Plantain,Yaounde,3,50.0,429.75
+Cocoa,Addis Ababa,10,100.0,300.43
+Beans,Addis Ababa,12,100.0,92.13
+Coffee,Kumasi,12,50.0,32.49
+Beans,Lusaka,7,10.0,27.97
+Cassava,Kigali,10,25.0,269.6
+Rice,Kigali,3,500.0,1152.97
+Irish Potato,Yaounde,7,500.0,370.61
+Rice,Maputo,5,500.0,101.25
+Cassava,Johannesburg,1,500.0,7.49
+Cocoa,Johannesburg,11,500.0,96.78
+Rice,Yaounde,11,1000.0,655.81
+Tomato,Kampala,12,250.0,2138.85
+Tomato,Johannesburg,6,500.0,13.53
+Maize,Cairo,5,500.0,15.87
+Beans,Tunis,6,10.0,5.0
+Cassava,Tunis,2,500.0,1.93
+Cocoa,Dakar,2,10.0,3994.31
+Cocoa,Khartoum,12,1000.0,4097.17
+Beans,Lagos,11,100.0,1975.9
+Rice,Dakar,3,10.0,887.74
+Coffee,Lagos,8,50.0,3618.59
+Plantain,Lusaka,5,100.0,12.24
+Onion,Johannesburg,1,100.0,9.61
+Rice,Khartoum,8,10.0,1570.67
+Cassava,Kigali,10,250.0,264.43
+Cocoa,Nairobi,7,1000.0,350.63
+Coffee,Cairo,8,100.0,237.34
+Cocoa,Kampala,5,250.0,4992.43
+Coffee,Maputo,12,250.0,430.59
+Plantain,Kinshasa,11,10.0,1058.59
+Cocoa,Kigali,12,25.0,3160.64
+Cassava,Arusha,6,25.0,818.65
+Irish Potato,Kumasi,7,250.0,9.97
+Irish Potato,Nairobi,3,50.0,62.79
+Irish Potato,Khartoum,12,50.0,703.96
+Irish Potato,Kampala,8,50.0,2137.55
+Plantain,Maputo,12,50.0,52.55
+Cocoa,Casablanca,5,500.0,73.93
+Tomato,Lagos,6,250.0,866.81
+Maize,Casablanca,9,1000.0,5.37
+Maize,Kampala,11,500.0,1139.11
+Onion,Tunis,7,100.0,2.69
+Rice,Harare,9,100.0,4612.75
+Rice,Cairo,5,1000.0,40.79
+Rice,Kano,10,1000.0,1153.38
+Coffee,Tunis,3,10.0,29.72
+Tomato,Kano,12,50.0,698.24
+Rice,Luanda,9,50.0,820.56
+Plantain,Luanda,5,10.0,392.35
+Cocoa,Kigali,3,500.0,3232.8
+Rice,Lusaka,7,250.0,26.39
+Tomato,Kigali,1,10.0,552.3
+Irish Potato,Kumasi,2,1000.0,11.17
+Rice,Maputo,12,10.0,95.42
+Cocoa,Kampala,3,50.0,4708.15
+Tomato,Kinshasa,10,25.0,1819.06
+Onion,Khartoum,8,250.0,785.08
+Onion,Luanda,5,250.0,363.26
+Irish Potato,Lusaka,2,1000.0,10.14
+Rice,Tunis,10,100.0,4.26
+Cocoa,Maputo,10,10.0,393.13
+Cassava,Dakar,7,25.0,181.07
+Irish Potato,Harare,4,50.0,1813.84
+Cocoa,Yaounde,1,1000.0,1005.02
+Onion,Addis Ababa,3,10.0,49.72
+Beans,Dakar,12,1000.0,929.87
+Plantain,Addis Ababa,2,1000.0,39.26
+Tomato,Lagos,8,50.0,1019.62
+Maize,Yaounde,6,50.0,404.4
+Plantain,Dakar,12,1000.0,301.68
+Coffee,Casablanca,1,10.0,90.19
+Tomato,Tunis,6,25.0,2.93
+Cassava,Kano,5,50.0,270.21
+Maize,Addis Ababa,9,100.0,25.88
+Rice,Kumasi,1,10.0,19.46
+Plantain,Khartoum,9,250.0,590.33
+Cocoa,Dakar,10,250.0,3775.65
+Maize,Lagos,4,250.0,812.63
+Irish Potato,Maputo,9,1000.0,39.11
+Beans,Kampala,2,10.0,4467.58
+Cocoa,Maputo,6,1000.0,380.1
+Beans,Lagos,1,500.0,1729.56
+Maize,Kinshasa,4,100.0,962.72
+Maize,Kano,12,1000.0,655.63
+Beans,Dakar,7,50.0,790.7
+Onion,Luanda,3,10.0,393.72
+Cassava,Maputo,6,100.0,31.87
+Beans,Nairobi,6,25.0,145.74
+Cassava,Nairobi,2,25.0,37.94
+Cocoa,Yaounde,12,1000.0,1015.66
+Onion,Addis Ababa,8,1000.0,51.96
+Coffee,Tunis,5,25.0,34.59
+Irish Potato,Tunis,3,100.0,2.2
+Maize,Khartoum,9,250.0,436.91
+Plantain,Arusha,10,500.0,927.87
+Irish Potato,Kano,2,250.0,886.84
+Rice,Kinshasa,6,25.0,3447.5
+Irish Potato,Casablanca,3,10.0,6.5
+Plantain,Kampala,2,25.0,1249.77
+Tomato,Kigali,6,25.0,546.89
+Plantain,Kampala,4,250.0,1333.27
+Coffee,Kinshasa,7,250.0,11297.58
+Onion,Kumasi,11,10.0,13.86
+Coffee,Kano,6,50.0,4113.51
+Beans,Luanda,5,1000.0,762.24
+Cocoa,Kigali,9,25.0,3609.25
+Irish Potato,Lusaka,10,250.0,10.49
+Plantain,Arusha,8,50.0,972.13
+Tomato,Harare,9,1000.0,2934.76
+Plantain,Kigali,8,500.0,433.91
+Rice,Lusaka,7,100.0,30.6
+Irish Potato,Nairobi,8,1000.0,47.79
+Rice,Nairobi,9,25.0,151.63
+Coffee,Maputo,4,250.0,542.5
+Coffee,Kinshasa,5,50.0,12828.67
+Rice,Dakar,6,100.0,813.93
+Beans,Lagos,5,50.0,1556.29
+Plantain,Tunis,4,1000.0,2.98
+Tomato,Maputo,5,50.0,59.26
+Rice,Lagos,11,10.0,1550.34
+Tomato,Nairobi,3,1000.0,65.52
+Maize,Yaounde,9,500.0,370.55
+Irish Potato,Tunis,7,250.0,1.69
+Maize,Tunis,7,500.0,1.94
+Rice,Cairo,12,100.0,33.57
+Rice,Khartoum,9,500.0,1427.45
+Maize,Johannesburg,2,250.0,8.06
+Rice,Kano,9,250.0,1400.17
+Irish Potato,Tunis,1,1000.0,2.03
+Coffee,Dakar,8,10.0,2503.23
+Plantain,Dakar,1,100.0,355.61
+Cassava,Kampala,2,25.0,786.26
+Onion,Maputo,9,50.0,63.25
+Onion,Kumasi,10,10.0,14.52
+Onion,Nairobi,4,50.0,100.66
+Onion,Tunis,5,500.0,2.18
+Cassava,Lagos,6,1000.0,276.5
+Cassava,Harare,4,1000.0,1134.78
+Coffee,Addis Ababa,6,100.0,435.0
+Cassava,Kumasi,9,10.0,4.48
+Plantain,Lusaka,9,50.0,10.59
+Onion,Lusaka,11,1000.0,11.32
+Plantain,Addis Ababa,8,500.0,33.91
+Cocoa,Luanda,1,50.0,2856.21
+Maize,Cairo,2,50.0,20.03
+Coffee,Nairobi,8,250.0,497.88
+Beans,Khartoum,2,250.0,1842.62
+Onion,Kano,3,50.0,679.66
+Coffee,Khartoum,7,1000.0,6055.66
+Irish Potato,Nairobi,10,50.0,58.35
+Plantain,Kampala,11,500.0,1092.8
+Coffee,Dakar,1,25.0,2397.07
+Irish Potato,Harare,4,100.0,2111.47
+Onion,Luanda,12,500.0,350.99
+Cassava,Harare,12,1000.0,936.01
+Plantain,Kigali,7,50.0,463.79
+Maize,Khartoum,2,1000.0,510.49
+Beans,Johannesburg,6,1000.0,22.3
+Onion,Maputo,2,10.0,49.24
+Irish Potato,Yaounde,6,500.0,345.1
+Maize,Lusaka,5,50.0,9.25
+Cocoa,Kinshasa,5,50.0,10948.71
+Tomato,Kigali,12,500.0,516.79
+Rice,Kigali,6,10.0,1114.51
+Coffee,Cairo,5,10.0,257.98
+Plantain,Luanda,12,10.0,332.37
+Beans,Tunis,7,250.0,5.15
+Onion,Johannesburg,5,10.0,10.56
+Onion,Casablanca,10,1000.0,6.53
+Beans,Dakar,2,10.0,939.24
+Maize,Addis Ababa,8,250.0,23.29
+Maize,Lagos,6,10.0,774.47
+Coffee,Addis Ababa,12,250.0,358.67
+Beans,Tunis,12,10.0,7.02
+Cassava,Maputo,3,500.0,28.8
+Tomato,Kumasi,6,100.0,12.33
+Tomato,Khartoum,11,250.0,788.46
+Beans,Kumasi,8,100.0,21.37
+Beans,Dakar,6,250.0,726.13
+Plantain,Khartoum,4,25.0,785.15
+Onion,Cairo,5,100.0,17.18
+Cassava,Lagos,7,1000.0,259.4
+Plantain,Khartoum,5,1000.0,594.87
+Plantain,Casablanca,7,500.0,8.35
+Onion,Kinshasa,9,100.0,1465.03
+Onion,Dakar,5,50.0,441.94
+Plantain,Cairo,12,25.0,21.26
+Cassava,Johannesburg,4,50.0,9.86
+Cassava,Kumasi,3,250.0,4.82
+Maize,Tunis,12,100.0,2.41
+Maize,Cairo,10,100.0,16.86
+Onion,Casablanca,7,50.0,7.84
+Maize,Cairo,5,500.0,15.88
+Cassava,Arusha,3,25.0,815.47
+Maize,Tunis,3,500.0,2.35
+Beans,Cairo,6,25.0,42.94
+Cassava,Kano,7,50.0,282.97
+Coffee,Dakar,11,10.0,1977.44
+Coffee,Harare,5,25.0,26357.29
+Cocoa,Cairo,2,50.0,179.48
+Maize,Kinshasa,7,50.0,872.15
+Maize,Cairo,4,10.0,19.1
+Plantain,Tunis,10,100.0,3.03
+Onion,Luanda,3,500.0,368.85
+Maize,Tunis,11,250.0,2.31
+Plantain,Kinshasa,6,500.0,960.88
+Tomato,Luanda,8,500.0,462.35
+Maize,Luanda,8,10.0,256.54
+Cassava,Addis Ababa,6,100.0,24.74
+Irish Potato,Luanda,9,25.0,330.53
+Beans,Harare,4,10.0,5949.71
+Tomato,Dakar,4,1000.0,376.74
+Beans,Kano,3,10.0,1610.36
+Onion,Khartoum,4,250.0,664.64
+Beans,Arusha,6,1000.0,2589.85
+Plantain,Kigali,1,500.0,446.75
+Beans,Tunis,11,25.0,6.43
+Cocoa,Khartoum,6,250.0,6797.45
+Onion,Tunis,12,25.0,2.32
+Maize,Tunis,11,25.0,2.43
+Cocoa,Harare,2,500.0,16925.23
+Cocoa,Yaounde,1,50.0,1234.94
+Coffee,Kampala,8,500.0,9527.69
+Onion,Casablanca,2,25.0,6.23
+Plantain,Maputo,9,50.0,46.33
+Coffee,Nairobi,10,10.0,483.37
+Onion,Kigali,8,25.0,614.56
+Plantain,Addis Ababa,1,100.0,41.87
+Rice,Khartoum,9,100.0,1431.6
+Onion,Johannesburg,12,50.0,9.95
+Plantain,Khartoum,8,25.0,619.64
+Beans,Kumasi,5,500.0,20.42
+Tomato,Khartoum,6,250.0,809.69
+Beans,Lusaka,5,250.0,32.66
+Cassava,Lagos,4,500.0,253.87
+Rice,Addis Ababa,12,1000.0,75.68
+Irish Potato,Kano,6,250.0,673.55
+Maize,Lagos,2,100.0,941.57
+Beans,Arusha,1,250.0,3854.73
+Onion,Kinshasa,3,250.0,1180.73
+Maize,Lagos,10,500.0,756.52
+Cassava,Arusha,9,500.0,712.82
+Irish Potato,Harare,11,10.0,1973.0
+Cocoa,Casablanca,2,500.0,58.0
+Rice,Nairobi,11,25.0,144.64
+Onion,Lusaka,11,10.0,13.25
+Coffee,Lagos,11,10.0,3076.0
+Coffee,Kumasi,1,250.0,33.06
+Maize,Khartoum,7,1000.0,409.81
+Beans,Nairobi,2,50.0,184.08
+Maize,Kano,8,50.0,577.39
+Rice,Arusha,4,250.0,4025.5
+Maize,Tunis,6,1000.0,1.67
+Onion,Kumasi,11,50.0,13.71
+Beans,Johannesburg,3,10.0,31.92
+Cocoa,Addis Ababa,5,50.0,337.02
+Irish Potato,Luanda,5,250.0,310.78
+Rice,Kampala,5,250.0,4595.19
+Maize,Tunis,2,50.0,2.5
+Tomato,Kumasi,9,50.0,13.22
+Coffee,Luanda,10,1000.0,3114.3
+Plantain,Kano,10,1000.0,425.41
+Plantain,Lusaka,9,50.0,9.45
+Coffee,Johannesburg,1,500.0,127.72
+Cassava,Kampala,9,100.0,714.03
+Cassava,Lusaka,10,50.0,6.48
+Irish Potato,Kano,10,25.0,718.28
+Maize,Addis Ababa,2,25.0,34.67
+Maize,Arusha,2,250.0,1066.44
+Irish Potato,Dakar,1,250.0,524.59
+Plantain,Johannesburg,2,25.0,13.07
+Maize,Cairo,11,50.0,17.69
+Coffee,Lusaka,9,250.0,151.47
+Maize,Kano,8,500.0,568.3
+Rice,Dakar,6,25.0,883.92
+Rice,Luanda,9,10.0,790.19
+Cassava,Lusaka,11,250.0,5.71
+Tomato,Kinshasa,9,100.0,1758.44
+Cocoa,Kano,5,10.0,7713.34
+Cassava,Kampala,6,100.0,819.14
+Cassava,Maputo,9,1000.0,22.41
+Plantain,Khartoum,5,1000.0,647.77
+Onion,Dakar,2,1000.0,315.64
+Rice,Khartoum,8,500.0,1416.65
+Cocoa,Luanda,8,1000.0,3054.24
+Beans,Yaounde,3,100.0,884.31
+Cassava,Kano,5,1000.0,235.95
+Tomato,Addis Ababa,5,10.0,41.53
+Tomato,Arusha,8,1000.0,1234.46
+Maize,Yaounde,12,25.0,438.16
+Cocoa,Maputo,1,250.0,339.14
+Cassava,Kinshasa,5,500.0,646.22
+Rice,Khartoum,7,500.0,1557.17
+Tomato,Dakar,3,10.0,419.29
+Plantain,Maputo,3,250.0,55.37
+Plantain,Harare,8,25.0,1879.79
+Cassava,Luanda,2,50.0,193.03
+Irish Potato,Casablanca,9,50.0,5.69
+Rice,Khartoum,11,250.0,1332.55
+Onion,Dakar,2,100.0,370.06
+Beans,Nairobi,9,1000.0,143.44
+Maize,Casablanca,12,10.0,7.76
+Plantain,Kampala,1,50.0,1245.68
+Cocoa,Casablanca,6,1000.0,73.14
+Onion,Kigali,3,1000.0,396.95
+Beans,Lusaka,11,50.0,38.49
+Coffee,Luanda,10,250.0,3368.92
+Maize,Johannesburg,1,250.0,7.32
+Cocoa,Kigali,7,1000.0,3266.5
+Tomato,Arusha,3,100.0,1178.48
+Beans,Luanda,5,25.0,842.47
+Beans,Cairo,11,10.0,53.43
+Maize,Cairo,3,100.0,18.31
+Rice,Cairo,10,1000.0,31.02
+Irish Potato,Nairobi,10,25.0,55.15
+Onion,Khartoum,8,25.0,813.69
+Rice,Kano,8,250.0,1396.94
+Plantain,Kinshasa,11,1000.0,828.74
+Plantain,Casablanca,3,10.0,10.07
+Irish Potato,Kano,2,25.0,992.6
+Beans,Nairobi,1,1000.0,167.81
+Cocoa,Tunis,5,100.0,23.75
+Irish Potato,Kampala,9,25.0,1889.48
+Maize,Kigali,3,250.0,429.43
+Irish Potato,Lagos,12,500.0,903.35
+Rice,Harare,7,50.0,5278.76
+Coffee,Luanda,2,500.0,3800.26
+Irish Potato,Luanda,3,250.0,326.3
+Cassava,Dakar,5,500.0,187.45
+Coffee,Johannesburg,12,250.0,143.92
+Coffee,Luanda,1,50.0,4053.22
+Irish Potato,Lusaka,3,250.0,10.29
+Coffee,Harare,12,1000.0,18525.32
+Tomato,Kinshasa,10,25.0,1849.17
+Rice,Johannesburg,1,10.0,25.63
+Rice,Addis Ababa,2,25.0,98.5
+Rice,Lagos,9,50.0,1463.11
+Onion,Johannesburg,12,25.0,10.17
+Tomato,Kinshasa,11,10.0,1712.04
+Cassava,Tunis,9,250.0,1.92
+Cassava,Harare,4,1000.0,1210.56
+Onion,Arusha,10,25.0,1288.45
+Onion,Dakar,7,100.0,463.64
+Rice,Arusha,12,50.0,3401.49
+Irish Potato,Lusaka,7,1000.0,8.25
+Tomato,Dakar,11,1000.0,406.51
+Cassava,Johannesburg,3,100.0,9.2
+Coffee,Yaounde,9,250.0,2263.67
+Irish Potato,Tunis,4,50.0,2.09
+Coffee,Maputo,11,100.0,435.1
+Plantain,Dakar,2,1000.0,373.13
+Beans,Harare,5,500.0,4771.02
+Coffee,Yaounde,1,10.0,2505.22
+Cocoa,Luanda,2,100.0,3503.73
+Beans,Cairo,12,25.0,54.32
+Tomato,Khartoum,11,25.0,825.95
+Coffee,Addis Ababa,12,50.0,375.08
+Onion,Addis Ababa,11,250.0,47.77
+Irish Potato,Cairo,2,1000.0,15.82
+Cocoa,Harare,3,25.0,16880.4
+Irish Potato,Yaounde,2,250.0,490.05
+Irish Potato,Kinshasa,12,50.0,1189.23
+Rice,Addis Ababa,2,1000.0,84.77
+Beans,Kumasi,10,250.0,24.1
+Maize,Luanda,6,250.0,280.02
+Plantain,Arusha,8,1000.0,753.61
+Coffee,Yaounde,1,10.0,2394.84
+Rice,Tunis,7,250.0,4.56
+Cocoa,Kano,1,1000.0,4615.67
+Cassava,Dakar,1,1000.0,149.52
+Beans,Kampala,10,10.0,4729.97
+Maize,Kano,7,50.0,633.89
+Cocoa,Kigali,8,500.0,3682.88
+Irish Potato,Arusha,7,500.0,1057.07
+Plantain,Dakar,1,10.0,375.51
+Beans,Luanda,12,250.0,983.09
+Onion,Luanda,12,25.0,421.12
+Cocoa,Addis Ababa,11,100.0,263.19
+Rice,Khartoum,9,500.0,1366.49
+Onion,Dakar,11,50.0,498.11
+Irish Potato,Luanda,10,50.0,371.27
+Maize,Johannesburg,6,50.0,6.63
+Plantain,Kumasi,8,25.0,8.63
+Rice,Luanda,1,50.0,1050.7
+Tomato,Casablanca,9,10.0,8.82
+Irish Potato,Cairo,11,250.0,16.17
+Coffee,Nairobi,2,50.0,557.51
+Tomato,Dakar,12,25.0,499.55
+Irish Potato,Maputo,10,10.0,48.6
+Beans,Lusaka,8,50.0,31.88
+Cocoa,Yaounde,4,50.0,1431.02
+Tomato,Addis Ababa,12,25.0,45.73
+Rice,Luanda,2,1000.0,733.09
+Irish Potato,Cairo,12,10.0,18.89
+Coffee,Kano,10,1000.0,2882.36
+Irish Potato,Arusha,11,250.0,1518.55
+Onion,Kinshasa,10,100.0,1281.76
+Maize,Harare,12,10.0,1758.4
+Tomato,Arusha,4,250.0,1158.23
+Rice,Kumasi,2,50.0,22.38
+Beans,Kampala,3,100.0,4502.93
+Coffee,Dakar,7,500.0,2267.78
+Rice,Harare,9,10.0,4860.9
+Maize,Kano,9,1000.0,534.97
+Irish Potato,Kinshasa,9,25.0,1018.74
+Onion,Maputo,2,250.0,42.17
+Beans,Yaounde,1,25.0,1019.25
+Irish Potato,Luanda,6,100.0,294.66
+Rice,Johannesburg,11,1000.0,20.86
+Rice,Maputo,7,50.0,97.81
+Rice,Cairo,5,100.0,42.93
+Cocoa,Cairo,4,250.0,182.38
+Cassava,Kigali,3,500.0,282.93
+Rice,Cairo,8,100.0,38.94
+Cassava,Kumasi,11,50.0,4.08
+Rice,Dakar,2,1000.0,798.34
+Plantain,Cairo,8,100.0,21.06
+Tomato,Cairo,5,100.0,20.35
+Beans,Kano,1,100.0,1601.79
+Irish Potato,Maputo,11,1000.0,39.77
+Beans,Tunis,8,25.0,5.09
+Plantain,Kinshasa,9,1000.0,813.95
+Cassava,Kampala,4,250.0,811.16
+Onion,Lusaka,12,250.0,11.82
+Rice,Harare,8,50.0,4736.71
+Cassava,Kinshasa,8,1000.0,566.3
+Tomato,Addis Ababa,1,10.0,45.77
+Maize,Kinshasa,7,250.0,778.09
+Tomato,Addis Ababa,4,100.0,40.82
+Plantain,Arusha,7,1000.0,825.52
+Tomato,Nairobi,3,10.0,79.49
+Beans,Harare,11,500.0,5925.1
+Cassava,Cairo,5,500.0,12.63
+Tomato,Kampala,9,500.0,2350.32
+Maize,Addis Ababa,6,50.0,29.75
+Irish Potato,Nairobi,2,100.0,64.33
+Cassava,Kumasi,4,500.0,4.51
+Plantain,Kano,12,25.0,565.71
+Plantain,Kampala,7,10.0,1306.93
+Cassava,Yaounde,7,250.0,183.17
+Maize,Luanda,6,250.0,272.38
+Rice,Kinshasa,3,250.0,3473.08
+Maize,Dakar,1,100.0,451.07
+Irish Potato,Dakar,4,100.0,455.03
+Cocoa,Cairo,10,10.0,171.09
+Rice,Arusha,7,500.0,3445.0
+Maize,Lagos,10,500.0,711.68
+Cocoa,Kampala,7,500.0,4875.53
+Rice,Maputo,9,500.0,87.31
+Irish Potato,Kano,4,500.0,722.53
+Rice,Arusha,7,1000.0,3066.5
+Maize,Yaounde,11,250.0,387.55
+Maize,Kampala,2,1000.0,1097.36
+Rice,Nairobi,12,10.0,152.09
+Irish Potato,Kampala,11,250.0,2072.8
+Rice,Lagos,4,100.0,1855.3
+Cassava,Luanda,7,1000.0,162.19
+Cassava,Tunis,10,100.0,1.75
+Plantain,Dakar,1,100.0,349.75
+Cassava,Kampala,12,100.0,693.85
+Beans,Harare,3,50.0,5985.04
+Beans,Cairo,5,10.0,38.35
+Maize,Kinshasa,3,250.0,1021.63
+Plantain,Harare,6,10.0,2029.99
+Coffee,Luanda,1,500.0,4021.12
+Cocoa,Kumasi,3,1000.0,51.0
+Tomato,Lagos,1,25.0,830.35
+Cassava,Addis Ababa,12,1000.0,19.01
+Plantain,Tunis,11,500.0,2.81
+Coffee,Kigali,9,250.0,3756.8
+Rice,Harare,4,500.0,5218.52
+Cassava,Maputo,10,25.0,27.46
+Cocoa,Kigali,6,50.0,3539.75
+Beans,Arusha,12,1000.0,4054.55
+Plantain,Cairo,6,50.0,22.98
+Coffee,Casablanca,10,250.0,82.46
+Rice,Harare,9,1000.0,3941.62
+Plantain,Cairo,6,1000.0,20.43
+Onion,Nairobi,8,25.0,122.23
+Maize,Kampala,6,250.0,978.49
+Rice,Tunis,4,10.0,6.65
+Plantain,Dakar,6,10.0,377.61
+Plantain,Casablanca,12,250.0,9.2
+Plantain,Nairobi,5,1000.0,64.31
+Cassava,Kano,4,500.0,230.11
+Cocoa,Harare,8,50.0,18805.14
+Cocoa,Tunis,10,10.0,20.57
+Rice,Khartoum,6,250.0,1622.17
+Coffee,Arusha,1,500.0,7803.76
+Cocoa,Kampala,4,25.0,5097.64
+Irish Potato,Harare,11,10.0,2069.76
+Coffee,Harare,10,100.0,21568.72
+Cocoa,Kampala,11,500.0,4044.15
+Tomato,Harare,2,25.0,2612.43
+Onion,Addis Ababa,10,10.0,56.21
+Onion,Luanda,4,50.0,411.04
+Cassava,Tunis,4,100.0,2.3
+Coffee,Harare,6,10.0,27344.49
+Onion,Lagos,9,50.0,927.74
+Tomato,Nairobi,2,25.0,87.94
+Cassava,Kano,3,50.0,256.78
+Coffee,Dakar,8,250.0,2413.01
+Beans,Casablanca,1,250.0,20.6
+Onion,Luanda,11,1000.0,362.29
+Cassava,Addis Ababa,4,25.0,27.11
+Onion,Casablanca,1,100.0,6.41
+Rice,Lagos,5,25.0,2001.98
+Rice,Luanda,11,10.0,807.85
+Beans,Casablanca,6,250.0,14.37
+Cassava,Yaounde,2,10.0,181.32
+Onion,Khartoum,6,25.0,799.29
+Beans,Kigali,1,500.0,1105.99
+Cocoa,Maputo,9,250.0,399.89
+Rice,Harare,8,500.0,5123.15
+Beans,Arusha,9,10.0,3711.87
+Irish Potato,Lagos,2,10.0,1090.59
+Irish Potato,Tunis,7,50.0,1.78
+Onion,Nairobi,2,500.0,71.48
+Cassava,Kumasi,6,50.0,5.25
+Cassava,Kumasi,6,25.0,5.08
+Beans,Arusha,9,50.0,4009.44
+Tomato,Cairo,7,10.0,22.4
+Onion,Nairobi,3,50.0,84.25
+Beans,Kumasi,5,500.0,18.14
+Rice,Nairobi,9,10.0,139.27
+Plantain,Kano,2,100.0,616.53
+Beans,Kinshasa,4,100.0,2972.12
+Cassava,Maputo,9,100.0,28.05
+Cocoa,Khartoum,9,50.0,5828.8
+Coffee,Dakar,2,25.0,2303.23
+Plantain,Dakar,9,100.0,292.62
+Maize,Lagos,10,100.0,798.1
+Maize,Maputo,10,250.0,37.81
+Irish Potato,Lusaka,9,25.0,11.03
+Cocoa,Johannesburg,9,50.0,109.45
+Irish Potato,Yaounde,1,500.0,497.01
+Plantain,Kigali,6,50.0,455.2
+Cassava,Kinshasa,4,10.0,844.39
+Cassava,Lagos,6,25.0,316.79
+Cassava,Kampala,11,250.0,593.25
+Cocoa,Lagos,2,250.0,6940.89
+Irish Potato,Cairo,2,500.0,17.65
+Tomato,Johannesburg,8,10.0,14.54
+Cassava,Khartoum,7,250.0,416.13
+Maize,Lusaka,1,25.0,9.75
+Tomato,Maputo,4,1000.0,46.97
+Cassava,Johannesburg,5,25.0,9.79
+Tomato,Lagos,6,500.0,883.36
+Cassava,Harare,1,250.0,1021.64
+Cocoa,Kinshasa,10,1000.0,8059.67
+Tomato,Addis Ababa,7,500.0,47.24
+Rice,Johannesburg,6,100.0,25.63
+Rice,Kumasi,4,50.0,22.62
+Coffee,Lagos,9,10.0,3664.33
+Rice,Maputo,3,100.0,116.81
+Maize,Maputo,4,1000.0,36.58
+Coffee,Kinshasa,5,1000.0,12510.45
+Maize,Khartoum,8,1000.0,364.33
+Plantain,Yaounde,7,500.0,302.12
+Irish Potato,Yaounde,1,50.0,500.79
+Irish Potato,Harare,10,500.0,1743.97
+Plantain,Yaounde,1,500.0,364.65
+Plantain,Kampala,9,1000.0,883.5
+Onion,Johannesburg,7,10.0,10.92
+Cocoa,Dakar,5,10.0,4554.91
+Cassava,Kigali,12,25.0,277.4
+Maize,Kampala,5,10.0,1185.95
+Cocoa,Johannesburg,4,500.0,98.88
+Onion,Kinshasa,3,250.0,1087.8
+Tomato,Khartoum,4,50.0,723.1
+Cassava,Kumasi,9,250.0,4.2
+Onion,Kampala,4,1000.0,2241.62
+Coffee,Lagos,4,25.0,3871.61
+Irish Potato,Dakar,12,500.0,440.58
+Maize,Kano,7,100.0,613.96
+Cocoa,Cairo,6,50.0,207.04
+Irish Potato,Tunis,2,1000.0,1.97
+Maize,Maputo,5,10.0,40.22
+Coffee,Yaounde,1,250.0,2374.11
+Tomato,Kigali,4,1000.0,447.13
+Tomato,Nairobi,2,100.0,86.1
+Irish Potato,Nairobi,4,250.0,57.17
+Plantain,Nairobi,4,500.0,76.69
+Irish Potato,Maputo,3,25.0,49.72
+Plantain,Kumasi,7,25.0,8.73
+Coffee,Addis Ababa,11,25.0,343.49
+Beans,Luanda,3,500.0,904.78
+Rice,Luanda,9,25.0,777.69
+Maize,Kinshasa,11,100.0,861.62
+Cocoa,Dakar,4,100.0,4507.54
+Irish Potato,Cairo,10,100.0,16.03
+Irish Potato,Tunis,12,25.0,2.25
+Coffee,Kigali,6,50.0,5158.32
+Cassava,Nairobi,1,50.0,41.19
+Onion,Casablanca,4,500.0,6.63
+Cocoa,Dakar,9,50.0,4548.9
+Cocoa,Lagos,1,10.0,7197.22
+Onion,Kinshasa,6,1000.0,1114.98
+Cocoa,Nairobi,8,100.0,376.59
+Onion,Kumasi,2,10.0,12.15
+Cassava,Maputo,11,500.0,22.12
+Coffee,Kano,11,500.0,2697.76
+Beans,Kampala,3,50.0,4433.31
+Beans,Addis Ababa,3,1000.0,67.18
+Irish Potato,Dakar,3,250.0,483.56
+Plantain,Nairobi,8,250.0,55.55
+Coffee,Dakar,4,250.0,2399.6
+Onion,Dakar,2,25.0,379.62
+Beans,Addis Ababa,9,1000.0,67.5
+Beans,Yaounde,11,50.0,1081.54
+Cocoa,Kano,2,50.0,6740.73
+Maize,Nairobi,3,1000.0,58.86
+Cassava,Harare,10,100.0,1092.47
+Rice,Harare,12,500.0,4257.82
+Coffee,Kigali,7,25.0,4400.27
+Maize,Nairobi,2,50.0,73.45
+Coffee,Kampala,10,10.0,8678.92
+Maize,Cairo,10,1000.0,15.41
+Cassava,Casablanca,2,1000.0,4.91
+Irish Potato,Yaounde,2,25.0,513.76
+Beans,Nairobi,8,10.0,172.83
+Cocoa,Kumasi,11,100.0,51.18
+Onion,Nairobi,9,100.0,112.56
+Maize,Yaounde,1,50.0,474.12
+Tomato,Kinshasa,3,250.0,1329.75
+Onion,Kigali,11,500.0,476.32
+Cassava,Khartoum,8,1000.0,358.85
+Cocoa,Kigali,3,100.0,3456.77
+Maize,Kinshasa,12,10.0,911.84
+Rice,Addis Ababa,7,1000.0,78.79
+Maize,Yaounde,4,100.0,401.05
+Plantain,Luanda,4,100.0,347.67
+Cassava,Nairobi,11,10.0,34.74
+Irish Potato,Dakar,9,250.0,405.04
+Maize,Kano,6,25.0,653.68
+Beans,Khartoum,8,50.0,1496.9
+Rice,Johannesburg,1,1000.0,22.85
+Cassava,Kinshasa,5,1000.0,683.22
+Cassava,Khartoum,3,10.0,462.71
+Coffee,Yaounde,7,1000.0,2169.16
+Tomato,Maputo,4,25.0,53.88
+Cassava,Dakar,4,250.0,182.46
+Tomato,Addis Ababa,8,25.0,52.66
+Onion,Lusaka,2,250.0,11.67
+Plantain,Kumasi,5,500.0,9.53
+Irish Potato,Nairobi,12,50.0,68.73
+Plantain,Dakar,11,10.0,343.69
+Cocoa,Nairobi,1,10.0,321.17
+Plantain,Kinshasa,1,100.0,1049.7
+Coffee,Lusaka,1,100.0,155.37
+Coffee,Arusha,2,25.0,8995.99
+Cocoa,Casablanca,2,50.0,64.67
+Cassava,Khartoum,5,50.0,464.78
+Tomato,Casablanca,4,500.0,7.1
+Coffee,Kigali,5,25.0,5338.2
+Rice,Kinshasa,11,50.0,2814.25
+Maize,Dakar,9,100.0,338.84
+Maize,Cairo,5,500.0,16.46
+Tomato,Johannesburg,12,250.0,13.23
+Onion,Harare,3,1000.0,1659.98
+Coffee,Addis Ababa,2,1000.0,368.12
+Onion,Lagos,5,250.0,871.01
+Cassava,Harare,1,10.0,1146.48
+Maize,Cairo,2,250.0,19.79
+Beans,Lusaka,2,100.0,36.44
+Irish Potato,Addis Ababa,12,25.0,31.06
+Maize,Luanda,9,25.0,250.5
+Plantain,Nairobi,12,500.0,68.65
+Cassava,Casablanca,1,50.0,5.92
+Tomato,Addis Ababa,5,50.0,44.17
+Tomato,Khartoum,9,100.0,890.3
+Irish Potato,Casablanca,2,10.0,6.33
+Cassava,Cairo,1,50.0,11.8
+Maize,Lusaka,12,250.0,9.91
+Cassava,Dakar,12,250.0,137.01
+Irish Potato,Addis Ababa,4,25.0,27.38
+Beans,Nairobi,4,25.0,160.64
+Coffee,Khartoum,2,100.0,7292.93
+Plantain,Maputo,5,10.0,56.41
+Onion,Kano,8,50.0,812.97
+Cassava,Maputo,2,1000.0,23.57
+Irish Potato,Harare,5,500.0,1669.81
+Onion,Casablanca,2,50.0,6.09
+Onion,Lagos,9,100.0,964.1
+Rice,Johannesburg,4,25.0,28.62
+Irish Potato,Casablanca,6,25.0,4.98
+Irish Potato,Cairo,4,50.0,15.96
+Irish Potato,Kinshasa,12,250.0,1169.05
+Cassava,Arusha,3,500.0,794.83
+Irish Potato,Dakar,9,10.0,421.06
+Tomato,Nairobi,10,500.0,101.26
+Coffee,Khartoum,1,500.0,6000.75
+Tomato,Khartoum,11,50.0,923.47
+Maize,Lusaka,5,10.0,9.69
+Coffee,Khartoum,1,500.0,6072.1
+Cassava,Dakar,12,10.0,153.96
+Irish Potato,Johannesburg,10,1000.0,9.95
+Cassava,Addis Ababa,5,50.0,25.36
+Tomato,Maputo,8,1000.0,61.58
+Cocoa,Casablanca,7,10.0,77.52
+Coffee,Dakar,3,250.0,2513.92
+Coffee,Dakar,5,250.0,2412.03
+Cassava,Arusha,1,50.0,700.06
+Cocoa,Maputo,4,500.0,376.26
+Rice,Tunis,3,1000.0,4.89
+Onion,Cairo,5,1000.0,15.3
+Irish Potato,Kigali,3,500.0,336.68
+Tomato,Kigali,3,100.0,503.63
+Beans,Luanda,4,1000.0,731.41
+Irish Potato,Maputo,12,1000.0,45.88
+Irish Potato,Harare,1,10.0,2270.09
+Tomato,Nairobi,5,50.0,92.67
+Plantain,Luanda,3,1000.0,328.64
+Maize,Kampala,3,100.0,1303.59
+Onion,Yaounde,1,100.0,408.01
+Tomato,Kano,12,50.0,682.48
+Cocoa,Kigali,2,10.0,3299.65
+Plantain,Dakar,10,10.0,310.78
+Tomato,Lusaka,7,10.0,16.73
+Cocoa,Dakar,2,25.0,3658.69
+Beans,Nairobi,10,100.0,160.41
+Plantain,Luanda,7,50.0,328.09
+Irish Potato,Arusha,9,100.0,1316.76
+Coffee,Johannesburg,10,25.0,131.86
+Beans,Yaounde,10,50.0,999.85
+Tomato,Kano,2,500.0,592.52
+Beans,Kumasi,4,250.0,22.39
+Irish Potato,Tunis,6,100.0,1.96
+Plantain,Kano,11,250.0,451.54
+Coffee,Dakar,1,250.0,2192.33
+Tomato,Kinshasa,6,50.0,1671.05
+Maize,Johannesburg,8,50.0,5.79
+Cocoa,Nairobi,8,500.0,358.55
+Irish Potato,Harare,1,250.0,2031.39
+Rice,Kinshasa,12,250.0,2982.62
+Maize,Maputo,6,100.0,36.55
+Onion,Kigali,3,250.0,480.49
+Irish Potato,Khartoum,1,250.0,684.87
+Irish Potato,Kano,9,25.0,742.0
+Maize,Harare,7,100.0,1571.18
+Maize,Lagos,5,250.0,808.39
+Coffee,Maputo,1,500.0,467.39
+Coffee,Kano,2,250.0,3610.2
+Plantain,Johannesburg,11,25.0,11.81
+Maize,Kampala,2,50.0,1371.3
+Cocoa,Casablanca,5,50.0,81.28
+Beans,Luanda,1,100.0,1010.75
+Cocoa,Yaounde,5,500.0,1602.77
+Coffee,Nairobi,5,250.0,619.53
+Cassava,Johannesburg,2,25.0,8.58
+Cassava,Lusaka,5,100.0,8.6
+Maize,Maputo,12,250.0,42.73
+Onion,Lusaka,6,100.0,13.95
+Irish Potato,Kigali,4,250.0,317.21
+Irish Potato,Kumasi,5,250.0,10.59
+Onion,Addis Ababa,9,50.0,63.93
+Onion,Khartoum,6,1000.0,645.36
+Cocoa,Cairo,6,500.0,184.42
+Beans,Khartoum,1,10.0,1906.93
+Rice,Johannesburg,5,25.0,23.69
+Coffee,Maputo,7,10.0,535.85
+Cassava,Lusaka,5,500.0,6.96
+Irish Potato,Arusha,10,250.0,1444.57
+Coffee,Maputo,3,100.0,535.49
+Plantain,Maputo,4,100.0,54.62
+Tomato,Johannesburg,3,1000.0,9.58
+Rice,Lagos,6,250.0,1743.22
+Tomato,Tunis,9,100.0,3.65
+Rice,Addis Ababa,3,1000.0,87.86
+Onion,Kinshasa,6,250.0,1295.02
+Maize,Kumasi,8,25.0,9.24
+Irish Potato,Johannesburg,5,1000.0,8.53
+Rice,Nairobi,2,25.0,170.65
+Rice,Khartoum,3,25.0,1911.44
+Cocoa,Harare,12,100.0,15272.42
+Plantain,Lusaka,12,10.0,11.7
+Irish Potato,Kano,11,50.0,825.97
+Irish Potato,Tunis,11,500.0,2.2
+Coffee,Kigali,12,1000.0,3155.54
+Coffee,Khartoum,2,250.0,6400.72
+Coffee,Lagos,12,250.0,3227.76
+Tomato,Khartoum,10,1000.0,756.35
+Beans,Luanda,2,1000.0,798.22
+Onion,Kano,2,25.0,606.47
+Onion,Kumasi,10,1000.0,11.46
+Beans,Lusaka,9,250.0,33.85
+Cassava,Arusha,12,250.0,662.02
+Beans,Johannesburg,9,25.0,30.02
+Maize,Kano,2,250.0,793.25
+Tomato,Lagos,1,500.0,739.05
+Plantain,Luanda,10,1000.0,257.15
+Rice,Addis Ababa,12,10.0,86.39
+Cocoa,Harare,11,10.0,15729.38
+Coffee,Kano,12,250.0,3067.36
+Maize,Kano,7,500.0,580.31
+Rice,Tunis,1,250.0,4.95
+Rice,Casablanca,1,1000.0,12.31
+Beans,Yaounde,4,25.0,827.0
+Cassava,Kano,2,1000.0,216.5
+Cassava,Cairo,6,100.0,11.54
+Maize,Lagos,4,250.0,797.03
+Beans,Tunis,7,25.0,5.5
+Cassava,Kumasi,2,250.0,4.32
+Onion,Kumasi,1,10.0,11.97
+Cassava,Harare,3,100.0,1174.71
+Onion,Lusaka,3,10.0,11.18
+Beans,Harare,10,250.0,5754.01
+Beans,Arusha,9,500.0,3411.45
+Maize,Harare,8,10.0,1465.04
+Rice,Cairo,4,500.0,44.55
+Maize,Johannesburg,8,25.0,5.81
+Beans,Kumasi,8,10.0,19.99
+Cassava,Kano,12,25.0,224.96
+Coffee,Kinshasa,5,500.0,12950.53
+Tomato,Tunis,11,500.0,2.88
+Irish Potato,Kigali,6,10.0,306.3
+Cassava,Harare,12,100.0,1055.55
+Cocoa,Addis Ababa,9,500.0,275.43
+Tomato,Tunis,10,25.0,3.33
+Coffee,Dakar,10,25.0,2149.38
+Beans,Tunis,2,100.0,6.89
+Cassava,Dakar,8,1000.0,143.35
+Cocoa,Harare,6,25.0,19203.32
+Tomato,Cairo,2,10.0,20.56
+Tomato,Johannesburg,12,500.0,12.69
+Irish Potato,Kigali,5,1000.0,259.03
+Irish Potato,Maputo,2,250.0,53.5
+Maize,Dakar,4,1000.0,374.5
+Coffee,Maputo,9,1000.0,470.69
+Irish Potato,Addis Ababa,4,250.0,27.98
+Coffee,Johannesburg,9,500.0,139.05
+Irish Potato,Lagos,10,500.0,855.33
+Cocoa,Yaounde,12,10.0,1128.21
+Irish Potato,Casablanca,7,100.0,4.92
+Cassava,Arusha,1,100.0,683.69
+Cocoa,Kinshasa,4,25.0,9348.52
+Maize,Cairo,6,10.0,15.98
+Plantain,Dakar,8,50.0,318.5
+Plantain,Lagos,5,500.0,591.61
+Cocoa,Kigali,4,1000.0,3228.43
+Cocoa,Yaounde,7,25.0,1480.47
+Plantain,Luanda,7,100.0,325.23
+Plantain,Kumasi,2,250.0,10.6
+Beans,Cairo,2,50.0,50.43
+Cassava,Nairobi,12,1000.0,32.12
+Onion,Kumasi,11,10.0,15.3
+Irish Potato,Yaounde,6,10.0,397.83
+Maize,Cairo,1,25.0,17.71
+Onion,Kano,11,100.0,758.64
+Cocoa,Casablanca,3,50.0,69.03
+Rice,Arusha,5,10.0,4367.16
+Cassava,Khartoum,1,25.0,377.46
+Rice,Kumasi,6,500.0,18.99
+Onion,Maputo,6,250.0,54.25
+Plantain,Cairo,1,1000.0,21.73
+Onion,Nairobi,8,100.0,113.65
+Onion,Kano,8,500.0,801.59
+Maize,Kigali,11,1000.0,331.02
+Maize,Dakar,4,250.0,390.11
+Maize,Arusha,4,25.0,1093.15
+Irish Potato,Luanda,9,50.0,331.95
+Irish Potato,Khartoum,5,25.0,526.83
+Onion,Johannesburg,8,10.0,11.86
+Rice,Harare,4,250.0,5876.72
+Beans,Dakar,2,250.0,864.71
+Irish Potato,Kinshasa,1,500.0,1159.79
+Coffee,Yaounde,5,500.0,2736.4
+Cassava,Khartoum,11,1000.0,277.28
+Cocoa,Nairobi,11,250.0,289.89
+Coffee,Kigali,1,100.0,4143.09
+Irish Potato,Arusha,7,1000.0,1052.82
+Maize,Kigali,12,50.0,412.04
+Maize,Tunis,12,25.0,2.38
+Rice,Lusaka,5,10.0,33.9
+Plantain,Kigali,1,500.0,445.75
+Beans,Maputo,3,10.0,133.17
+Cassava,Lusaka,10,250.0,6.29
+Beans,Kampala,10,100.0,4520.57
+Irish Potato,Arusha,2,100.0,1512.83
+Beans,Arusha,8,50.0,3324.03
+Onion,Luanda,8,25.0,442.23
+Cassava,Nairobi,11,10.0,36.56
+Cassava,Harare,10,10.0,1031.62
+Coffee,Kano,3,50.0,3790.18
+Plantain,Harare,3,250.0,2495.0
+Cassava,Arusha,3,1000.0,707.06
+Cassava,Kano,1,100.0,221.1
+Irish Potato,Addis Ababa,6,50.0,26.33
+Onion,Kano,5,1000.0,626.26
+Tomato,Nairobi,10,10.0,101.08
+Maize,Yaounde,9,500.0,335.05
+Irish Potato,Tunis,9,100.0,1.98
+Beans,Nairobi,11,1000.0,160.06
+Cassava,Maputo,3,25.0,32.43
+Coffee,Kigali,1,500.0,3891.78
+Plantain,Kampala,5,100.0,1388.47
+Plantain,Khartoum,6,250.0,744.57
+Coffee,Kampala,12,250.0,9007.0
+Plantain,Johannesburg,12,500.0,10.98
+Rice,Dakar,1,10.0,817.27
+Beans,Lusaka,8,50.0,33.56
+Beans,Kumasi,7,10.0,21.91
+Cassava,Harare,5,100.0,1329.94
+Tomato,Kampala,8,100.0,2445.04
+Beans,Luanda,9,10.0,963.39
+Plantain,Nairobi,4,500.0,69.66
+Coffee,Kinshasa,5,250.0,12259.27
+Rice,Dakar,2,500.0,743.68
+Plantain,Kampala,4,50.0,1524.35
+Onion,Kumasi,12,250.0,13.37
+Rice,Arusha,8,1000.0,2515.14
+Plantain,Maputo,10,10.0,46.75
+Tomato,Johannesburg,10,100.0,15.37
+Onion,Yaounde,5,100.0,450.29
+Plantain,Lusaka,12,500.0,11.39
+Rice,Luanda,2,25.0,869.51
+Plantain,Kigali,11,100.0,503.74
+Maize,Kigali,1,100.0,454.75
+Plantain,Addis Ababa,11,1000.0,35.5
+Plantain,Harare,12,1000.0,1799.89
+Coffee,Addis Ababa,6,50.0,410.4
+Cassava,Cairo,5,10.0,13.28
+Beans,Arusha,8,100.0,3703.17
+Irish Potato,Nairobi,2,10.0,62.59
+Irish Potato,Lusaka,9,10.0,10.51
+Beans,Tunis,10,10.0,5.99
+Beans,Casablanca,1,25.0,20.56
+Tomato,Lagos,2,25.0,804.85
+Irish Potato,Maputo,5,250.0,42.27
+Cocoa,Arusha,8,500.0,3746.32
+Beans,Addis Ababa,3,10.0,85.57
+Onion,Arusha,1,250.0,1146.27
+Coffee,Nairobi,7,1000.0,452.37
+Cocoa,Casablanca,4,250.0,69.31
+Tomato,Kigali,3,10.0,529.97
+Tomato,Addis Ababa,3,100.0,37.75
+Plantain,Kumasi,2,1000.0,8.8
+Plantain,Nairobi,1,50.0,83.82
+Irish Potato,Kampala,3,100.0,2292.65
+Onion,Kano,11,1000.0,610.2
+Onion,Harare,12,10.0,2330.52
+Rice,Kinshasa,1,10.0,3284.54
+Beans,Lagos,9,10.0,1893.52
+Rice,Johannesburg,12,250.0,22.19
+Onion,Kinshasa,7,500.0,1428.45
+Plantain,Addis Ababa,5,50.0,45.05
+Onion,Dakar,6,10.0,493.75
+Coffee,Cairo,1,50.0,218.4
+Tomato,Dakar,5,100.0,398.54
+Cassava,Kigali,7,25.0,299.89
+Irish Potato,Addis Ababa,5,25.0,28.15
+Cassava,Khartoum,4,25.0,413.43
+Beans,Kigali,1,100.0,1195.91
+Maize,Kampala,5,1000.0,1092.92
+Coffee,Harare,7,500.0,23041.68
+Plantain,Kigali,9,25.0,407.31
+Cocoa,Addis Ababa,1,1000.0,204.8
+Maize,Kumasi,3,1000.0,10.17
+Cocoa,Yaounde,3,250.0,1272.6
+Rice,Maputo,11,500.0,89.81
+Onion,Khartoum,7,1000.0,726.07
+Coffee,Harare,9,100.0,22982.68
+Coffee,Nairobi,3,100.0,505.64
+Onion,Casablanca,9,250.0,7.67
+Coffee,Khartoum,1,250.0,6444.91
+Onion,Nairobi,4,250.0,89.35
+Cocoa,Kinshasa,6,25.0,10807.34
+Cocoa,Dakar,10,500.0,3371.94
+Irish Potato,Yaounde,2,100.0,474.1
+Beans,Kano,4,250.0,1365.81
+Maize,Dakar,4,1000.0,341.21
+Cassava,Kumasi,8,100.0,4.65
+Beans,Addis Ababa,5,500.0,67.66
+Onion,Kigali,3,100.0,452.78
+Maize,Kigali,8,250.0,333.71
+Coffee,Arusha,8,10.0,8952.7
+Tomato,Lusaka,7,500.0,16.42
+Cocoa,Kinshasa,9,25.0,8590.25
+Onion,Lusaka,10,10.0,13.69
+Plantain,Harare,2,1000.0,1984.26
+Irish Potato,Nairobi,11,1000.0,52.72
+Rice,Arusha,6,1000.0,3209.63
+Beans,Luanda,12,500.0,1010.55
+Maize,Lagos,10,50.0,807.83
+Beans,Yaounde,4,50.0,795.12
+Beans,Lagos,10,50.0,2025.04
+Beans,Nairobi,1,100.0,182.44
+Tomato,Tunis,4,100.0,2.53
+Maize,Kano,7,25.0,608.93
+Maize,Kumasi,5,25.0,10.21
+Cassava,Nairobi,2,1000.0,38.38
+Cassava,Dakar,11,1000.0,137.24
+Beans,Casablanca,8,500.0,16.73
+Cassava,Arusha,4,500.0,772.85
+Coffee,Nairobi,11,10.0,477.03
+Onion,Addis Ababa,11,10.0,51.77
+Cassava,Luanda,10,10.0,162.03
+Beans,Cairo,9,250.0,41.51
+Irish Potato,Yaounde,4,10.0,486.81
+Beans,Dakar,2,50.0,874.91
+Maize,Maputo,6,50.0,40.26
+Tomato,Kumasi,1,100.0,12.1
+Plantain,Tunis,1,10.0,3.56
+Cocoa,Luanda,6,500.0,3790.29
+Tomato,Kumasi,5,100.0,12.57
+Cocoa,Yaounde,12,25.0,1229.51
+Irish Potato,Lusaka,5,10.0,9.52
+Beans,Lagos,8,250.0,1440.27
+Rice,Harare,11,25.0,4637.58
+Rice,Nairobi,9,10.0,153.83
+Coffee,Addis Ababa,5,25.0,511.53
+Tomato,Luanda,9,10.0,518.1
+Tomato,Casablanca,10,10.0,8.9
+Rice,Kano,6,250.0,1536.47
+Maize,Kinshasa,10,250.0,848.81
+Cassava,Cairo,7,100.0,12.91
+Tomato,Johannesburg,1,100.0,11.79
+Coffee,Lagos,1,50.0,3523.53
+Beans,Cairo,11,10.0,48.91
+Tomato,Kigali,4,100.0,495.96
+Plantain,Nairobi,4,10.0,80.92
+Beans,Kinshasa,4,500.0,3210.93
+Cocoa,Kigali,9,500.0,2961.1
+Cocoa,Kigali,8,10.0,3578.61
+Tomato,Dakar,6,100.0,464.92
+Beans,Addis Ababa,9,25.0,82.66
+Onion,Arusha,8,500.0,1435.38
+Plantain,Dakar,9,50.0,310.09
+Rice,Nairobi,3,25.0,165.96
+Cassava,Addis Ababa,7,500.0,23.8
+Cocoa,Dakar,10,10.0,4047.88
+Maize,Maputo,2,1000.0,40.54
+Cocoa,Addis Ababa,5,250.0,307.73
+Maize,Yaounde,3,50.0,448.5
+Irish Potato,Luanda,7,500.0,270.02
+Tomato,Kano,1,25.0,643.67
+Irish Potato,Cairo,2,100.0,18.35
+Plantain,Maputo,8,25.0,45.67
+Cassava,Yaounde,11,250.0,139.3
+Beans,Kampala,4,10.0,4502.34
+Tomato,Casablanca,6,10.0,9.09
+Onion,Lusaka,3,500.0,11.34
+Irish Potato,Khartoum,8,25.0,540.89
+Rice,Yaounde,3,1000.0,774.82
+Plantain,Kumasi,3,50.0,10.73
+Plantain,Kinshasa,11,50.0,957.09
+Beans,Lusaka,6,500.0,28.46
+Cassava,Johannesburg,11,1000.0,6.94
+Beans,Harare,12,100.0,6397.39
+Beans,Harare,2,100.0,6790.22
+Cassava,Kigali,3,10.0,313.39
+Beans,Casablanca,8,250.0,15.04
+Cassava,Kigali,1,500.0,263.3
+Tomato,Tunis,5,1000.0,2.35
+Coffee,Kinshasa,10,100.0,10130.27
+Cocoa,Johannesburg,5,25.0,115.41
+Irish Potato,Arusha,5,25.0,1249.7
+Tomato,Yaounde,10,50.0,562.38
+Onion,Johannesburg,8,10.0,12.78
+Onion,Luanda,7,250.0,422.85
+Maize,Addis Ababa,4,500.0,28.22
+Beans,Khartoum,10,10.0,1671.25
+Maize,Dakar,12,500.0,391.68
+Maize,Johannesburg,8,50.0,5.63
+Beans,Lagos,5,100.0,1495.68
+Cocoa,Kigali,3,100.0,3387.4
+Irish Potato,Casablanca,4,250.0,5.37
+Cocoa,Kigali,6,500.0,3677.56
+Cocoa,Kampala,10,250.0,3946.9
+Irish Potato,Arusha,11,500.0,1415.75
+Maize,Casablanca,1,1000.0,6.76
+Cocoa,Nairobi,7,10.0,364.78
+Cassava,Kigali,11,500.0,219.62
+Rice,Lagos,12,100.0,1670.34
+Beans,Lusaka,6,250.0,29.16
+Coffee,Kinshasa,6,500.0,11591.74
+Tomato,Harare,11,250.0,2994.74
+Coffee,Kampala,7,250.0,11852.47
+Plantain,Johannesburg,6,100.0,11.7
+Plantain,Cairo,3,10.0,27.34
+Onion,Luanda,9,500.0,399.27
+Coffee,Kampala,8,100.0,10037.75
+Maize,Arusha,2,25.0,1114.83
+Beans,Lusaka,12,250.0,38.57
+Irish Potato,Tunis,10,10.0,2.1
+Onion,Tunis,4,50.0,2.13
+Coffee,Casablanca,9,10.0,88.28
+Rice,Kigali,12,25.0,928.43
+Maize,Cairo,7,25.0,16.66
+Beans,Casablanca,6,10.0,15.59
+Beans,Cairo,11,250.0,49.53
+Cocoa,Harare,8,25.0,20914.84
+Irish Potato,Lagos,7,1000.0,611.46
+Cassava,Luanda,7,1000.0,164.1
+Maize,Addis Ababa,7,50.0,25.08
+Rice,Harare,12,100.0,4812.52
+Onion,Kinshasa,12,10.0,1177.3
+Coffee,Lagos,7,100.0,3859.92
+Rice,Maputo,4,25.0,111.15
+Plantain,Maputo,11,100.0,50.25
+Coffee,Dakar,10,250.0,1850.15
+Irish Potato,Lusaka,2,10.0,12.75
+Irish Potato,Lagos,7,1000.0,678.28
+Coffee,Kampala,4,100.0,12103.02
+Irish Potato,Arusha,5,250.0,1306.7
+Onion,Kinshasa,4,50.0,1268.7
+Beans,Casablanca,6,100.0,15.12
+Cocoa,Yaounde,3,1000.0,1230.25
+Rice,Maputo,11,250.0,90.75
+Cocoa,Harare,2,10.0,17701.57
+Cassava,Khartoum,3,250.0,413.83
+Onion,Casablanca,4,1000.0,5.49
+Cocoa,Luanda,10,1000.0,2991.29
+Cassava,Lusaka,10,250.0,6.06
+Tomato,Dakar,9,10.0,518.98
+Irish Potato,Harare,11,500.0,1820.23
+Rice,Johannesburg,11,10.0,22.94
+Plantain,Maputo,1,100.0,53.0
+Cassava,Kampala,2,50.0,741.62
+Beans,Kampala,9,10.0,4395.76
+Cassava,Johannesburg,6,1000.0,8.46
+Onion,Kigali,3,10.0,500.37
+Rice,Yaounde,4,100.0,967.96
+Cocoa,Lusaka,2,10.0,112.39
+Tomato,Lusaka,12,10.0,16.17
+Rice,Kigali,3,25.0,1205.65
+Tomato,Lusaka,3,500.0,13.06
+Beans,Khartoum,7,1000.0,1272.8
+Cocoa,Kampala,12,500.0,3822.51
+Cocoa,Kinshasa,4,250.0,9213.03
+Tomato,Johannesburg,7,100.0,14.19
+Tomato,Arusha,3,1000.0,1044.65
+Tomato,Maputo,7,1000.0,56.91
+Plantain,Kano,12,500.0,520.57
+Beans,Addis Ababa,12,100.0,96.2
+Irish Potato,Kampala,9,250.0,1900.93
+Cocoa,Kampala,9,500.0,4583.18
+Cassava,Luanda,6,100.0,187.43
+Onion,Cairo,5,50.0,18.22
+Plantain,Lusaka,5,500.0,11.89
+Maize,Lagos,9,10.0,713.53
+Cocoa,Cairo,5,100.0,177.72
+Tomato,Cairo,4,250.0,19.8
+Tomato,Khartoum,8,10.0,871.21
+Onion,Kano,3,500.0,692.66
+Coffee,Cairo,5,500.0,226.92
+Cocoa,Arusha,4,100.0,4117.2
+Cassava,Yaounde,3,500.0,170.34
+Rice,Yaounde,5,500.0,942.14
+Onion,Kumasi,6,50.0,14.1
+Irish Potato,Luanda,12,500.0,336.58
+Cocoa,Kampala,3,1000.0,3970.4
+Plantain,Johannesburg,1,50.0,12.49
+Tomato,Lusaka,6,1000.0,13.56
+Coffee,Casablanca,9,100.0,89.2
+Plantain,Johannesburg,12,100.0,10.79
+Onion,Arusha,9,10.0,1557.34
+Onion,Harare,8,25.0,2599.2
+Irish Potato,Khartoum,3,250.0,598.35
+Beans,Kano,9,1000.0,1285.56
+Cocoa,Tunis,11,50.0,19.41
+Plantain,Kinshasa,11,500.0,947.22
+Plantain,Harare,3,50.0,2222.4
+Plantain,Kinshasa,4,25.0,1074.57
+Plantain,Kigali,4,100.0,542.24
+Plantain,Kumasi,8,50.0,8.53
+Cocoa,Lusaka,2,500.0,107.06
+Tomato,Casablanca,8,10.0,8.28
+Plantain,Khartoum,3,500.0,661.67
+Coffee,Harare,7,50.0,23703.56
+Tomato,Kampala,8,10.0,2435.83
+Onion,Maputo,11,50.0,56.3
+Beans,Luanda,3,250.0,952.02
+Maize,Maputo,8,10.0,33.78
+Onion,Casablanca,6,500.0,6.57
+Cocoa,Kinshasa,12,250.0,7522.47
+Cassava,Kinshasa,9,1000.0,520.37
+Cassava,Khartoum,9,1000.0,335.56
+Maize,Kano,9,25.0,626.14
+Onion,Kumasi,6,100.0,15.28
+Rice,Yaounde,2,500.0,867.19
+Irish Potato,Cairo,4,10.0,16.0
+Irish Potato,Kampala,1,100.0,2517.5
+Irish Potato,Johannesburg,8,250.0,8.94
+Tomato,Kinshasa,11,100.0,1922.15
+Cocoa,Kampala,5,250.0,5045.13
+Tomato,Tunis,8,500.0,3.03
+Rice,Johannesburg,1,25.0,26.15
+Irish Potato,Nairobi,11,25.0,57.37
+Onion,Khartoum,1,500.0,667.1
+Rice,Maputo,2,1000.0,93.8
+Plantain,Nairobi,4,250.0,81.04
+Plantain,Lagos,6,100.0,680.63
+Cocoa,Dakar,1,500.0,3434.07
+Onion,Luanda,12,500.0,372.14
+Plantain,Kinshasa,11,500.0,921.57
+Tomato,Casablanca,4,500.0,7.02
+Rice,Kampala,1,50.0,4024.95
+Coffee,Lusaka,7,25.0,173.62
+Plantain,Casablanca,7,500.0,8.6
+Onion,Luanda,4,1000.0,340.5
+Coffee,Lusaka,5,25.0,169.25
+Maize,Harare,2,50.0,1891.05
+Plantain,Cairo,7,500.0,22.05
+Cassava,Nairobi,6,50.0,45.9
+Cocoa,Johannesburg,9,25.0,97.76
+Irish Potato,Yaounde,2,100.0,510.57
+Cassava,Casablanca,11,100.0,4.4
+Plantain,Lagos,12,25.0,680.92
+Plantain,Yaounde,9,500.0,275.29
+Maize,Nairobi,11,25.0,65.17
+Cassava,Kinshasa,12,100.0,641.61
+Tomato,Kumasi,5,100.0,12.72
+Tomato,Addis Ababa,4,1000.0,33.66
+Maize,Kumasi,10,25.0,9.35
+Tomato,Kano,5,100.0,686.02
+Maize,Lagos,5,50.0,853.84
+Onion,Luanda,8,50.0,432.61
+Irish Potato,Addis Ababa,1,250.0,31.32
+Onion,Kano,8,500.0,788.98
+Tomato,Lagos,9,50.0,946.17
+Coffee,Kumasi,3,25.0,35.53
+Irish Potato,Lagos,3,250.0,879.32
+Rice,Tunis,12,250.0,4.96
+Maize,Maputo,6,10.0,40.16
+Tomato,Lusaka,8,50.0,19.32
+Coffee,Addis Ababa,2,250.0,379.14
+Coffee,Kigali,4,500.0,4554.0
+Tomato,Arusha,10,500.0,1526.04
+Onion,Luanda,9,250.0,417.85
+Irish Potato,Maputo,6,100.0,42.62
+Cassava,Cairo,2,250.0,10.67
+Plantain,Yaounde,3,25.0,401.49
+Tomato,Lusaka,10,250.0,18.62
+Plantain,Dakar,6,500.0,321.94
+Rice,Arusha,5,100.0,3755.44
+Cassava,Nairobi,2,10.0,38.51
+Irish Potato,Khartoum,7,100.0,499.65
+Onion,Kinshasa,7,25.0,1492.38
+Cassava,Johannesburg,1,25.0,9.63
+Tomato,Addis Ababa,2,500.0,36.83
+Cassava,Yaounde,11,500.0,146.06
+Rice,Yaounde,11,25.0,781.6
+Irish Potato,Kinshasa,2,50.0,1110.98
+Irish Potato,Lagos,1,25.0,1121.56
+Maize,Casablanca,3,250.0,7.93
+Rice,Lagos,4,500.0,1900.01
+Coffee,Kumasi,12,25.0,30.64
+Onion,Cairo,5,100.0,15.35
+Cassava,Kano,9,250.0,212.15
+Irish Potato,Kinshasa,12,1000.0,1014.53
+Beans,Johannesburg,4,250.0,30.55
+Coffee,Luanda,2,1000.0,3662.72
+Onion,Harare,10,500.0,2284.28
+Cassava,Tunis,11,250.0,1.89
+Beans,Dakar,10,50.0,896.51
+Rice,Johannesburg,8,1000.0,20.62
+Cocoa,Dakar,2,25.0,3979.14
+Onion,Kigali,2,100.0,434.99
+Cocoa,Kumasi,12,500.0,48.81
+Coffee,Dakar,2,1000.0,1943.61
+Cassava,Luanda,12,100.0,152.76
+Beans,Luanda,4,1000.0,806.81
+Onion,Kinshasa,6,100.0,1437.69
+Maize,Dakar,12,1000.0,376.66
+Plantain,Maputo,1,1000.0,51.51
+Maize,Luanda,8,100.0,233.72
+Rice,Khartoum,5,25.0,1753.18
+Coffee,Khartoum,4,250.0,7663.71
+Onion,Kumasi,7,100.0,14.87
+Cocoa,Harare,5,50.0,19793.56
+Cassava,Yaounde,10,1000.0,138.03
+Beans,Harare,6,25.0,5178.39
+Coffee,Arusha,6,100.0,9081.66
+Maize,Addis Ababa,11,25.0,29.54
+Irish Potato,Kumasi,5,250.0,10.14
+Rice,Kumasi,6,1000.0,17.67
+Rice,Yaounde,7,250.0,924.4
+Plantain,Johannesburg,7,25.0,10.31
+Maize,Kinshasa,7,50.0,830.84
+Maize,Tunis,2,1000.0,2.37
+Plantain,Nairobi,9,1000.0,48.21
+Irish Potato,Kigali,5,10.0,345.36
+Plantain,Harare,10,50.0,1884.75
+Onion,Johannesburg,7,500.0,10.44
+Irish Potato,Lagos,9,1000.0,723.08
+Onion,Tunis,12,50.0,2.23
+Cocoa,Lusaka,7,100.0,130.75
+Onion,Khartoum,10,500.0,775.65
+Onion,Kigali,7,10.0,599.01
+Rice,Casablanca,2,1000.0,14.65
+Beans,Lagos,8,1000.0,1388.84
+Tomato,Yaounde,4,1000.0,400.64
+Beans,Casablanca,2,100.0,20.83
+Beans,Khartoum,4,50.0,1451.55
+Maize,Lagos,11,250.0,778.66
+Irish Potato,Yaounde,8,100.0,362.14
+Irish Potato,Lagos,9,10.0,975.05
+Cassava,Yaounde,5,50.0,191.65
+Coffee,Kigali,2,25.0,4454.18
+Onion,Luanda,6,10.0,418.88
+Cassava,Johannesburg,2,25.0,9.24
+Rice,Arusha,1,50.0,3525.68
+Cocoa,Cairo,4,50.0,182.29
+Irish Potato,Khartoum,5,10.0,528.11
+Beans,Addis Ababa,8,1000.0,69.95
+Cocoa,Kano,11,100.0,6879.28
+Onion,Maputo,3,250.0,50.17
+Irish Potato,Kampala,8,250.0,1755.66
+Cocoa,Khartoum,3,500.0,5304.5
+Plantain,Yaounde,6,250.0,332.04
+Cocoa,Arusha,12,250.0,3283.19
+Coffee,Kinshasa,4,10.0,12440.96
+Plantain,Kampala,12,100.0,1367.7
+Plantain,Kano,11,250.0,507.07
+Coffee,Yaounde,3,25.0,2730.58
+Cassava,Casablanca,10,100.0,5.84
+Maize,Dakar,9,100.0,341.14
+Irish Potato,Cairo,4,250.0,16.35
+Coffee,Dakar,1,100.0,2222.4
+Onion,Luanda,2,100.0,365.25
+Cocoa,Kano,2,1000.0,5900.15
+Tomato,Dakar,1,25.0,403.38
+Coffee,Maputo,12,25.0,469.35
+Plantain,Kampala,3,1000.0,1239.56
+Cassava,Luanda,9,1000.0,145.45
+Rice,Casablanca,1,25.0,17.66
+Tomato,Lagos,5,500.0,764.34
+Irish Potato,Kumasi,6,250.0,9.32
+Irish Potato,Nairobi,3,10.0,60.4
+Onion,Kumasi,5,25.0,15.61
+Irish Potato,Maputo,10,25.0,45.42
+Cocoa,Luanda,3,1000.0,2880.28
+Rice,Lagos,10,25.0,1434.57
+Rice,Lagos,10,1000.0,1222.44
+Cocoa,Johannesburg,10,10.0,99.52
+Tomato,Kigali,6,500.0,553.53
+Rice,Kigali,12,500.0,981.97
+Cocoa,Johannesburg,5,100.0,121.5
+Cocoa,Kigali,3,1000.0,3106.11
+Tomato,Arusha,11,10.0,1404.9
+Cassava,Yaounde,7,10.0,187.87
+Cassava,Luanda,5,100.0,201.11
+Maize,Cairo,8,10.0,14.39
+Rice,Johannesburg,4,250.0,26.09
+Maize,Nairobi,4,25.0,69.24
+Cassava,Kano,11,500.0,206.04
+Cocoa,Lusaka,11,25.0,97.98
+Beans,Kampala,1,100.0,4819.85
+Irish Potato,Kinshasa,12,10.0,1209.85
+Cocoa,Maputo,9,50.0,431.29
+Rice,Kampala,12,10.0,3911.31
+Coffee,Dakar,6,100.0,2553.4
+Plantain,Dakar,5,250.0,331.84
+Irish Potato,Casablanca,2,10.0,6.72
+Tomato,Lagos,11,500.0,827.49
+Beans,Kigali,3,10.0,983.3
+Plantain,Kano,12,500.0,588.52
+Tomato,Johannesburg,11,100.0,14.62
+Irish Potato,Kigali,8,10.0,326.88
+Cocoa,Kano,7,100.0,7564.73
+Coffee,Kinshasa,2,100.0,12637.46
+Cocoa,Casablanca,7,25.0,78.3
+Plantain,Casablanca,2,500.0,10.4
+Irish Potato,Kampala,9,100.0,2033.21
+Irish Potato,Arusha,11,50.0,1618.44
+Maize,Lagos,9,100.0,732.79
+Beans,Tunis,1,50.0,6.63
+Rice,Kumasi,11,100.0,17.31
+Cassava,Nairobi,5,25.0,47.81
+Irish Potato,Addis Ababa,2,1000.0,26.27
+Rice,Kano,11,50.0,1354.28
+Plantain,Kumasi,3,50.0,11.33
+Irish Potato,Kano,4,250.0,792.71
+Onion,Kano,9,1000.0,744.2
+Rice,Khartoum,10,1000.0,1158.13
+Tomato,Arusha,4,500.0,1120.62
+Cocoa,Kampala,8,100.0,5494.67
+Plantain,Yaounde,12,500.0,326.35
+Coffee,Kigali,4,250.0,4724.85
+Beans,Khartoum,7,1000.0,1414.0
+Tomato,Maputo,4,250.0,55.61
+Coffee,Yaounde,7,10.0,2859.6
+Coffee,Cairo,1,250.0,208.91
+Beans,Kampala,11,10.0,5219.01
+Tomato,Addis Ababa,1,10.0,46.3
+Cocoa,Arusha,8,50.0,4053.95
+Cocoa,Tunis,7,1000.0,20.06
+Tomato,Addis Ababa,2,250.0,39.69
+Beans,Kinshasa,11,1000.0,3469.44
+Coffee,Khartoum,8,50.0,6888.39
+Tomato,Kumasi,7,10.0,11.46
+Plantain,Casablanca,7,100.0,8.95
+Beans,Harare,4,25.0,5770.13
+Cassava,Kampala,4,250.0,819.42
+Maize,Kigali,2,10.0,454.62
+Rice,Khartoum,2,10.0,1688.68
+Cocoa,Nairobi,6,25.0,371.73
+Irish Potato,Kampala,11,100.0,2211.11
+Rice,Arusha,10,10.0,3222.03
+Coffee,Casablanca,8,1000.0,77.41
+Beans,Harare,9,1000.0,5198.98
+Tomato,Kinshasa,6,250.0,1645.6
+Cassava,Kampala,9,100.0,713.8
+Cassava,Khartoum,11,10.0,337.57
+Tomato,Yaounde,2,50.0,439.25
+Maize,Lagos,4,250.0,793.58
+Beans,Casablanca,5,100.0,16.08
+Irish Potato,Lagos,4,10.0,898.77
+Onion,Kampala,6,50.0,2590.37
+Beans,Casablanca,10,250.0,18.6
+Cocoa,Yaounde,7,250.0,1616.07
+Cassava,Kigali,6,25.0,356.0
+Coffee,Maputo,12,250.0,454.79
+Cassava,Kampala,12,250.0,644.55
+Beans,Lusaka,7,50.0,31.67
+Maize,Kampala,1,25.0,1228.36
+Maize,Kinshasa,3,100.0,1038.03
+Cassava,Kigali,8,500.0,273.51
+Irish Potato,Kinshasa,5,1000.0,948.7
+Coffee,Kumasi,7,250.0,41.31
+Cocoa,Kano,5,250.0,6887.74
+Coffee,Kampala,4,10.0,12410.04
+Onion,Kumasi,3,10.0,13.37
+Tomato,Kinshasa,4,100.0,1519.32
+Beans,Addis Ababa,6,25.0,69.93
+Cocoa,Kinshasa,4,50.0,9686.96
+Plantain,Lagos,9,10.0,558.24
+Beans,Nairobi,6,500.0,133.5
+Beans,Lusaka,6,100.0,28.41
+Onion,Khartoum,10,50.0,771.64
+Onion,Kigali,5,10.0,559.72
+Plantain,Kano,1,1000.0,522.89
+Tomato,Casablanca,9,50.0,9.42
+Onion,Lagos,9,1000.0,868.8
+Cocoa,Cairo,10,50.0,156.65
+Rice,Maputo,4,50.0,111.98
+Cocoa,Nairobi,1,10.0,332.47
+Rice,Nairobi,10,25.0,154.71
+Onion,Maputo,10,500.0,50.56
+Beans,Harare,5,10.0,5039.46
+Irish Potato,Lagos,10,100.0,982.58
+Coffee,Yaounde,6,25.0,3137.82
+Cocoa,Kumasi,9,10.0,55.74
+Coffee,Kampala,5,250.0,11825.04
+Coffee,Nairobi,6,1000.0,486.59
+Beans,Dakar,10,100.0,886.02
+Coffee,Casablanca,10,250.0,82.08
+Cassava,Addis Ababa,4,100.0,25.53
+Cocoa,Yaounde,8,50.0,1435.04
+Rice,Khartoum,12,250.0,1411.94
+Coffee,Lagos,9,50.0,3477.6
+Plantain,Cairo,5,25.0,25.96
+Maize,Cairo,8,10.0,13.64
+Onion,Nairobi,7,1000.0,99.03
+Cocoa,Kano,3,500.0,6594.86
+Plantain,Harare,7,250.0,1977.62
+Cassava,Kano,10,500.0,179.99
+Cassava,Arusha,7,100.0,773.14
+Onion,Maputo,8,500.0,57.91
+Onion,Nairobi,5,50.0,106.28
+Onion,Dakar,10,250.0,458.56
+Onion,Addis Ababa,5,25.0,51.65
+Rice,Kumasi,1,1000.0,16.83
+Coffee,Kumasi,12,250.0,31.39
+Irish Potato,Arusha,4,1000.0,1312.46
+Coffee,Johannesburg,4,500.0,150.5
+Tomato,Cairo,6,25.0,20.81
+Onion,Cairo,9,100.0,20.17
+Tomato,Cairo,9,250.0,23.85
+Tomato,Khartoum,9,50.0,959.71
+Plantain,Kinshasa,10,10.0,898.61
+Coffee,Arusha,1,250.0,8262.94
+Cassava,Casablanca,12,500.0,4.57
+Cocoa,Dakar,12,1000.0,2741.74
+Onion,Maputo,7,25.0,56.21
+Cocoa,Arusha,10,50.0,4222.2
+Rice,Luanda,10,250.0,709.69
+Coffee,Lagos,12,50.0,3250.63
+Irish Potato,Kigali,10,10.0,367.63
+Coffee,Kumasi,11,25.0,27.43
+Onion,Kampala,10,10.0,2681.01
+Maize,Dakar,10,10.0,389.68
+Onion,Kano,4,100.0,728.2
+Cocoa,Maputo,1,1000.0,309.47
+Coffee,Addis Ababa,4,25.0,443.92
+Plantain,Arusha,11,500.0,979.84
+Onion,Casablanca,12,250.0,6.68
+Tomato,Addis Ababa,6,25.0,42.21
+Tomato,Addis Ababa,5,250.0,40.68
+Maize,Tunis,3,25.0,2.54
+Maize,Casablanca,9,100.0,6.1
+Rice,Kigali,3,1000.0,941.97
+Rice,Kigali,7,10.0,1036.9
+Tomato,Harare,2,250.0,2663.09
+Rice,Johannesburg,5,50.0,27.0
+Beans,Kinshasa,7,50.0,3222.12
+Coffee,Johannesburg,3,100.0,167.17
+Cassava,Johannesburg,11,50.0,7.77
+Onion,Kumasi,5,1000.0,11.62
+Maize,Cairo,1,50.0,19.32
+Tomato,Kigali,10,250.0,592.7
+Onion,Yaounde,4,100.0,463.69
+Beans,Cairo,2,250.0,46.71
+Beans,Maputo,6,10.0,91.57
+Rice,Lagos,2,1000.0,1579.1
+Cocoa,Dakar,12,50.0,3376.61
+Maize,Yaounde,11,1000.0,367.04
+Rice,Kinshasa,12,25.0,3133.65
+Rice,Johannesburg,5,250.0,26.19
+Maize,Kigali,3,25.0,456.36
+Tomato,Addis Ababa,7,500.0,47.23
+Cocoa,Tunis,5,500.0,19.53
+Coffee,Dakar,8,500.0,2298.71
+Coffee,Tunis,1,10.0,28.58
+Tomato,Tunis,8,10.0,3.35
+Irish Potato,Lusaka,2,250.0,10.64
+Coffee,Kano,8,50.0,3652.93
+Cocoa,Yaounde,10,50.0,1197.27
+Tomato,Johannesburg,7,1000.0,12.04
+Maize,Tunis,7,250.0,2.16
+Beans,Nairobi,10,10.0,191.18
+Coffee,Lusaka,6,250.0,163.4
+Beans,Yaounde,10,50.0,903.42
+Plantain,Kumasi,3,500.0,10.15
+Maize,Kinshasa,2,500.0,896.8
+Tomato,Kigali,1,250.0,524.96
+Cocoa,Khartoum,5,50.0,6356.19
+Tomato,Luanda,12,50.0,475.81
+Plantain,Addis Ababa,8,500.0,39.0
+Maize,Kumasi,9,250.0,9.34
+Beans,Lusaka,10,250.0,33.16
+Rice,Addis Ababa,4,50.0,112.54
+Irish Potato,Cairo,12,100.0,18.15
+Coffee,Kumasi,2,1000.0,31.18
+Beans,Johannesburg,1,500.0,33.26
+Onion,Arusha,9,50.0,1415.51
+Beans,Addis Ababa,11,250.0,83.46
+Plantain,Nairobi,11,10.0,73.06
+Irish Potato,Dakar,1,1000.0,475.73
+Maize,Tunis,12,250.0,2.31
+Beans,Harare,5,10.0,5299.18
+Onion,Addis Ababa,1,500.0,44.97
+Beans,Kigali,12,250.0,1208.99
+Cocoa,Kampala,1,250.0,4295.63
+Rice,Casablanca,2,50.0,17.46
+Beans,Lagos,6,500.0,1413.87
+Cocoa,Kigali,12,500.0,2855.49
+Rice,Lusaka,9,250.0,25.59
+Irish Potato,Kampala,10,500.0,2101.91
+Cocoa,Casablanca,11,1000.0,57.54
+Maize,Casablanca,12,500.0,6.96
+Cassava,Arusha,11,10.0,624.96
+Maize,Maputo,1,50.0,44.41
+Rice,Lusaka,1,250.0,27.36
+Cocoa,Casablanca,9,25.0,68.65
+Maize,Kumasi,12,25.0,11.76
+Maize,Cairo,6,25.0,15.7
+Cocoa,Tunis,11,1000.0,16.35
+Irish Potato,Nairobi,8,1000.0,46.69
+Coffee,Harare,8,100.0,22005.26
+Plantain,Casablanca,10,500.0,7.91
+Cassava,Kampala,5,10.0,876.53
+Rice,Lagos,3,50.0,1965.14
+Tomato,Arusha,6,50.0,1454.91
+Beans,Tunis,5,250.0,4.89
+Beans,Khartoum,12,1000.0,1785.39
+Cocoa,Kinshasa,9,50.0,9813.21
+Cocoa,Dakar,9,500.0,3993.35
+Cocoa,Arusha,12,10.0,3272.22
+Plantain,Lusaka,5,10.0,12.38
+Plantain,Dakar,11,500.0,299.48
+Tomato,Nairobi,9,250.0,101.33
+Cocoa,Kinshasa,6,250.0,10738.54
+Irish Potato,Addis Ababa,11,50.0,33.44
+Cocoa,Kumasi,3,500.0,52.45
+Cassava,Casablanca,2,25.0,5.73
+Onion,Kampala,5,50.0,2576.05
+Cocoa,Dakar,10,1000.0,3528.57
+Irish Potato,Cairo,5,100.0,15.17
+Coffee,Lagos,6,500.0,3466.46
+Cocoa,Kinshasa,1,50.0,7797.62
+Rice,Yaounde,3,500.0,933.82
+Tomato,Lagos,5,1000.0,737.35
+Plantain,Maputo,8,250.0,50.28
+Plantain,Cairo,8,500.0,18.55
+Coffee,Kigali,12,500.0,3493.93
+Coffee,Addis Ababa,10,50.0,344.73
+Plantain,Kigali,1,500.0,442.02
+Cassava,Johannesburg,8,10.0,9.41
+Cocoa,Yaounde,5,250.0,1486.49
+Cocoa,Khartoum,6,50.0,6353.31
+Cassava,Tunis,8,100.0,2.3
+Beans,Arusha,4,25.0,3577.42
+Rice,Kumasi,10,100.0,16.49
+Plantain,Cairo,10,500.0,21.35
+Rice,Kano,6,1000.0,1345.45
+Irish Potato,Lusaka,7,500.0,8.34
+Tomato,Maputo,6,25.0,67.4
+Rice,Kampala,1,500.0,3562.29
+Beans,Lagos,5,10.0,1539.02
+Coffee,Lagos,11,100.0,3448.26
+Cocoa,Maputo,9,25.0,422.93
+Maize,Addis Ababa,1,10.0,31.06
+Tomato,Kano,12,100.0,694.3
+Onion,Yaounde,9,100.0,493.74
+Plantain,Casablanca,1,25.0,10.17
+Plantain,Addis Ababa,4,10.0,43.27
+Onion,Luanda,11,250.0,388.56
+Onion,Lagos,7,500.0,1000.31
+Tomato,Kumasi,5,500.0,11.05
+Coffee,Cairo,5,500.0,225.81
+Coffee,Tunis,8,50.0,28.56
+Cassava,Khartoum,6,25.0,451.19
+Plantain,Arusha,5,1000.0,939.24
+Maize,Casablanca,9,1000.0,5.24
+Irish Potato,Yaounde,7,10.0,377.88
+Beans,Kano,4,1000.0,1279.92
+Plantain,Johannesburg,12,25.0,11.85
+Rice,Cairo,8,50.0,39.07
+Onion,Lusaka,7,250.0,13.88
+Cassava,Casablanca,7,50.0,6.18
+Plantain,Kampala,5,250.0,1314.83
+Tomato,Kampala,5,50.0,2316.18
+Beans,Tunis,4,100.0,5.17
+Coffee,Johannesburg,5,10.0,183.74
+Plantain,Luanda,4,10.0,367.79
+Maize,Kigali,6,250.0,373.58
+Onion,Tunis,7,250.0,2.48
+Plantain,Kumasi,3,10.0,10.45
+Coffee,Luanda,10,100.0,3441.09
+Irish Potato,Luanda,12,50.0,385.65
+Maize,Kumasi,1,500.0,9.87
+Rice,Maputo,2,50.0,107.62
+Plantain,Kampala,9,1000.0,1003.38
+Coffee,Harare,12,250.0,19776.59
+Plantain,Dakar,11,10.0,326.42
+Coffee,Khartoum,8,100.0,7387.57
+Tomato,Kumasi,7,50.0,13.76
+Cassava,Yaounde,3,50.0,177.62
+Cocoa,Yaounde,3,500.0,1304.86
+Irish Potato,Kampala,2,10.0,2398.73
+Tomato,Tunis,10,25.0,3.15
+Cassava,Dakar,5,100.0,201.4
+Coffee,Kampala,12,10.0,7988.0
+Coffee,Kampala,12,25.0,7970.0
+Coffee,Kampala,12,50.0,7940.0
+Coffee,Kampala,12,100.0,7880.0
+Coffee,Kampala,12,250.0,7700.0
+Coffee,Kampala,12,500.0,7400.0
+Coffee,Kampala,12,1000.0,6800.0
+Coffee,Kampala,2,10.0,9735.38
+Coffee,Kampala,2,25.0,9713.44
+Coffee,Kampala,2,50.0,9676.88
+Coffee,Kampala,2,100.0,9603.75
+Coffee,Kampala,2,250.0,9384.38
+Coffee,Kampala,2,500.0,9018.75
+Coffee,Kampala,2,1000.0,8287.5
+Coffee,Kampala,5,10.0,12730.88
+Coffee,Kampala,5,25.0,12702.19
+Coffee,Kampala,5,50.0,12654.38
+Coffee,Kampala,5,100.0,12558.75
+Coffee,Kampala,5,250.0,12271.88
+Coffee,Kampala,5,500.0,11793.75
+Coffee,Kampala,5,1000.0,10837.5
+Coffee,Kampala,11,10.0,12581.1
+Coffee,Kampala,11,25.0,12552.75
+Coffee,Kampala,11,50.0,12505.5
+Coffee,Kampala,11,100.0,12411.0
+Coffee,Kampala,11,250.0,12127.5
+Coffee,Kampala,11,500.0,11655.0
+Coffee,Kampala,11,1000.0,10710.0
+Coffee,Kampala,9,10.0,12481.25
+Coffee,Kampala,9,25.0,12453.12
+Coffee,Kampala,9,50.0,12406.25
+Coffee,Kampala,9,100.0,12312.5
+Coffee,Kampala,9,250.0,12031.25
+Coffee,Kampala,9,500.0,11562.5
+Coffee,Kampala,9,1000.0,10625.0
+Coffee,Kampala,2,10.0,12481.25
+Coffee,Kampala,2,25.0,12453.12
+Coffee,Kampala,2,50.0,12406.25
+Coffee,Kampala,2,100.0,12312.5
+Coffee,Kampala,2,250.0,12031.25
+Coffee,Kampala,2,500.0,11562.5
+Coffee,Kampala,2,1000.0,10625.0

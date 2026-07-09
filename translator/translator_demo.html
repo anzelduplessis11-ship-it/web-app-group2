@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmConnect AI — Farm Translator preview</title>
+  <link rel="stylesheet" href="farm-translator.css">
+  <style>
+    /* Minimal earthy styling so this preview looks like FarmConnect.
+       (Your real app already provides these styles via style.css.) */
+    :root{
+      --green-900:#081C15; --green-800:#1B4332; --green-700:#2D6A4F; --green-100:#D8F3DC;
+      --gold-400:#F2C94C; --gold-500:#E9B44C; --cream:#FDF8EF; --paper:#fff;
+      --ink:#22301C; --ink-soft:#5A6B54; --line:#E7DFCD;
+      --shadow:0 8px 28px rgba(27,67,50,.12); --radius:16px;
+      --font:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font);color:var(--ink);background:var(--cream);line-height:1.6}
+    .hero{background:linear-gradient(160deg,var(--green-800),var(--green-900));color:#fff;padding:2.4rem 1.4rem 2rem;text-align:center}
+    .hero .mark{font-size:2.4rem}
+    .hero h1{color:#fff;font-size:1.7rem;margin:.4rem 0}
+    .hero h1 b{color:var(--gold-400)}
+    .hero p{color:var(--green-100);max-width:640px;margin:.3rem auto 0}
+    .preview-tag{display:inline-block;margin-top:1rem;background:rgba(255,255,255,.14);color:#fff;
+      border:1px solid rgba(255,255,255,.35);padding:.35rem .8rem;border-radius:999px;font-size:.8rem}
+    .wrap{max-width:760px;margin:0 auto;padding:1.6rem 1.2rem 5rem}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+      padding:1.3rem 1.4rem;box-shadow:var(--shadow);margin:1.1rem 0}
+    h2{color:var(--green-800);font-size:1.25rem;margin-bottom:.3rem;display:flex;align-items:center;gap:.5rem}
+    h3{color:var(--green-700);font-size:1.02rem;margin:1rem 0 .3rem}
+    p{margin:.4rem 0}
+    ol,ul{margin:.5rem 0 .5rem 1.3rem}
+    li{margin:.35rem 0}
+    .lead{font-size:1.05rem;color:var(--ink-soft)}
+    .step-num{background:var(--green-700);color:#fff;border-radius:50%;width:1.7rem;height:1.7rem;
+      display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+    .tip{background:var(--green-100);border-left:4px solid var(--green-700);padding:.7rem .9rem;border-radius:0 10px 10px 0;margin:.7rem 0}
+    .btn-demo{display:inline-block;background:linear-gradient(135deg,var(--gold-400),var(--gold-500));
+      color:var(--green-900);font-weight:700;padding:.6rem 1.1rem;border-radius:11px;border:none;cursor:pointer;font:inherit;font-weight:700}
+    .note{font-size:.85rem;color:var(--ink-soft)}
+    label{display:block;font-weight:600;margin:.6rem 0 .2rem;color:var(--green-800)}
+    input,select{width:100%;padding:.55rem .7rem;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--cream)}
+    footer{text-align:center;color:var(--ink-soft);font-size:.85rem;padding:1.5rem}
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="mark">🌱</div>
+    <h1>Welcome to <b>FarmConnect AI</b></h1>
+    <p>Sell your harvest directly to buyers — fair prices, no middlemen, works even with little or no internet.</p>
+    <div class="preview-tag" data-no-translate>🔧 Translator preview — tap the 🌐 button (bottom-right) to change language</div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="card">
+      <h2>📖 How to use FarmConnect</h2>
+      <p class="lead">This short guide shows farmers and buyers how to get started. Choose your language using the globe button and this whole page will be translated for you.</p>
+    </section>
+
+    <section class="card">
+      <h2>🌾 For Farmers</h2>
+
+      <h3><span class="step-num">1</span> Create your free account</h3>
+      <p>Open the app and tap <b>Join free</b>. Enter your name, your location, and choose a password. Select <b>Farmer</b> as your role. You can also add your farm name and a short description so buyers trust you.</p>
+
+      <h3><span class="step-num">2</span> Add your first product</h3>
+      <p>From your dashboard, tap <b>Add Product</b>. Enter the name of your crop, choose a category, set the quantity you have, and pick the quality grade (A, B, or C). Add a clear price for each unit, such as per kilogram.</p>
+
+      <h3><span class="step-num">3</span> Let the AI suggest a fair price</h3>
+      <p>As you type your product name, the AI studies real market prices, current demand, and the season, then recommends a fair price and a price range. Every suggestion is explained in simple words, so you always understand why. Tap the suggested price to use it, or set your own.</p>
+      <div class="tip">💡 Tip: A fair price helps you sell faster while still earning a good profit. The AI never invents numbers — it only uses real data from the marketplace.</div>
+
+      <h3><span class="step-num">4</span> Manage your stock</h3>
+      <p>When you sell produce or harvest more, update the quantity in <b>My Products</b>. The app warns you when stock is running low so you never run out without knowing.</p>
+
+      <h3><span class="step-num">5</span> Talk to buyers and confirm sales</h3>
+      <p>When a buyer is interested, they send you a message. Use the chat to agree on the collection time, the pickup place, and how they will pay you — cash or mobile money. After the buyer collects the produce, mark the order as confirmed.</p>
+    </section>
+
+    <section class="card">
+      <h2>🧺 For Buyers</h2>
+      <ol>
+        <li>Search the marketplace for the fresh produce you need.</li>
+        <li>Compare different farmers selling the same crop by price, quality grade, rating, and location.</li>
+        <li>Add products from several farmers into one basket.</li>
+        <li>Place your order, then message the farmer to arrange a pickup time and payment.</li>
+        <li>After you collect your produce, leave a rating to help other buyers choose fairly.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>📶 Using the app without internet</h2>
+      <p>FarmConnect works even when you have no signal. You can keep browsing, add products, build your basket, and write messages while offline. Everything you do is saved safely on your phone and sent automatically as soon as your connection returns.</p>
+    </section>
+
+    <section class="card">
+      <h2>🤝 Payment and collection</h2>
+      <p>FarmConnect is pickup-only — there is no delivery. You arrange payment directly with the other person, using cash or mobile money. Always agree on the price, the amount, and the meeting place inside the chat before you travel.</p>
+    </section>
+
+    <section class="card" data-no-translate>
+      <h2>🧪 Try translating a form</h2>
+      <p class="note">These form labels and placeholders also get translated automatically.</p>
+      <label>Product name</label>
+      <input type="text" placeholder="For example: Tomatoes, Maize, Beans" title="Type the name of your crop">
+      <label>Quality grade</label>
+      <select><option>Grade A — best quality</option><option>Grade B — good quality</option><option>Grade C — fair quality</option></select>
+      <p style="margin-top:1rem"><button class="btn-demo">Save product</button></p>
+      <p class="note" style="margin-top:.6rem">(This box is marked <code>data-no-translate</code> only so you can compare — remove that to translate it too.)</p>
+    </section>
+
+  </main>
+
+  <footer data-no-translate>
+    FarmConnect AI · Farm Translator preview · not yet wired into the live app
+  </footer>
+
+  <!-- ============ Farm Translator (the whole widget) ============ -->
+  <script src="farm-translator.js"></script>
+  <script>
+    // Zero-backend preview: translates in the browser via Google (with a
+    // MyMemory fallback). For production, switch to the Flask backend —
+    // see translator/README.md.
+    FarmTranslator.init({
+      position: "bottom-right",
+      email: "lisakhanya0830@outlook.com", // raises the free MyMemory daily limit
+      // backends: ["server"], endpoint: "/api/translate",  // ← production option
+    });
+  </script>
+</body>
+</html>

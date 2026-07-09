@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% import "_macros.html" as ui %}
+{% block title %}{{ person['name'] }}{% endblock %}
+{% block content %}
+
+<section class="section">
+  <div style="display:flex;align-items:center;gap:14px;">
+    <span class="avatar" style="width:56px;height:56px;font-size:1.4rem;">{{ person['name'][0] | upper }}</span>
+    <div>
+      <h1 style="margin:0;">{{ person['name'] }}</h1>
+      <span class="pill">{{ person['role'] }}</span>
+      <span class="muted">· {{ person['region'] }}</span>
+    </div>
+  </div>
+
+  <p style="margin-top:12px;">{{ ui.stars(rating['avg'], rating['count']) }}</p>
+
+  {% if user and user['id'] != person['id'] %}
+    <a class="btn btn-sm btn-green" href="{{ url_for('conversation', other_id=person['id']) }}">Message</a>
+  {% endif %}
+
+  {% if active_listings %}
+    <hr class="divider">
+    <h2>Crops for sale</h2>
+    <div class="grid grid-3" style="margin-top:12px;">
+      {% for l in active_listings %}
+        <a class="card listing-card" href="{{ url_for('listing_detail', listing_id=l['id']) }}" style="text-decoration:none;color:inherit;">
+          <div class="crop">{{ l['crop'] }}</div>
+          <div class="meta">{{ l['quantity_kg'] | int }} kg</div>
+          <span class="tag" style="align-self:flex-start;">
+            <span class="amount">{{ "%.2f"|format(l['price_per_kg']) }}</span>
+            <span class="unit">per kg</span>
+          </span>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <hr class="divider">
+  <h2>Ratings & reviews</h2>
+
+  {% if user and user['id'] != person['id'] %}
+    <form method="post" action="{{ url_for('rate', ratee_id=person['id']) }}" class="card" style="margin:12px 0;">
+      <p class="eyebrow" style="margin-bottom:8px;">Leave a rating</p>
+      <div class="rate-picker">
+        {% for n in [5,4,3,2,1] %}
+          <input type="radio" id="s{{ n }}" name="stars" value="{{ n }}" {{ 'required' if n == 5 }}>
+          <label for="s{{ n }}" title="{{ n }} stars">★</label>
+        {% endfor %}
+      </div>
+      <div class="field" style="margin-top:10px;">
+        <textarea name="comment" rows="2" placeholder="How was the deal? Was the produce as described?"></textarea>
+      </div>
+      <button class="btn btn-sm btn-green" type="submit">Submit rating</button>
+    </form>
+  {% endif %}
+
+  {% if reviews %}
+    {% for r in reviews %}
+      <div class="card" style="margin-bottom:10px;">
+        <strong>{{ r['rater_name'] }}</strong>
+        <span class="stars">{% for i in range(r['stars']) %}★{% endfor %}</span>
+        <span class="muted" style="font-size:0.82rem;">· {{ r['created_at'] }}</span>
+        {% if r['comment'] %}<p style="margin:6px 0 0;">{{ r['comment'] }}</p>{% endif %}
+      </div>
+    {% endfor %}
+  {% else %}
+    <p class="muted">No reviews yet.</p>
+  {% endif %}
+</section>
+
+{% endblock %}

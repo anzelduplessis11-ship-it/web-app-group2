@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Ask the Farm Expert{% endblock %}
+{% block content %}
+
+<div class="assistant-page">
+
+  <div class="card assistant-hero">
+    <span class="assistant-bot" aria-hidden="true">🤖</span>
+    <div class="assistant-hero-copy">
+      <p class="eyebrow">FarmConnect AI</p>
+      <h1>Ask the Farm Expert</h1>
+      <p class="muted">Free advice on crops, animals, pests, soil, weather &amp; selling.
+        Ask in <b>your own language</b> 🌍 — tap a question below or type your own.</p>
+    </div>
+  </div>
+
+  <div class="chat-wrap card">
+    <div class="chat-scroll" id="askScroll">
+      <!-- The welcome + suggested questions ARE translated by the page widget
+           (so a Swahili user sees Swahili prompts). The live answer bubbles go
+           in #askMessages, which is data-no-translate because the SERVER already
+           translates each answer into the farmer's language. -->
+      <div class="ask-welcome" id="askWelcome">
+        <p class="ask-welcome-line">👋 Hello! What do you need help with today?</p>
+        <div class="suggest-grid">
+          <button class="suggest-card" type="button" data-q="My maize leaves are turning yellow from the bottom. What could be wrong and what should I do?"><span class="sc-ico">🌽</span><span class="sc-txt">Yellow maize leaves</span></button>
+          <button class="suggest-card" type="button" data-q="Insects are eating holes in my crop leaves. How do I identify and control the pest safely?"><span class="sc-ico">🐛</span><span class="sc-txt">Pests eating my crop</span></button>
+          <button class="suggest-card" type="button" data-q="How often and how much should I water my tomato plants?"><span class="sc-ico">💧</span><span class="sc-txt">Watering my plants</span></button>
+          <button class="suggest-card" type="button" data-q="How do I store my maize grain safely to avoid weevils and mould?"><span class="sc-ico">🌾</span><span class="sc-txt">Storing my harvest</span></button>
+          <button class="suggest-card" type="button" data-q="How do I keep my chickens healthy and prevent Newcastle disease?"><span class="sc-ico">🐔</span><span class="sc-txt">Healthy chickens</span></button>
+          <button class="suggest-card" type="button" data-q="Which fertiliser should I use for my crop and when should I apply it?"><span class="sc-ico">🧪</span><span class="sc-txt">Which fertiliser</span></button>
+          <button class="suggest-card" type="button" data-q="What can I plant this season, and what is the best planting time in my region?"><span class="sc-ico">🌱</span><span class="sc-txt">What to plant now</span></button>
+          <button class="suggest-card" type="button" data-q="How can I get a fair price when I sell my produce at the market?"><span class="sc-ico">⚖️</span><span class="sc-txt">Getting a fair price</span></button>
+        </div>
+      </div>
+      <div id="askMessages" data-no-translate></div>
+    </div>
+
+    <form class="chat-input ask-input" id="askForm" autocomplete="off"
+          data-endpoint="{{ url_for('api_ask') }}">
+      <input type="text" id="askInput" placeholder="Type your farming question…"
+             aria-label="Type your farming question" required>
+      <button class="btn btn-green send-btn" type="submit" aria-label="Send question">➤</button>
+    </form>
+    <p class="ask-disclaimer muted">
+      🤝 This is general guidance from FarmConnect's farming knowledge base. For serious
+      crop or animal problems, please also consult a local agricultural extension officer.
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/assistant.js') }}"></script>
+{% endblock %}

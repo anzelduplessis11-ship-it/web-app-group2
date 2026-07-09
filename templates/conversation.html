@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% block title %}Chat with {{ other['name'] }}{% endblock %}
+{% block content %}
+
+<section class="section" style="max-width:640px;">
+  <a class="muted" href="{{ url_for('inbox') }}">← All messages</a>
+
+  <div style="display:flex;align-items:center;gap:12px;margin:14px 0;">
+    <span class="avatar">{{ other['name'][0] | upper }}</span>
+    <div>
+      <h2 style="margin:0;">
+        <a href="{{ url_for('profile', user_id=other['id']) }}">{{ other['name'] }}</a>
+      </h2>
+      <span class="pill">{{ other['role'] }}</span>
+      <span class="muted">· {{ other['region'] }}</span>
+    </div>
+  </div>
+
+  <div class="thread">
+    {% for m in thread %}
+      <div class="bubble {{ 'me' if m['sender_id'] == user['id'] else 'them' }}">
+        <span class="msg-body" data-no-translate data-msg-original="{{ m['body'] }}">{{ m['body'] }}</span>
+        <button type="button" class="msg-translate-btn" data-no-translate>🌐 Translate</button>
+        <span class="when">{{ m['created_at'] }}</span>
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <span class="empty-state-icon">💬</span>
+        <p class="muted">No messages yet. Say hello and start the conversation.</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  <form method="post" class="card">
+    {% if listing_id %}<input type="hidden" name="listing_id" value="{{ listing_id }}">{% endif %}
+    <div class="field" style="margin-bottom:10px;">
+      <label for="body">Your message</label>
+      <textarea id="body" name="body" rows="2" required
+        placeholder="Hi, is this still available? What is your best price for 200 kg?"></textarea>
+    </div>
+    <button class="btn btn-green btn-sm" type="submit">Send</button>
+  </form>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Per-message translation. The blanket page-translator (FarmTranslator)
+// assumes the page is written in English, which is true for the site's own
+// text but NOT for a message someone typed - it could be in any language.
+// So message bodies are excluded from that sweep (data-no-translate) and
+// instead go through source="auto" detection here, one message at a time.
+
+// Whatever language the viewer has picked for the site itself, so a message
+// translates into the same language the rest of the page is showing them.
+function currentSiteLanguage() {
+  // FarmTranslator persists this as a plain string (not JSON-encoded) -
+  // read it the same way, otherwise anything but the "never chosen" case
+  // silently falls back to English.
+  return localStorage.getItem('ft_lang') || 'en';
+}
+
+function showOriginal(bodyEl, btn) {
+  bodyEl.textContent = bodyEl.dataset.msgOriginal;
+  btn.dataset.translated = '0';
+  btn.textContent = '🌐 Translate';
+}
+
+function showTranslation(bodyEl, btn, auto) {
+  const target = currentSiteLanguage();
+  btn.disabled = true;
+  btn.textContent = auto ? 'Translating…' : 'Translating…';
+  return fetch('{{ url_for("translate.api_translate") }}', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ q: [bodyEl.dataset.msgOriginal], target: target, source: 'auto' }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      const translated = data.translations && data.translations[bodyEl.dataset.msgOriginal];
+      if (translated && translated !== bodyEl.dataset.msgOriginal) {
+        bodyEl.textContent = translated;
+        btn.dataset.translated = '1';
+        btn.textContent = 'Show original';
+      } else if (translated) {
+        // Already in the target language (or translation is a no-op) -
+        // nothing useful to show, so leave the button alone rather than
+        // claiming a translation happened.
+        btn.textContent = auto ? '🌐 Translate' : 'Already in this language';
+        if (!auto) setTimeout(() => { btn.textContent = '🌐 Translate'; }, 2000);
+      } else {
+        btn.textContent = 'Could not translate';
+      }
+    })
+    .catch(() => { btn.textContent = 'Could not translate'; })
+    .finally(() => { btn.disabled = false; });
+}
+
+document.querySelectorAll('.bubble').forEach(function (bubble) {
+  const bodyEl = bubble.querySelector('.msg-body');
+  const btn = bubble.querySelector('.msg-translate-btn');
+  btn.addEventListener('click', function () {
+    if (btn.dataset.translated === '1') showOriginal(bodyEl, btn);
+    else showTranslation(bodyEl, btn, false);
+  });
+});
+
+// Incoming messages (from the other person) translate automatically into
+// the viewer's chosen site language - that's the whole point of this
+// feature, a farmer and buyer shouldn't have to hunt for a button every
+// time to understand each other. Your OWN messages stay as you wrote them
+// by default (you already know what you said); the button is still there
+// if you want to see how it reads in another language.
+function retranslateIncoming() {
+  document.querySelectorAll('.bubble.them').forEach(function (bubble) {
+    const bodyEl = bubble.querySelector('.msg-body');
+    const btn = bubble.querySelector('.msg-translate-btn');
+    if (!btn.disabled) showTranslation(bodyEl, btn, true);
+  });
+}
+retranslateIncoming();
+
+// The rest of the page updates live when the viewer switches the site
+// language via the floating widget - no reload needed. Messages need to
+// keep up with that too, so re-run the translation whenever the language
+// actually changes (not just once at page load).
+//
+// Note: wrapping FarmTranslator.setLanguage does NOT work here - clicking
+// a language in the widget's own list calls its internal setLanguage
+// closure directly, bypassing the public FarmTranslator.setLanguage
+// property entirely. cfg.onTranslate is the one hook the widget always
+// invokes itself, from inside that same internal function, regardless of
+// how it was triggered.
+if (window.FarmTranslator) {
+  FarmTranslator.init({ onTranslate: retranslateIncoming });
+}
+
+// onTranslate is only fired when switching TO a translated language -
+// reverting to "English" is a separate code path with no callback, so
+// catch that case by watching for clicks on the "English / Continue in
+// English" list item directly (present in both the floating widget and
+// the first-visit onboarding modal, always marked .ft-original).
+document.addEventListener('click', function (e) {
+  if (e.target.closest && e.target.closest('.ft-item.ft-original')) {
+    retranslateIncoming();
+  }
+});
+</script>
+{% endblock %}

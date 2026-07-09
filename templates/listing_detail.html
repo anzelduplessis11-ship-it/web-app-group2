@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% import "_macros.html" as ui %}
+{% block title %}{{ listing['crop'] }}{% endblock %}
+{% block content %}
+
+<section class="section">
+  <a class="muted" href="{{ url_for('market') }}">← Back to market</a>
+
+  <div class="grid grid-2" style="margin-top:14px;align-items:start;">
+    <div class="card">
+      <p class="eyebrow">{{ listing['region'] }}</p>
+      <h1 style="margin-bottom:6px;">{{ listing['crop'] }}</h1>
+      <p class="muted">{{ listing['quantity_kg'] | int }} kg available
+        {% if listing['status'] == 'sold' %}· <span class="pill">Sold</span>{% endif %}
+        {% if user and user['id'] != listing['farmer_uid'] %}
+          {% set km = distance_to(listing['region']) %}
+          {% if km is not none %}· {{ km | round(0) | int }} km from you{% endif %}
+        {% endif %}
+      </p>
+
+      <span class="tag" style="margin:8px 0;">
+        <span class="amount">{{ "%.2f"|format(listing['price_per_kg']) }}<span class="tag-currency">{{ currency_symbol(listing['region']) }}</span></span>
+        <span class="unit">asking per kg</span>
+      </span>
+
+      {% if listing['description'] %}
+        <p style="margin-top:14px;">{{ listing['description'] }}</p>
+      {% endif %}
+
+      {% if market_context %}
+        <hr class="divider">
+        <p class="eyebrow">Actual market prices in {{ listing['region'] }}</p>
+        <p class="muted" style="margin-top:0;">
+          {{ market_context['count'] }} other active listing{{ '' if market_context['count'] == 1 else 's' }}
+          for this {{ 'crop' if listing['category'] == 'crop' else 'animal' }} in {{ listing['region'] }}
+          {{ 'is' if market_context['count'] == 1 else 'are' }} asking between
+          <strong>{{ currency_symbol(listing['region']) }}{{ "%.2f"|format(market_context['min']) }}</strong> and
+          <strong>{{ currency_symbol(listing['region']) }}{{ "%.2f"|format(market_context['max']) }}</strong> per kg
+          (recency-weighted average {{ currency_symbol(listing['region']) }}{{ "%.2f"|format(market_context['avg']) }}).
+        </p>
+      {% endif %}
+
+      {% if price_context %}
+        <hr class="divider">
+        <p class="eyebrow">AI fair-price estimate (this month)</p>
+        <p class="muted" style="margin-top:0;">
+          Based on historical data, a fair price for this crop, region and
+          quantity is around
+          <strong>{{ currency_symbol(listing['region']) }}{{ "%.2f"|format(price_context['suggested']) }}</strong> per kg
+          (range {{ currency_symbol(listing['region']) }}{{ "%.2f"|format(price_context['fair_low']) }}–{{ currency_symbol(listing['region']) }}{{ "%.2f"|format(price_context['fair_high']) }}).
+        </p>
+      {% endif %}
+
+      {% if buyer_offer and user and user['id'] != listing['farmer_uid'] %}
+        <hr class="divider">
+        <p class="eyebrow">Fair opening offer, for buyers</p>
+        <p class="muted" style="margin-top:0;">
+          Based on real local listings and historical trends, a fair offer to
+          open with would be between
+          <strong>{{ currency_symbol(listing['region']) }}{{ "%.2f"|format(buyer_offer['low']) }}</strong> and
+          <strong>{{ currency_symbol(listing['region']) }}{{ "%.2f"|format(buyer_offer['high']) }}</strong> per kg
+          — low enough that you aren't overpaying, high enough that it's a
+          respectful offer to the farmer.
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="card">
+      <p class="eyebrow">The farmer</p>
+      <h3 style="margin-bottom:4px;">
+        <a href="{{ url_for('profile', user_id=listing['farmer_uid']) }}">{{ listing['farmer_name'] }}</a>
+      </h3>
+      <p>{{ ui.stars(farmer_rating['avg'], farmer_rating['count']) }}</p>
+
+      {% if user and user['id'] != listing['farmer_uid'] %}
+        <a class="btn btn-green" style="margin-top:8px;"
+           href="{{ url_for('conversation', other_id=listing['farmer_uid'], listing_id=listing['id']) }}">
+          Message this farmer
+        </a>
+      {% elif not user %}
+        <p class="muted">Please <a href="{{ url_for('login') }}">log in</a> to contact the farmer.</p>
+      {% endif %}
+
+      {% if user and user['id'] == listing['farmer_uid'] and listing['status'] == 'active' %}
+        <form method="post" action="{{ url_for('mark_sold', listing_id=listing['id']) }}" style="margin-top:10px;">
+          <button class="btn btn-sm btn-ghost" type="submit">Mark as sold</button>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

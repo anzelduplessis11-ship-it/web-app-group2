@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% import "_macros.html" as ui %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+
+<section class="section">
+  <p class="eyebrow">{{ user['role'] | capitalize }} dashboard</p>
+  <h1>Hello, {{ user['name'].split(' ')[0] }}</h1>
+  <p>{{ ui.stars(rating['avg'], rating['count']) }}
+     · <a href="{{ url_for('profile', user_id=user['id']) }}">View public profile</a></p>
+
+  <div class="card" style="margin-top:20px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+      <p class="eyebrow" style="margin-bottom:8px;">Trending in {{ user['region'] }}</p>
+      <a href="{{ url_for('market_trends') }}" style="font-size:0.85rem;font-weight:600;">See full trends →</a>
+    </div>
+    {% if trending %}
+      <div class="grid grid-3">
+        {% for t in trending %}
+          <span class="tag" style="align-self:flex-start;">
+            <span class="amount">{{ t['crop'] }}</span>
+            <span class="unit">{{ t['category'] | capitalize }} ·
+              {{ t['total'] }} {{ 'sold' if trending_basis == 'sold' else 'listed' }}</span>
+          </span>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="muted" style="margin:0;">No trends yet for {{ user['region'] }} —
+      be the first to buy or sell something here!</p>
+    {% endif %}
+  </div>
+
+  {% if user['role'] == 'farmer' %}
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:20px;">
+      <h2 style="margin:0;">Your listings</h2>
+      <a class="btn btn-sm btn-green" href="{{ url_for('new_listing') }}">+ New listing</a>
+    </div>
+
+    {% if my_listings %}
+      <div class="grid grid-3" style="margin-top:16px;">
+        {% for l in my_listings %}
+          <a class="card listing-card" href="{{ url_for('listing_detail', listing_id=l['id']) }}" style="text-decoration:none;color:inherit;">
+            <div class="crop">{{ l['crop'] }}</div>
+            <div class="meta">{{ l['quantity_kg'] | int }} kg ·
+              {% if l['status'] == 'sold' %}<span class="pill">Sold</span>{% else %}<span class="pill">Active</span>{% endif %}
+            </div>
+            <span class="tag" style="align-self:flex-start;">
+              <span class="amount">{{ "%.2f"|format(l['price_per_kg']) }}</span>
+              <span class="unit">per kg</span>
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="card" style="margin-top:16px;">
+        <h3>No listings yet</h3>
+        <p class="muted">Post your first crop and let buyers come to you.</p>
+        <a class="btn btn-sm btn-green" href="{{ url_for('new_listing') }}">Sell a crop</a>
+      </div>
+    {% endif %}
+
+  {% else %}
+    <div class="card" style="margin-top:20px;">
+      <h3>Find crops to buy</h3>
+      <p class="muted">Browse the market, filter by crop or region, and message
+      farmers directly to arrange a deal.</p>
+      <a class="btn btn-sm btn-green" href="{{ url_for('market') }}">Browse the market</a>
+    </div>
+  {% endif %}
+</section>
+
+{% endblock %}

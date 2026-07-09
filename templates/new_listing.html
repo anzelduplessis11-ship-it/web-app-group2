@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+{% block title %}Sell a crop{% endblock %}
+{% block content %}
+
+<section class="section form-wide">
+  <p class="eyebrow">List your harvest</p>
+  <h1>Sell a crop</h1>
+
+  <form method="post" class="card" style="margin-top:18px;">
+    <div class="field">
+      <label>What are you selling?</label>
+      <div class="row-2">
+        <label class="role-pill">
+          <input type="radio" name="category" value="crop" id="cat-crop"
+            {{ 'checked' if form.get('category', 'crop') != 'livestock' }}>
+          <span class="role-icon">🌾</span>
+          <span class="role-label">Crop</span>
+          <span class="role-sub">Vegetables, grains, etc.</span>
+        </label>
+        <label class="role-pill">
+          <input type="radio" name="category" value="livestock" id="cat-livestock"
+            {{ 'checked' if form.get('category') == 'livestock' }}>
+          <span class="role-icon">🐄</span>
+          <span class="role-label">Livestock</span>
+          <span class="role-sub">Chicken, goat, cattle, etc.</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="row-2">
+      <div class="field" id="crop-field">
+        <label for="crop">Crop</label>
+        <select id="crop" name="crop">
+          <option value="" disabled {{ 'selected' if not form.get('crop') }}>Choose…</option>
+          {% for c in crops %}
+            <option value="{{ c }}" {{ 'selected' if form.get('crop') == c }}>{{ c }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="field" id="livestock-field" style="display:none;">
+        <label for="livestock">Livestock</label>
+        <select id="livestock" name="livestock">
+          <option value="" disabled {{ 'selected' if not form.get('livestock') }}>Choose…</option>
+          {% for a in livestock %}
+            <option value="{{ a }}" {{ 'selected' if form.get('livestock') == a }}>{{ a }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="region">Region</label>
+        <select id="region" name="region" required>
+          <option value="" disabled {{ 'selected' if not form.get('region') }}>Choose…</option>
+          {% for r in regions %}
+            <option value="{{ r }}" {{ 'selected' if form.get('region') == r }}>{{ r }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <div class="row-2">
+      <div class="field">
+        <label for="quantity_kg">Quantity available (kg)</label>
+        <input id="quantity_kg" name="quantity_kg" type="number" min="1" step="1"
+               value="{{ form.get('quantity_kg', '') }}" required>
+      </div>
+      <div class="field">
+        <label for="price_per_kg">Your price per kg ({{ currency_code(user['region']) }})</label>
+        <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+          <input id="price_per_kg" name="price_per_kg" type="number" min="0.01" step="0.01"
+                 value="{{ form.get('price_per_kg', '') }}" required style="flex:1;min-width:140px;">
+          <div id="priceCompare" class="card" style="display:none;flex:1;min-width:240px;
+               font-size:1.1rem;line-height:1.4;padding:16px 18px;
+               background:var(--paper-2);border-style:dashed;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background:var(--paper-2);border-style:dashed;">
+      <p class="eyebrow" style="margin-bottom:8px;">AI price advisor</p>
+      <p class="muted" style="margin-top:0;">
+        Pick a crop or livestock, region and quantity to see what other farmers
+        are actually asking right now, plus AI-backed pricing advice.
+      </p>
+      <button type="button" class="btn btn-sm" id="suggestBtn">Check the market price</button>
+      <div id="suggestBox" style="margin-top:14px;"></div>
+    </div>
+
+    <div class="field" style="margin-top:16px;">
+      <label for="description">Description (optional)</label>
+      <textarea id="description" name="description" rows="3"
+        placeholder="Grade A, freshly harvested, ready this week…">{{ form.get('description', '') }}</textarea>
+    </div>
+
+    <button class="btn btn-green" type="submit">Post to the market</button>
+  </form>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Show the Crop dropdown or the Livestock dropdown depending on which
+// category radio button is selected, and keep "required" in sync.
+document.querySelectorAll('input[name="category"]').forEach(function (radio) {
+  radio.addEventListener('change', function () {
+    const isLivestock = document.getElementById('cat-livestock').checked;
+    document.getElementById('crop-field').style.display = isLivestock ? 'none' : '';
+    document.getElementById('livestock-field').style.display = isLivestock ? '' : 'none';
+    document.getElementById('crop').required = !isLivestock;
+    document.getElementById('livestock').required = isLivestock;
+  });
+});
+window.addEventListener('DOMContentLoaded', function () {
+  const checked = document.querySelector('input[name="category"]:checked');
+  if (checked) checked.dispatchEvent(new Event('change'));
+});
+</script>
+<script>
+// Ask the server for a suggested fair price, store the result, and show it.
+// Runs when the farmer clicks the button, AND automatically whenever
+// crop/livestock, region, and quantity are all filled in.
+const btn = document.getElementById('suggestBtn');
+const box = document.getElementById('suggestBox');
+const priceInput = document.getElementById('price_per_kg');
+const compareBox = document.getElementById('priceCompare');
+const CURRENCY_SYMBOL = {{ currency_symbol(user['region']) | tojson }};
+let lastSuggestion = null;
+
+function currentProduct() {
+  const isLivestock = document.getElementById('cat-livestock').checked;
+  return isLivestock
+    ? document.getElementById('livestock').value
+    : document.getElementById('crop').value;
+}
+
+// The single number we compare the farmer's typed price against: a blend
+// of the real market average and the AI historical estimate when both are
+// available, otherwise whichever one we have.
+function referencePrice(data) {
+  if (data.market && data.model) return (data.market.avg + data.model.suggested) / 2;
+  if (data.market) return data.market.avg;
+  if (data.model) return data.model.suggested;
+  return null;
+}
+
+async function fetchSuggestion(showLoading) {
+  const crop = currentProduct();
+  const category = document.getElementById('cat-livestock').checked ? 'livestock' : 'crop';
+  const region = document.getElementById('region').value;
+  const quantity = document.getElementById('quantity_kg').value;
+
+  if (!crop || !region || !quantity) {
+    if (showLoading) {
+      box.innerHTML = '<p class="flash error">Choose a crop, region and quantity first.</p>';
+    }
+    return;
+  }
+
+  if (showLoading) {
+    btn.disabled = true;
+    btn.textContent = 'Thinking…';
+  }
+  try {
+    const res = await fetch('{{ url_for("api_suggest_price") }}', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ crop, category, region, quantity_kg: quantity }),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      lastSuggestion = null;
+      compareBox.style.display = 'none';
+      if (showLoading) {
+        box.innerHTML = '<p class="flash error">' + (data.error || 'Could not get a price.') + '</p>';
+      }
+    } else {
+      lastSuggestion = data;
+      let html = '';
+      if (data.market) {
+        html +=
+          '<p class="eyebrow" style="margin-bottom:4px;">Actual market prices right now</p>' +
+          '<span class="tag"><span class="amount">' + data.market.avg.toFixed(2) +
+          '<span class="tag-currency">' + CURRENCY_SYMBOL + '</span></span><span class="unit">recency-weighted average per kg</span></span>' +
+          '<div class="tag-range">' + data.market.count + ' other listing' +
+          (data.market.count === 1 ? '' : 's') + ' in your region: ' +
+          CURRENCY_SYMBOL + data.market.min.toFixed(2) + ' – ' + CURRENCY_SYMBOL + data.market.max.toFixed(2) + ' per kg</div>';
+      }
+      if (data.model) {
+        html +=
+          '<p class="eyebrow" style="margin:12px 0 4px;">AI historical estimate</p>' +
+          '<span class="tag"><span class="amount">' + data.model.suggested.toFixed(2) +
+          '<span class="tag-currency">' + CURRENCY_SYMBOL + '</span></span><span class="unit">suggested per kg</span></span>' +
+          '<div class="tag-range">Fair range: ' + CURRENCY_SYMBOL + data.model.fair_low.toFixed(2) +
+          ' – ' + CURRENCY_SYMBOL + data.model.fair_high.toFixed(2) + ' per kg</div>';
+      }
+      if (data.buyer_offer) {
+        html +=
+          '<p class="eyebrow" style="margin:12px 0 4px;">Fair offer range buyers will see</p>' +
+          '<div class="tag-range">' + CURRENCY_SYMBOL + data.buyer_offer.low.toFixed(2) +
+          ' – ' + CURRENCY_SYMBOL + data.buyer_offer.high.toFixed(2) + ' per kg</div>';
+      }
+      html += '<p class="muted" style="margin-top:10px;">' + data.advice + '</p>';
+
+      const ref = referencePrice(data);
+      if (ref) {
+        html += '<div style="margin-top:6px;"><button type="button" class="btn btn-sm btn-green" id="usePrice">Use ' +
+          CURRENCY_SYMBOL + ref.toFixed(2) + '</button></div>';
+      }
+      box.innerHTML = html;
+      if (ref) {
+        document.getElementById('usePrice').addEventListener('click', () => {
+          priceInput.value = ref.toFixed(2);
+          priceInput.dispatchEvent(new Event('input'));
+        });
+      }
+      updatePriceCompare();
+    }
+  } catch (e) {
+    if (showLoading) {
+      box.innerHTML = '<p class="flash error">Something went wrong. Please try again.</p>';
+    }
+  } finally {
+    if (showLoading) {
+      btn.disabled = false;
+      btn.textContent = 'Suggest a fair price';
+    }
+  }
+}
+
+// Shows a neutral (not red/green, not alarming) message comparing the
+// farmer's own typed price to the actual market / AI reference price.
+function updatePriceCompare() {
+  const price = parseFloat(priceInput.value);
+  const ref = lastSuggestion ? referencePrice(lastSuggestion) : null;
+  if (!ref || !price || price <= 0) {
+    compareBox.style.display = 'none';
+    return;
+  }
+  const diffPct = ((price - ref) / ref) * 100;
+  let message;
+  if (Math.abs(diffPct) < 3) {
+    message = 'Your price is right around the current market average (' +
+      CURRENCY_SYMBOL + ref.toFixed(2) + ' per kg).';
+  } else if (diffPct > 0) {
+    message = 'Your price is about ' + diffPct.toFixed(0) +
+      '% above the current market average (' + CURRENCY_SYMBOL + ref.toFixed(2) + ' per kg).';
+  } else {
+    message = 'Your price is about ' + Math.abs(diffPct).toFixed(0) +
+      '% below the current market average (' + CURRENCY_SYMBOL + ref.toFixed(2) + ' per kg).';
+  }
+  compareBox.textContent = message;
+  compareBox.style.display = '';
+}
+
+btn.addEventListener('click', () => fetchSuggestion(true));
+priceInput.addEventListener('input', updatePriceCompare);
+
+['crop', 'livestock', 'region', 'quantity_kg'].forEach(function (id) {
+  document.getElementById(id).addEventListener('change', function () {
+    fetchSuggestion(false);
+  });
+});
+</script>
+{% endblock %}
