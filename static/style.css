@@ -10,6 +10,8 @@
   --paper-2:    #FFF1D9;   /* soft maize panel */
   --green:      #12A055;   /* vivid leaf green (primary) */
   --green-dark: #0C7C41;
+  --olive:       #A9B665;  /* light olive green — crops & listings accent */
+  --olive-light: #C6CE94;
   --maize:      #FFB01F;   /* bright maize (signature) */
   --tomato:     #EE4036;   /* bright tomato */
   --sky:        #17A3DC;   /* NEW sky blue */
@@ -153,6 +155,10 @@ a { color: var(--green-dark); }
 .grid-3 .card:nth-child(6n+5)::before { background: var(--tomato); }
 .grid-3 .card:nth-child(6n+6)::before { background: var(--maize); }
 
+/* on crop/listing cards, the green accents become light olive */
+.listing-card::before,
+.grid-3 .listing-card:nth-child(6n+1)::before { background: var(--olive); }
+
 .listing-card { display: flex; flex-direction: column; gap: 8px; }
 .listing-card .crop { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.25rem; font-weight: 800; }
 .listing-card .meta { color: var(--muted); font-size: 0.9rem; }
@@ -160,7 +166,7 @@ a { color: var(--green-dark); }
 /* ---------- the price tag (signature element) ---------- */
 .tag {
   position: relative; display: inline-flex; flex-direction: column;
-  background: linear-gradient(135deg, #5AD097, #3DBE7C);
+  background: linear-gradient(135deg, var(--olive-light), var(--olive));
   color: var(--ink);
   border: 2px solid var(--ink); border-radius: 10px;
   padding: 10px 16px 10px 26px; font-weight: 700; line-height: 1.1;
@@ -211,6 +217,10 @@ a { color: var(--green-dark); }
 .field .hint { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
 .form-narrow { max-width: 480px; }
 .form-wide { max-width: 720px; }
+/* the two-step join flow: larger boxes, centered on the page */
+.form-join { max-width: 720px; margin: 0 auto; }
+.form-join .card { padding: 30px 36px; }
+@media (max-width: 600px) { .form-join .card { padding: 20px; } }
 .row-2 { display: grid; gap: 14px; }
 @media (min-width: 560px) { .row-2 { grid-template-columns: 1fr 1fr; } }
 
