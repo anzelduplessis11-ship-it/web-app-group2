@@ -9,6 +9,93 @@
   <p>{{ ui.stars(rating['avg'], rating['count']) }}
      · <a href="{{ url_for('profile', user_id=user['id']) }}">View public profile</a></p>
 
+  {% if recs %}
+  <div class="card" style="margin-top:20px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+      <p class="eyebrow" style="margin-bottom:8px;">✨ Recommended for you</p>
+      <a href="{{ url_for('market') }}" style="font-size:0.85rem;font-weight:600;">Browse all →</a>
+    </div>
+    {% if recs['headline'] %}
+      <p style="margin:0 0 12px;font-weight:600;">{{ recs['headline'] }}</p>
+    {% elif recs['basis'] == 'popular' %}
+      <p class="muted" style="margin:0 0 12px;">Fresh picks near you — the more
+      you browse and buy, the smarter these get.</p>
+    {% endif %}
+    <div class="grid grid-2">
+      {% for r in recs['items'] %}
+        {% set l = r['listing'] %}
+        <a class="card listing-card" href="{{ url_for('listing_detail', listing_id=l['id']) }}"
+           style="text-decoration:none;color:inherit;">
+          <div class="crop">{{ l['crop'] }}</div>
+          <div class="meta">{{ l['region'] }} · {{ l['quantity_kg'] | int }} kg
+            · by {{ l['farmer_name'] }}</div>
+          <span class="tag" style="align-self:flex-start;">
+            <span class="amount">{{ "%.2f"|format(l['price_per_kg']) }}<span class="tag-currency">{{ currency_symbol(l['region']) }}</span></span>
+            <span class="unit">per kg</span>
+          </span>
+          <div>
+            {% for reason in r['reasons'][:2] %}
+              <span class="reason-chip">{{ reason }}</span>
+            {% endfor %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if orders_received %}
+  <div class="card" style="margin-top:20px;">
+    <p class="eyebrow" style="margin-bottom:8px;">Order requests from buyers</p>
+    {% for o in orders_received %}
+      <div class="order-row">
+        <div>
+          <strong>{{ o['buyer_name'] }}</strong> wants
+          {{ o['quantity_kg'] | int }} kg of {{ o['crop'] }}
+          <span class="muted">· {{ o['created_at'].strftime('%d %b') }}</span>
+        </div>
+        {% if o['status'] == 'pending' %}
+          <div style="display:flex;gap:8px;">
+            <form method="post" action="{{ url_for('confirm_order', order_id=o['id']) }}">
+              <button class="btn btn-sm btn-green" type="submit">Confirm sale</button>
+            </form>
+            <form method="post" action="{{ url_for('decline_order', order_id=o['id']) }}">
+              <button class="btn btn-sm btn-ghost" type="submit">Decline</button>
+            </form>
+          </div>
+        {% else %}
+          <span class="pill">{{ o['status'] | capitalize }}</span>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if my_orders %}
+  <div class="card" style="margin-top:20px;">
+    <p class="eyebrow" style="margin-bottom:8px;">My orders</p>
+    {% for o in my_orders %}
+      <div class="order-row">
+        <div>
+          {{ o['quantity_kg'] | int }} kg {{ o['crop'] }} from
+          <a href="{{ url_for('listing_detail', listing_id=o['listing_id']) }}">{{ o['farmer_name'] }}</a>
+          <span class="muted">· {{ o['created_at'].strftime('%d %b') }}</span>
+        </div>
+        {% if o['status'] == 'pending' %}
+          <div style="display:flex;gap:8px;align-items:center;">
+            <span class="pill">Waiting for farmer</span>
+            <form method="post" action="{{ url_for('cancel_order', order_id=o['id']) }}">
+              <button class="btn btn-sm btn-ghost" type="submit">Cancel</button>
+            </form>
+          </div>
+        {% else %}
+          <span class="pill">{{ o['status'] | capitalize }}</span>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
   <div class="card" style="margin-top:20px;">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
       <p class="eyebrow" style="margin-bottom:8px;">Trending in {{ user['region'] }}</p>

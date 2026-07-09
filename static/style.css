@@ -503,3 +503,29 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted)
   display: flex; justify-content: space-between; align-items: center;
   font-size: 0.82rem; margin-top: 8px; font-weight: 600;
 }
+
+/* ---- "For you" recommendations + orders --------------------------------- */
+/* The little explanation chips under each recommended listing
+   ("You restock Maize about every 30 days"). */
+.reason-chip {
+  display: inline-block;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 2px 4px 0 0;
+}
+
+/* One order per row on the dashboard: details left, action/status right. */
+.order-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.order-row:last-child { border-bottom: none; padding-bottom: 0; }

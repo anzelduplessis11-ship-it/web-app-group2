@@ -28,6 +28,7 @@ import crop_quality
 import db
 import currency
 import geo
+import recommender
 import reference_prices
 import trends
 from pricing_model import PricingModel
@@ -85,6 +86,28 @@ def current_user():
         g._current_user = db.query_one("SELECT * FROM users WHERE id = ?", (uid,))
         g._current_user_id = uid
     return g._current_user
+
+
+def _track(event_type, listing=None, crop=None, category=None, region=None):
+    """Record one row of on-site behaviour (a listing view or market search)
+    for the logged-in user — this is what the "For you" recommendations learn
+    from. Guests aren't tracked, and a tracking hiccup must never break the
+    page the user is actually looking at."""
+    viewer = current_user()
+    if viewer is None:
+        return
+    if listing is not None:
+        crop, category, region = listing["crop"], listing["category"], listing["region"]
+    try:
+        db.execute(
+            "INSERT INTO activity_events (user_id, event_type, listing_id, "
+            "crop, category, region) VALUES (?, ?, ?, ?, ?, ?)",
+            (viewer["id"], event_type,
+             listing["id"] if listing is not None else None,
+             crop or None, category or None, region or None),
+        )
+    except Exception as e:
+        print(f"[track] skipped {event_type} event: {e}")
 
 
 @app.context_processor
@@ -279,6 +302,11 @@ def market():
 
     listings = db.query_all(sql, tuple(params))
 
+    # Remember what logged-in users search for — the "For you" panel on the
+    # dashboard learns their tastes from it.
+    if crop or region or category:
+        _track("search", crop=crop, category=category, region=region)
+
     # If someone is logged in, recommend the closest farmers first.
     viewer = current_user()
     if viewer is not None:
@@ -440,10 +468,25 @@ def listing_detail(listing_id):
     # A fair opening-offer range for whoever is considering buying this.
     buyer_offer = _build_buyer_offer_range(price_context, market_context)
 
+    # Viewing a listing is a taste signal for the recommendation engine —
+    # and if the viewer already has an open request here, the template shows
+    # its status instead of the Request-to-buy button.
+    viewer = current_user()
+    my_order = None
+    if viewer is not None and viewer["id"] != listing["farmer_id"]:
+        _track("view_listing", listing=listing)
+        my_order = db.query_one(
+            "SELECT * FROM orders WHERE listing_id = ? AND buyer_id = ? "
+            "AND status IN ('pending', 'confirmed') "
+            "ORDER BY created_at DESC LIMIT 1",
+            (listing_id, viewer["id"]),
+        )
+
     return render_template(
         "listing_detail.html", listing=listing,
         farmer_rating=farmer_rating, price_context=price_context,
         market_context=market_context, buyer_offer=buyer_offer,
+        my_order=my_order,
     )
 
 
@@ -458,6 +501,151 @@ def mark_sold(listing_id):
         abort(403)
     db.execute("UPDATE listings SET status = 'sold' WHERE id = ?", (listing_id,))
     flash("Marked as sold. Well done!", "success")
+    return redirect(url_for("dashboard"))
+
+
+# ---------------------------------------------------------------------------
+# Orders: buyers request to buy, farmers confirm or decline. Every order is
+# also a purchase record that the "For you" recommendation engine learns from.
+# ---------------------------------------------------------------------------
+@app.route("/listing/<int:listing_id>/order", methods=["POST"])
+@login_required
+def place_order(listing_id):
+    """A buyer clicks "Request to buy": the order starts as 'pending' until
+    the farmer answers. The farmer also gets a message so they see it fast."""
+    me = current_user()
+    listing = db.query_one("SELECT * FROM listings WHERE id = ?", (listing_id,))
+    if listing is None:
+        abort(404)
+    if listing["farmer_id"] == me["id"]:
+        flash("You can't order your own listing.", "error")
+        return redirect(url_for("listing_detail", listing_id=listing_id))
+    if listing["status"] != "active":
+        flash("This listing has already been sold.", "error")
+        return redirect(url_for("listing_detail", listing_id=listing_id))
+    if db.query_one(
+        "SELECT id FROM orders WHERE listing_id = ? AND buyer_id = ? "
+        "AND status = 'pending'",
+        (listing_id, me["id"]),
+    ):
+        flash("You already have a pending request for this listing.", "error")
+        return redirect(url_for("listing_detail", listing_id=listing_id))
+
+    raw_qty = request.form.get("quantity_kg", "").strip()
+    try:
+        qty = float(raw_qty) if raw_qty else float(listing["quantity_kg"])
+        assert 0 < qty <= float(listing["quantity_kg"])
+    except (ValueError, AssertionError):
+        flash("Quantity must be a number, at most what's available.", "error")
+        return redirect(url_for("listing_detail", listing_id=listing_id))
+
+    db.execute(
+        "INSERT INTO orders (listing_id, buyer_id, farmer_id, crop, category, "
+        "region, quantity_kg, price_per_kg) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id",
+        (listing_id, me["id"], listing["farmer_id"], listing["crop"],
+         listing["category"], listing["region"], qty, listing["price_per_kg"]),
+    )
+    db.execute(
+        "INSERT INTO messages (sender_id, recipient_id, listing_id, body) "
+        "VALUES (?, ?, ?, ?)",
+        (me["id"], listing["farmer_id"], listing_id,
+         f"Order request: I'd like to buy {qty:g} kg of your {listing['crop']}. "
+         "(Sent from the Request-to-buy button — confirm or decline it on "
+         "your dashboard.)"),
+    )
+    flash("Request sent! The farmer will confirm or decline — watch your "
+          "dashboard and Messages.", "success")
+    return redirect(url_for("listing_detail", listing_id=listing_id))
+
+
+def _load_order_for_farmer(order_id):
+    """Fetch an order and make sure the logged-in user is its farmer and it
+    is still pending. Returns the order row or a redirect-worthy None."""
+    order = db.query_one("SELECT * FROM orders WHERE id = ?", (order_id,))
+    if order is None:
+        abort(404)
+    if order["farmer_id"] != current_user()["id"]:
+        abort(403)
+    if order["status"] != "pending":
+        flash("This request was already handled.", "error")
+        return None
+    return order
+
+
+@app.route("/order/<int:order_id>/confirm", methods=["POST"])
+@login_required
+def confirm_order(order_id):
+    """The farmer accepts a request: the order is confirmed, the listing
+    comes off the market, and any other pending requests for it are declined
+    so those buyers aren't left waiting forever."""
+    order = _load_order_for_farmer(order_id)
+    if order is None:
+        return redirect(url_for("dashboard"))
+    db.execute(
+        "UPDATE orders SET status = 'confirmed', decided_at = now() WHERE id = ?",
+        (order_id,),
+    )
+    db.execute(
+        "UPDATE orders SET status = 'declined', decided_at = now() "
+        "WHERE listing_id = ? AND status = 'pending'",
+        (order["listing_id"],),
+    )
+    db.execute(
+        "UPDATE listings SET status = 'sold' WHERE id = ?",
+        (order["listing_id"],),
+    )
+    db.execute(
+        "INSERT INTO messages (sender_id, recipient_id, listing_id, body) "
+        "VALUES (?, ?, ?, ?)",
+        (current_user()["id"], order["buyer_id"], order["listing_id"],
+         f"Good news — your order for {order['quantity_kg']:g} kg of "
+         f"{order['crop']} is confirmed! Let's arrange payment and delivery "
+         "here."),
+    )
+    flash("Order confirmed — the listing is now marked sold.", "success")
+    return redirect(url_for("dashboard"))
+
+
+@app.route("/order/<int:order_id>/decline", methods=["POST"])
+@login_required
+def decline_order(order_id):
+    order = _load_order_for_farmer(order_id)
+    if order is None:
+        return redirect(url_for("dashboard"))
+    db.execute(
+        "UPDATE orders SET status = 'declined', decided_at = now() WHERE id = ?",
+        (order_id,),
+    )
+    db.execute(
+        "INSERT INTO messages (sender_id, recipient_id, listing_id, body) "
+        "VALUES (?, ?, ?, ?)",
+        (current_user()["id"], order["buyer_id"], order["listing_id"],
+         f"Sorry — I can't fulfil your request for {order['quantity_kg']:g} kg "
+         f"of {order['crop']} this time."),
+    )
+    flash("Request declined.", "success")
+    return redirect(url_for("dashboard"))
+
+
+@app.route("/order/<int:order_id>/cancel", methods=["POST"])
+@login_required
+def cancel_order(order_id):
+    """A buyer withdraws their own pending request."""
+    me = current_user()
+    order = db.query_one("SELECT * FROM orders WHERE id = ?", (order_id,))
+    if order is None:
+        abort(404)
+    if order["buyer_id"] != me["id"]:
+        abort(403)
+    if order["status"] != "pending":
+        flash("Only pending requests can be cancelled.", "error")
+        return redirect(url_for("dashboard"))
+    db.execute(
+        "UPDATE orders SET status = 'cancelled', decided_at = now() WHERE id = ?",
+        (order_id,),
+    )
+    flash("Request cancelled.", "success")
     return redirect(url_for("dashboard"))
 
 
@@ -606,9 +794,41 @@ def dashboard():
         )
         trending_basis = "listed"
 
+    # Personal AI picks. Buyers always get the panel (brand-new users see
+    # popular/nearby listings while the engine learns their habits); farmers
+    # only once they have buying signals of their own. A recommender problem
+    # must never take the dashboard down, hence the try/except.
+    recs = None
+    try:
+        recs = recommender.recommend_for(me, limit=4)
+        if not recs["items"] or (me["role"] == "farmer"
+                                 and recs["basis"] != "personal"):
+            recs = None
+    except Exception as e:
+        print(f"[recommender] skipped for this view: {e}")
+        recs = None
+
+    # Order requests received (farmers) and placed (anyone), newest first,
+    # with anything still awaiting an answer at the top.
+    orders_received = []
+    if me["role"] == "farmer":
+        orders_received = db.query_all(
+            "SELECT o.*, u.name AS buyer_name FROM orders o "
+            "JOIN users u ON u.id = o.buyer_id WHERE o.farmer_id = ? "
+            "ORDER BY (o.status = 'pending') DESC, o.created_at DESC LIMIT 10",
+            (me["id"],),
+        )
+    my_orders = db.query_all(
+        "SELECT o.*, u.name AS farmer_name FROM orders o "
+        "JOIN users u ON u.id = o.farmer_id WHERE o.buyer_id = ? "
+        "ORDER BY o.created_at DESC LIMIT 10",
+        (me["id"],),
+    )
+
     return render_template(
         "dashboard.html", my_listings=my_listings, rating=rating,
         trending=trending, trending_basis=trending_basis,
+        recs=recs, my_orders=my_orders, orders_received=orders_received,
     )
 
 

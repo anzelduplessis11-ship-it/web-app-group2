@@ -14,9 +14,11 @@ Built with Flask (web), SQLite (storage, no server needed), and scikit-learn
 
 | File | Purpose |
 |------|---------|
-| `app.py` | The website: every page and action (login, market, listings, messaging, ratings). |
+| `app.py` | The website: every page and action (login, market, listings, orders, messaging, ratings). |
 | `db.py` | Creates the database tables and provides small helpers to read/write data. |
 | `pricing_model.py` | The AI pricing model: learns from price data, predicts a fair price + range. |
+| `recommender.py` | The "For you" AI: learns each user's buying rhythm and habits, then recommends listings with plain-language reasons. |
+| `migrations/` | SQL for the Supabase tables behind orders and behaviour tracking. |
 | `train_model.py` | Trains the model — on your CSV, or on generated sample data. |
 | `templates/` | The HTML pages. `base.html` is the shared layout; the rest extend it. |
 | `static/style.css` | All the styling (colors, fonts, layout, the price-tag design). |
@@ -67,6 +69,37 @@ python train_model.py my_prices.csv
 
 The website automatically uses the newly trained model. The crops and regions
 it offers in the dropdowns come straight from your data.
+
+---
+
+## The "For you" AI (personal recommendations)
+
+FarmConnect learns what each user actually does and uses it to keep the
+market relevant to them:
+
+- **Orders.** Buyers click **Request to buy** on any listing; the farmer
+  confirms or declines from their dashboard. Confirming marks the listing
+  sold, declines any other pending requests for it, and messages the buyer.
+  Every order is a purchase record with a buyer and a timestamp.
+- **Usage tracking.** For logged-in users the site also notes which listings
+  they view and what they search for on the market page
+  (the `activity_events` table).
+- **The engine** (`recommender.py`) mines those records for patterns: which
+  products you buy and browse, how often you restock each one, which day of
+  the week and time of month you usually order, which farmers you already
+  trust, what is close to you and what is genuinely below the local market
+  price. It scores every active listing against your habits and fills the
+  **"Recommended for you"** panel on the dashboard — each pick with an honest
+  reason, e.g. *"You restock Maize about every 30 days — it's been 29."*
+- **New users** see popular, nearby and freshly listed picks until the engine
+  has real signals to learn from.
+
+It is deliberately transparent (statistics, not a black box): every
+recommendation can explain itself, and nothing is tracked for guests.
+
+The two tables behind this live in Supabase; the SQL is in
+`migrations/2026-07-09_add_orders_and_activity_events.sql` (already applied
+to the team project).
 
 ---
 

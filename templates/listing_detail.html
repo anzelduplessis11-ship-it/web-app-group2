@@ -89,12 +89,39 @@
       <p>{{ ui.stars(farmer_rating['avg'], farmer_rating['count']) }}</p>
 
       {% if user and user['id'] != listing['farmer_uid'] %}
-        <a class="btn btn-green" style="margin-top:8px;"
+
+        {% if my_order and my_order['status'] == 'pending' %}
+          <p style="margin-top:10px;"><span class="pill">Request sent ✓</span></p>
+          <p class="muted" style="margin-top:6px;">You asked for
+            {{ my_order['quantity_kg'] | int }} kg — waiting for
+            {{ listing['farmer_name'] }} to confirm. You can
+            <a href="{{ url_for('dashboard') }}">track it on your dashboard</a>.</p>
+        {% elif my_order and my_order['status'] == 'confirmed' %}
+          <p style="margin-top:10px;"><span class="pill">Order confirmed 🎉</span></p>
+          <p class="muted" style="margin-top:6px;">{{ my_order['quantity_kg'] | int }} kg
+            is yours — arrange payment and delivery in Messages.</p>
+        {% elif listing['status'] == 'active' %}
+          <form method="post" action="{{ url_for('place_order', listing_id=listing['id']) }}"
+                style="margin-top:8px;">
+            <div class="field" style="margin-bottom:10px;">
+              <label for="quantity_kg">Quantity (kg)</label>
+              <input id="quantity_kg" type="number" name="quantity_kg"
+                     min="1" step="1" max="{{ listing['quantity_kg'] | int }}"
+                     value="{{ listing['quantity_kg'] | int }}">
+            </div>
+            <button class="btn btn-green" type="submit">Request to buy</button>
+            <p class="muted" style="font-size:0.8rem;margin-top:6px;">
+              The farmer confirms or declines your request — payment and
+              delivery are arranged between you in Messages.</p>
+          </form>
+        {% endif %}
+
+        <a class="btn {{ 'btn-sm btn-ghost' if listing['status'] == 'active' and not my_order else 'btn-green' }}" style="margin-top:10px;"
            href="{{ url_for('conversation', other_id=listing['farmer_uid'], listing_id=listing['id']) }}">
           Message this farmer
         </a>
       {% elif not user %}
-        <p class="muted">Please <a href="{{ url_for('login') }}">log in</a> to contact the farmer.</p>
+        <p class="muted">Please <a href="{{ url_for('login') }}">log in</a> to contact the farmer or place an order.</p>
       {% endif %}
 
       {% if user and user['id'] == listing['farmer_uid'] and listing['status'] == 'active' %}
