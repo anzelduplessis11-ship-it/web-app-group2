@@ -10,8 +10,8 @@
   --paper-2:    #FFF1D9;   /* soft maize panel */
   --green:      #12A055;   /* vivid leaf green (primary) */
   --green-dark: #0C7C41;
-  --olive:       #A9B665;  /* light olive green — crops & listings accent */
-  --olive-light: #C6CE94;
+  --olive:       #A4AC86;  /* soft sage olive — crops & listings accent */
+  --olive-light: #DDE2C6;  /* pale sage cream (gradient partner) */
   --maize:      #FFB01F;   /* bright maize (signature) */
   --tomato:     #EE4036;   /* bright tomato */
   --sky:        #17A3DC;   /* NEW sky blue */
@@ -246,7 +246,9 @@ label.role-pill {
 
 /* ---------- ratings ---------- */
 .stars { color: var(--maize); letter-spacing: 2px; font-size: 1.1rem; }
-.stars .empty { color: var(--line); }
+/* empty stars: a soft but clearly visible gray outline on both the tan page
+   background and white cards (the old hairline color blended into the page) */
+.stars .empty { color: rgba(102, 92, 107, 0.45); }
 .rate-picker { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px; }
 .rate-picker input { display: none; }
 .rate-picker label { font-size: 1.7rem; color: var(--line); cursor: pointer; transition: color 0.1s ease; }
