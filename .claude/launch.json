@@ -5,7 +5,8 @@
       "name": "farmconnect",
       "runtimeExecutable": "python3",
       "runtimeArgs": ["app.py"],
-      "port": 5050
+      "port": 5050,
+      "autoPort": true
     }
   ]
 }

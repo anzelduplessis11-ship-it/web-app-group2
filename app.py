@@ -777,9 +777,10 @@ def api_kb_status():
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
     db.init_db()  # create tables on first run
-    print("FarmConnect running at http://127.0.0.1:5050")
+    # Use the port assigned via the PORT env var when present (e.g. the dev
+    # preview harness), otherwise default to 5050 for local runs.
+    port = int(os.environ.get("PORT", 5050))
+    print(f"FarmConnect running at http://127.0.0.1:{port}")
     # threaded=True so a slow AI answer (the local model can take a while) never
     # blocks the rest of the site for other requests.
-    # app.run(debug=True, port=5050, threaded=True)
-
-    app.run()
+    app.run(host="127.0.0.1", port=port, threaded=True)
