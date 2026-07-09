@@ -94,26 +94,7 @@ keys are required to run it. ✅
   uv python install 3.12
   ```
 
-### 1️⃣ Clone and set up a virtual environment
-
-```bash
-git clone https://github.com/King-Daniel123/Group2---Project.git
-cd Group2---Project
-```
-
-**If your system Python is already 3.10+:**
-```bash
-python3 -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-```
-
-**If you installed Python via `uv` above:**
-```bash
-uv venv --python 3.12 .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-```
-
-### 2️⃣ Install the dependencies
+### 1. Install the dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -125,7 +106,7 @@ If you created the venv with `uv` above, use `uv pip install` instead —
 uv pip install -r requirements.txt
 ```
 
-### 3️⃣ Train the AI pricing model 🧠
+### 3. Train the AI pricing model 🧠
 
 With no data of your own, this generates a realistic sample dataset (based
 on real coffee prices where available, clearly-labelled estimates
@@ -141,15 +122,14 @@ This step is optional — the site still runs without it, just without AI
 price suggestions — but it only takes a few seconds, so there's no reason
 to skip it.
 
-### 4️⃣ Run the website 🖥️
+### 4. Run the website 🖥️
 
 ```bash
 python app.py
 ```
 
-Open **http://127.0.0.1:5050** in your browser. 🎉
 
-### 5️⃣ Try the full flow
+### 5. Try the full flow
 
 1. 📝 **Register two accounts** — one as a *farmer*, one as a *buyer* (use a
    different phone number for each). Sign-up is two steps: pick a language
