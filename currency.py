@@ -98,8 +98,21 @@ AFRICAN_CURRENCIES = {
 }
 
 
+# Canonical location list for the whole platform: every African country.
+# Locations are now country-level so FarmConnect scales pan-African; the
+# city entries in REGION_COUNTRY are kept only for backward compatibility
+# with accounts/listings created before the switch.
+COUNTRIES = sorted(AFRICAN_CURRENCIES.keys())
+
+
 def country_for_region(region):
-    """Best-effort: which country is this FarmConnect region in?"""
+    """Best-effort: which country is this FarmConnect location in?
+
+    A location is normally already a country. Legacy city values (e.g.
+    "Nairobi") still resolve, so old accounts and listings keep working.
+    """
+    if region in AFRICAN_CURRENCIES:
+        return region
     return REGION_COUNTRY.get(region)
 
 

@@ -41,14 +41,9 @@ app.secret_key = "change-me-to-a-long-random-secret"
 # If it hasn't been trained yet, the price tool is simply disabled.
 PRICING = PricingModel.load()
 
-# Regions the site offers. Kept in sync with the model where possible.
-DEFAULT_REGIONS = [
-    "Nairobi", "Kano", "Kumasi", "Kampala", "Arusha", "Lagos",
-    "Addis Ababa", "Dakar", "Cairo", "Casablanca", "Tunis",
-    "Johannesburg", "Harare", "Lusaka", "Kigali", "Maputo",
-    "Kinshasa", "Yaounde", "Luanda", "Khartoum",
-]
-REGIONS = PRICING.known_regions if PRICING else DEFAULT_REGIONS
+# Locations the site offers: every African country (pan-African by design).
+# The pricing model is trained on these same countries.
+REGIONS = currency.COUNTRIES
 CROPS = PRICING.known_crops if PRICING else [
     "Maize", "Tomato", "Cassava", "Rice", "Beans", "Plantain",
 ]
@@ -441,33 +436,6 @@ def _build_buyer_offer_range(model: dict | None, market: dict | None) -> dict | 
     return {"low": low, "high": high}
 
 
-def _trend_svg(trend: dict | None, width: int = 600, height: int = 160, pad: int = 12) -> dict | None:
-    """Turn a trends.py price-trend series into SVG polyline/dot coordinates.
-
-    Pure presentation math (no data invented) — kept out of the template
-    because Jinja arithmetic for a scaled polyline is unreadable.
-    """
-    if not trend or len(trend["points"]) < 2:
-        return None
-    lo, hi = trend["min"], trend["max"]
-    span = (hi - lo) or 1.0
-    n = len(trend["points"])
-    step = (width - 2 * pad) / (n - 1)
-
-    def _xy(i, price):
-        x = pad + i * step
-        y = height - pad - ((price - lo) / span) * (height - 2 * pad)
-        return round(x, 1), round(y, 1)
-
-    dots = []
-    coords = []
-    for i, p in enumerate(trend["points"]):
-        x, y = _xy(i, p["price"])
-        coords.append(f"{x},{y}")
-        dots.append({"x": x, "y": y, "week": p["week"], "price": p["price"]})
-    return {"points": " ".join(coords), "dots": dots, "width": width, "height": height}
-
-
 def _planting_note_for(crop: str) -> str | None:
     """Best-effort one-line planting-calendar context for an outlook product.
 
@@ -740,10 +708,9 @@ def market_trends():
     data = trends.region_overview(region, me["id"] if me["role"] == "farmer" else None)
     for o in data["outlook"][:3]:
         o["planting_note"] = _planting_note_for(o["crop"]) if o["category"] == "crop" else None
-    trend_svg = _trend_svg(data["trend"])
     code, symbol = currency.currency_for_region(region)
     return render_template(
-        "trends.html", data=data, region=region, regions=REGIONS, trend_svg=trend_svg,
+        "trends.html", data=data, region=region, regions=REGIONS,
         currency_symbol=symbol or code or "", currency_code=code or "",
     )
 
@@ -813,4 +780,6 @@ if __name__ == "__main__":
     print("FarmConnect running at http://127.0.0.1:5050")
     # threaded=True so a slow AI answer (the local model can take a while) never
     # blocks the rest of the site for other requests.
-    app.run(debug=True, port=5050, threaded=True)
+    # app.run(debug=True, port=5050, threaded=True)
+
+    app.run()

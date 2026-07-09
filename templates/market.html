@@ -33,9 +33,9 @@
         </select>
       </div>
       <div class="field" style="margin:0;">
-        <label for="region">Region</label>
+        <label for="region">Country</label>
         <select id="region" name="region">
-          <option value="">All regions</option>
+          <option value="">All countries</option>
           {% for r in regions %}
             <option value="{{ r }}" {{ 'selected' if r == sel_region }}>{{ r }}</option>
           {% endfor %}

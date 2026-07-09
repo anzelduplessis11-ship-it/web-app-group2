@@ -434,6 +434,12 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted)
 .chip-down { background: #FDEAE8; border-color: var(--tomato); color: var(--tomato); }
 .chip-at   { background: #FFF3D6; border-color: var(--maize); color: #8a5a00; }
 .chip-new  { background: #EDE4FF; border-color: var(--grape); color: var(--grape); }
+.chip-est  { background: #EEF1F5; border-color: #C7D0DB; color: #5b6b7f;
+             font-size: 0.68rem; padding: 2px 7px; margin-left: 6px; vertical-align: middle; }
+
+/* estimated (reference) price rows on the live board */
+.trend-table tr.row-est td { background: #FBFCFD; }
+.trend-table tr.row-est td b { font-weight: 600; }
 
 /* hottest-products rows */
 .hot-row {

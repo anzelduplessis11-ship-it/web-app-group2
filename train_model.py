@@ -11,17 +11,16 @@ Two ways to use it:
      Your CSV must have these columns (header row required):
          crop, region, month, quantity_kg, price_per_kg
      - crop:          e.g. "Maize", "Tomato"      (text)
-     - region:        e.g. "Nairobi", "Kano"       (text)
+     - region:        an African country, e.g. "Kenya", "Nigeria" (text)
      - month:         1 to 12                       (whole number)
      - quantity_kg:   e.g. 50, 500                  (number)
-     - price_per_kg:  the actual price it sold for, IN THE SAME LOCAL
-                       CURRENCY farmers in that region use to price
-                       their listings (see currency.py) - e.g. KES for
-                       Nairobi, NGN for Kano/Lagos, GHS for Kumasi, UGX
-                       for Kampala, TZS for Arusha. Mixing currencies in
-                       one region will make the AI's suggestions wrong,
-                       since app.py blends this number directly with real
-                       listing prices which are entered in local currency.
+     - price_per_kg:  the actual price it sold for, IN THAT COUNTRY'S OWN
+                       LOCAL CURRENCY (the same currency farmers type into
+                       the "price per kg" field on the site - see
+                       currency.py). Mixing currencies within one country
+                       will make the AI's suggestions wrong, since app.py
+                       blends this number directly with real listing prices
+                       which are entered in local currency.
 
   2) With NO data yet (generate sample data anchored on real prices
      where we have them, and clearly-labeled estimates elsewhere):
@@ -31,26 +30,27 @@ Either way, the trained model is saved to data/price_model.joblib and the
 website will pick it up automatically.
 
 ---------------------------------------------------------------------------
-Where BASE_PRICES_BY_REGION below came from
+Where the sample prices come from
 ---------------------------------------------------------------------------
-Every region's prices are in THAT region's own local currency (matching
-what farmers actually type into the "price per kg" field on the site), not
-a shared generic unit - this matters because app.py averages the AI's
-number directly with real, currently-active listing prices.
+Locations are country-level, so the model covers every African country.
+Each country's prices are in THAT country's own local currency (matching
+what farmers actually type into the "price per kg" field), not a shared
+generic unit - this matters because app.py averages the AI's number
+directly with real, currently-active listing prices.
 
-Two tiers, marked per entry:
+Two tiers:
   - VERIFIED: read directly from a live, cited source. Currently this is
-    only Kampala/Coffee, sourced from the Uganda Coffee Development
+    only Uganda/Coffee, sourced from the Uganda Coffee Development
     Authority's official "Daily Coffee Market Analysis Report" farmgate
     price bulletins (ugandacoffee.go.ug), 6 dated reports Dec 2023-Feb
     2026. See REAL_COFFEE_KAMPALA_POINTS below for the exact figures,
     dates and URLs.
-  - ESTIMATE: a rough, illustrative order-of-magnitude figure based on
-    general knowledge of typical staple-crop prices in that country, NOT
-    read from a specific dated source. These exist so every crop/region
-    combination the site offers has *something* plausible to show, but
-    they should be replaced with real data (via the CSV path above) before
-    you rely on this for real farmers' decisions.
+  - ESTIMATE: rough, illustrative order-of-magnitude figures from
+    reference_prices.py (a typical farmgate USD price per crop, converted
+    into each country's local currency), NOT read from a specific dated
+    source. They exist so every crop/country the site offers has
+    *something* plausible to show, but should be replaced with real data
+    (via the CSV path above) before you rely on this for real decisions.
 """
 
 import sys
@@ -59,141 +59,17 @@ import pandas as pd
 from pathlib import Path
 from pricing_model import PricingModel
 
+import currency
+import reference_prices
+
 DATA_DIR = Path(__file__).parent / "data"
 SAMPLE_CSV = DATA_DIR / "sample_prices.csv"
 
-REGIONS = [
-    "Nairobi", "Kano", "Kumasi", "Kampala", "Arusha", "Lagos",
-    "Addis Ababa", "Dakar", "Cairo", "Casablanca", "Tunis",
-    "Johannesburg", "Harare", "Lusaka", "Kigali", "Maputo",
-    "Kinshasa", "Yaounde", "Luanda", "Khartoum",
-]
-CROPS = [
-    "Maize", "Tomato", "Cassava", "Rice", "Beans", "Plantain",
-    "Onion", "Irish Potato", "Cocoa", "Coffee",
-]
-
-# Base price per kg, in EACH REGION'S OWN LOCAL CURRENCY (see currency.py):
-#   Nairobi -> KES, Kano/Lagos -> NGN, Kumasi -> GHS, Kampala -> UGX,
-#   Arusha -> TZS.
-# "source" is "verified" (see REAL_COFFEE_KAMPALA_POINTS) or "estimate"
-# (illustrative order-of-magnitude only - see module docstring).
-BASE_PRICES_BY_REGION = {
-    "Nairobi": {  # KES/kg
-        "Maize": 55, "Tomato": 80, "Cassava": 35, "Rice": 140,
-        "Beans": 145, "Plantain": 60, "Onion": 85, "Irish Potato": 50,
-        "Cocoa": 300, "Coffee": 450,
-    },
-    "Kano": {  # NGN/kg
-        "Maize": 600, "Tomato": 600, "Cassava": 200, "Rice": 1300,
-        "Beans": 1300, "Plantain": 500, "Onion": 650, "Irish Potato": 700,
-        "Cocoa": 6000, "Coffee": 3000,
-    },
-    "Lagos": {  # NGN/kg (produce typically costs a bit more than Kano)
-        "Maize": 700, "Tomato": 750, "Cassava": 250, "Rice": 1500,
-        "Beans": 1500, "Plantain": 550, "Onion": 750, "Irish Potato": 800,
-        "Cocoa": 6500, "Coffee": 3200,
-    },
-    "Kumasi": {  # GHS/kg
-        "Maize": 9, "Tomato": 11, "Cassava": 4, "Rice": 17,
-        "Beans": 20, "Plantain": 8, "Onion": 12, "Irish Potato": 10,
-        "Cocoa": 48, "Coffee": 30,
-    },
-    "Kampala": {  # UGX/kg
-        "Maize": 1000, "Tomato": 2000, "Cassava": 650, "Rice": 3500,
-        "Beans": 3800, "Plantain": 1100, "Onion": 2200, "Irish Potato": 1800,
-        "Cocoa": 4000,
-        "Coffee": 9500,  # ESTIMATE fallback only - real points below override nearby months
-    },
-    "Arusha": {  # TZS/kg
-        "Maize": 850, "Tomato": 1200, "Cassava": 650, "Rice": 3000,
-        "Beans": 3200, "Plantain": 900, "Onion": 1100, "Irish Potato": 1200,
-        "Cocoa": 3500, "Coffee": 7500,
-    },
-    # The regions below are ESTIMATES only (illustrative order-of-magnitude
-    # figures, not from a specific dated source - see module docstring).
-    "Addis Ababa": {  # ETB/kg
-        "Maize": 25, "Tomato": 40, "Cassava": 20, "Rice": 80,
-        "Beans": 70, "Plantain": 35, "Onion": 45, "Irish Potato": 25,
-        "Cocoa": 250, "Coffee": 350,
-    },
-    "Dakar": {  # XOF/kg
-        "Maize": 350, "Tomato": 400, "Cassava": 150, "Rice": 700,
-        "Beans": 750, "Plantain": 300, "Onion": 380, "Irish Potato": 400,
-        "Cocoa": 3500, "Coffee": 2000,
-    },
-    "Cairo": {  # EGP/kg
-        "Maize": 15, "Tomato": 18, "Cassava": 10, "Rice": 35,
-        "Beans": 40, "Plantain": 20, "Onion": 15, "Irish Potato": 14,
-        "Cocoa": 150, "Coffee": 200,
-    },
-    "Casablanca": {  # MAD/kg
-        "Maize": 6, "Tomato": 7, "Cassava": 5, "Rice": 14,
-        "Beans": 16, "Plantain": 8, "Onion": 6, "Irish Potato": 5,
-        "Cocoa": 60, "Coffee": 80,
-    },
-    "Tunis": {  # TND/kg
-        "Maize": 2, "Tomato": 2.5, "Cassava": 1.8, "Rice": 4.5,
-        "Beans": 5, "Plantain": 2.8, "Onion": 2, "Irish Potato": 1.8,
-        "Cocoa": 18, "Coffee": 25,
-    },
-    "Johannesburg": {  # ZAR/kg
-        "Maize": 6, "Tomato": 12, "Cassava": 8, "Rice": 22,
-        "Beans": 28, "Plantain": 10, "Onion": 9, "Irish Potato": 9,
-        "Cocoa": 90, "Coffee": 130,
-    },
-    "Harare": {  # ZWL/kg
-        "Maize": 1500, "Tomato": 2500, "Cassava": 1000, "Rice": 4500,
-        "Beans": 5000, "Plantain": 1800, "Onion": 2000, "Irish Potato": 1600,
-        "Cocoa": 15000, "Coffee": 20000,
-    },
-    "Lusaka": {  # ZMW/kg
-        "Maize": 8, "Tomato": 14, "Cassava": 6, "Rice": 25,
-        "Beans": 30, "Plantain": 10, "Onion": 11, "Irish Potato": 9,
-        "Cocoa": 100, "Coffee": 140,
-    },
-    "Kigali": {  # RWF/kg
-        "Maize": 350, "Tomato": 500, "Cassava": 250, "Rice": 900,
-        "Beans": 950, "Plantain": 400, "Onion": 450, "Irish Potato": 300,
-        "Cocoa": 3000, "Coffee": 3800,
-    },
-    "Maputo": {  # MZN/kg
-        "Maize": 35, "Tomato": 55, "Cassava": 25, "Rice": 90,
-        "Beans": 100, "Plantain": 45, "Onion": 48, "Irish Potato": 40,
-        "Cocoa": 350, "Coffee": 450,
-    },
-    "Kinshasa": {  # CDF/kg
-        "Maize": 800, "Tomato": 1400, "Cassava": 600, "Rice": 2800,
-        "Beans": 3000, "Plantain": 900, "Onion": 1100, "Irish Potato": 900,
-        "Cocoa": 8000, "Coffee": 10000,
-    },
-    "Yaounde": {  # XAF/kg
-        "Maize": 350, "Tomato": 450, "Cassava": 150, "Rice": 750,
-        "Beans": 800, "Plantain": 300, "Onion": 400, "Irish Potato": 380,
-        "Cocoa": 1200, "Coffee": 2200,
-    },
-    "Luanda": {  # AOA/kg
-        "Maize": 250, "Tomato": 400, "Cassava": 150, "Rice": 750,
-        "Beans": 800, "Plantain": 300, "Onion": 350, "Irish Potato": 300,
-        "Cocoa": 3000, "Coffee": 3500,
-    },
-    "Khartoum": {  # SDG/kg
-        "Maize": 450, "Tomato": 700, "Cassava": 350, "Rice": 1400,
-        "Beans": 1500, "Plantain": 600, "Onion": 650, "Irish Potato": 500,
-        "Cocoa": 5000, "Coffee": 6000,
-    },
-}
-
-# A gentle regional multiplier so prices differ by place.
-REGION_FACTOR = {
-    "Nairobi": 1.10, "Kano": 0.92, "Kumasi": 1.00,
-    "Kampala": 0.95, "Arusha": 1.05, "Lagos": 1.15,
-    "Addis Ababa": 1.00, "Dakar": 1.05, "Cairo": 0.95,
-    "Casablanca": 1.02, "Tunis": 0.98, "Johannesburg": 1.12,
-    "Harare": 0.90, "Lusaka": 0.97, "Kigali": 1.03,
-    "Maputo": 0.95, "Kinshasa": 0.93, "Yaounde": 1.00,
-    "Luanda": 1.08, "Khartoum": 0.92,
-}
+# Locations are country-level (pan-African): every African country.
+REGIONS = currency.COUNTRIES
+# Crops the model learns — kept in sync with the reference-price table so the
+# AI estimate and the Trends "reference" prices cover the same staples.
+CROPS = reference_prices.REFERENCE_CROPS
 
 # Which months are peak harvest (cheaper) per crop, roughly.
 # We give each crop a "cheap month" and prices rise the further away you get.
@@ -236,24 +112,28 @@ def _real_data_rows() -> pd.DataFrame:
     for month, price, _date, _url in REAL_COFFEE_KAMPALA_POINTS:
         for quantity in [10, 25, 50, 100, 250, 500, 1000]:
             bulk = 1.0 - min(quantity / 1000, 1.0) * 0.15
-            records.append(("Coffee", "Kampala", month, quantity, round(price * bulk, 2)))
+            records.append(("Coffee", "Uganda", month, quantity, round(price * bulk, 2)))
     return pd.DataFrame(records, columns=["crop", "region", "month", "quantity_kg", "price_per_kg"])
 
 
-def generate_sample_data(rows: int = 4000, seed: int = 42) -> pd.DataFrame:
-    """Create a believable dataset with seasonality and bulk discounts,
-    anchored on BASE_PRICES_BY_REGION (real where we have it, clearly
-    labeled estimates elsewhere - see the module docstring)."""
+def generate_sample_data(rows: int = 8000, seed: int = 42) -> pd.DataFrame:
+    """Create a believable pan-African dataset with seasonality and bulk
+    discounts. Base prices come from reference_prices (a typical farmgate USD
+    price per crop, converted into each country's local currency with a
+    baked-in rate snapshot). These are clearly-labeled estimates, layered with
+    the verified Kampala/Coffee points below - see the module docstring."""
     rng = np.random.default_rng(seed)
     records = []
 
     for _ in range(rows):
-        crop = rng.choice(CROPS)
-        region = rng.choice(REGIONS)
+        crop = str(rng.choice(CROPS))
+        region = str(rng.choice(REGIONS))
         month = int(rng.integers(1, 13))
         quantity = float(rng.choice([10, 25, 50, 100, 250, 500, 1000]))
 
-        base = BASE_PRICES_BY_REGION[region][crop]
+        base = reference_prices.base_local(crop, region)
+        if base is None:
+            continue
 
         # Seasonality: cheapest at harvest month, up to +35% off-season.
         harvest = HARVEST_MONTH[crop]

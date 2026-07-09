@@ -20,7 +20,6 @@
       <div class="nav-links">
         <a href="{{ url_for('market') }}" class="{{ 'active' if request.endpoint == 'market' }}">Market</a>
         {% if user %}
-          <a href="{{ url_for('assistant') }}" class="{{ 'active' if request.endpoint == 'assistant' }}">🤖 Ask AI</a>
           <a href="{{ url_for('market_trends') }}" class="{{ 'active' if request.endpoint == 'market_trends' }}">Trends</a>
           {% if user['role'] == 'farmer' %}
             <a href="{{ url_for('new_listing') }}" class="{{ 'active' if request.endpoint == 'new_listing' }}">Sell a crop</a>

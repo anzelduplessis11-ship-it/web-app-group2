@@ -8,11 +8,12 @@
       <p class="eyebrow">Market trends</p>
       <h1>What's trending in {{ region }}</h1>
       <p class="muted" style="margin:0;">
-        Live demand &amp; price signals, built from real FarmConnect listings in this region.
+        Live demand &amp; price signals from real FarmConnect listings in {{ region }},
+        topped up with estimated reference prices where nobody has listed yet.
       </p>
     </div>
     <form method="get" class="region-picker" action="{{ url_for('market_trends') }}">
-      <label for="region">Region</label>
+      <label for="region">Country</label>
       <select name="region" id="region"
               onchange="this.form.submit(); this.disabled=true; document.getElementById('regionLoading').style.display='inline';">
         {% for r in regions %}
@@ -31,68 +32,41 @@
   </div>
 </section>
 
-{% if data.totals.listings == 0 and not data.hot %}
-  <div class="card">
-    <h3>No market activity in {{ region }} yet</h3>
-    <p class="muted">Once farmers start listing here, this page fills up with live
-    prices and demand trends. Try another region above, or
-    <a href="{{ url_for('market') }}">browse the market</a>.</p>
-  </div>
-{% else %}
-
 {% set my_crops = (data.my_vs_market or []) | selectattr('region', 'equalto', region) | map(attribute='crop') | list %}
-<div class="grid grid-2">
-  <!-- ============ Live price board ============ -->
-  <div class="card">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
-      <h3 style="margin:0;">💹 Live price board</h3>
-      <span class="muted" style="font-size:0.78rem;white-space:nowrap;">Updated just now</span>
-    </div>
-    <p class="muted" style="margin-top:8px;">What farmers are asking right now, per kg.</p>
-    <div class="table-wrap">
-      <table class="trend-table">
-        <thead><tr><th>Product</th><th>Sellers</th><th>Avg</th><th>Range</th></tr></thead>
-        <tbody>
-          {% for p in data.price_board %}
-          <tr class="{{ 'row-mine' if p.crop in my_crops else '' }}">
-            <td><b>{{ p.crop }}</b></td>
-            <td>{{ p.sellers }}</td>
-            <td><b>{{ currency_symbol }}{{ "%.2f"|format(p.avg_p) }}</b></td>
-            <td class="muted">{{ currency_symbol }}{{ "%.2f"|format(p.min_p) }} – {{ currency_symbol }}{{ "%.2f"|format(p.max_p) }}</td>
-          </tr>
-          {% else %}
-          <tr><td colspan="4" class="muted">No active listings in {{ region }} yet.</td></tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  </div>
 
-  <!-- ============ Hottest / most active ============ -->
-  <div class="card">
-    <h3>🔥 Most active products</h3>
-    <p class="muted" style="margin-top:-6px;">Ranked by how much is listed here — arrows show the last 30 days vs the 30 before.</p>
-    {% for h in data.hot %}
-    <div class="hot-row">
-      <span class="hot-rank">{{ loop.index }}</span>
-      <div class="hot-info">
-        <b>{{ h.crop }}</b>
-        <small class="muted">{{ h.listed }} listed · {{ h.sold }} sold · {{ h.sell_through }}% sell-through</small>
-      </div>
-      {% if h.is_new %}
-        <span class="chip chip-new">NEW</span>
-      {% elif h.change is not none %}
-        <span class="chip {{ 'chip-up' if h.change >= 0 else 'chip-down' }}">
-          {{ '▲' if h.change >= 0 else '▼' }} {{ h.change|abs }}%
-        </span>
-      {% else %}
-        <span class="chip">—</span>
-      {% endif %}
-    </div>
-    {% else %}
-      <p class="muted">No products listed in {{ region }} yet.</p>
-    {% endfor %}
+<!-- ============ Live price board ============ -->
+<div class="card">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+    <h3 style="margin:0;">💹 Live price board</h3>
+    <span class="muted" style="font-size:0.78rem;white-space:nowrap;">Updated just now</span>
   </div>
+  <p class="muted" style="margin-top:8px;">
+    What farmers are asking right now, per kg. Rows marked
+    <span class="chip chip-est">Estimated</span> are reference prices for
+    {{ region }} — shown until local farmers list that crop.
+  </p>
+  <div class="table-wrap">
+    <table class="trend-table">
+      <thead><tr><th>Product</th><th>Sellers</th><th>Avg</th><th>Range</th></tr></thead>
+      <tbody>
+        {% for p in data.price_board %}
+        <tr class="{{ 'row-mine' if p.crop in my_crops else '' }}{{ ' row-est' if p.source == 'estimate' else '' }}">
+          <td>
+            <b>{{ p.crop }}</b>
+            {% if p.source == 'estimate' %}<span class="chip chip-est">Estimated</span>{% endif %}
+          </td>
+          <td>{% if p.source == 'estimate' %}<span class="muted">—</span>{% else %}{{ p.sellers }}{% endif %}</td>
+          <td><b>{{ currency_symbol }}{{ "%.2f"|format(p.avg_p) }}</b></td>
+          <td class="muted">{{ currency_symbol }}{{ "%.2f"|format(p.min_p) }} – {{ currency_symbol }}{{ "%.2f"|format(p.max_p) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="muted" style="font-size:0.78rem;margin-top:10px;">
+    Estimated prices are rough reference figures, converted into your local
+    currency — not a live market feed. Always check local markets before you sell.
+  </p>
 </div>
 
 <!-- ============ Your prices vs market (farmers) ============ -->
@@ -126,40 +100,6 @@
 </div>
 {% endif %}
 
-<!-- ============ Product mix ============ -->
-{% if data.product_share %}
-<div class="card" style="margin-top:18px;">
-  <h3>🥧 What's being sold most</h3>
-  <p class="muted" style="margin-top:-6px;">Share of {{ region }}'s active listings, by product.</p>
-  {% for s in data.product_share %}
-  <div class="share-row">
-    <div class="share-label"><b>{{ s.crop }}</b><span class="muted">{{ s.pct }}% · {{ s.n }} listing{{ 's' if s.n != 1 }}</span></div>
-    <div class="share-track"><div class="share-fill" style="width:{{ s.pct }}%;"></div></div>
-  </div>
-  {% endfor %}
-</div>
-{% endif %}
-
-<!-- ============ Price trend ============ -->
-{% if trend_svg %}
-<div class="card" style="margin-top:18px;">
-  <h3>📈 Price trend — {{ data.trend.crop }}</h3>
-  <p class="muted" style="margin-top:-6px;">Weekly average asking price over the last {{ data.trend.points|length }} weeks with listings.</p>
-  <div class="line-chart-wrap">
-    <svg class="line-chart" viewBox="0 0 {{ trend_svg.width }} {{ trend_svg.height }}" preserveAspectRatio="none">
-      <polyline class="chart-line" fill="none" points="{{ trend_svg.points }}" />
-      {% for d in trend_svg.dots %}
-        <circle class="chart-dot" cx="{{ d.x }}" cy="{{ d.y }}" r="4" />
-      {% endfor %}
-    </svg>
-    <div class="chart-range">
-      <span>Week {{ trend_svg.dots[0].week }} · {{ currency_symbol }}{{ "%.2f"|format(trend_svg.dots[0].price) }}</span>
-      <span>Week {{ trend_svg.dots[-1].week }} · {{ currency_symbol }}{{ "%.2f"|format(trend_svg.dots[-1].price) }}</span>
-    </div>
-  </div>
-</div>
-{% endif %}
-
 <!-- ============ Next-season outlook ============ -->
 {% if data.outlook %}
 <div class="card" style="margin-top:18px;">
@@ -182,8 +122,6 @@
   </div>
   {% endfor %}
 </div>
-{% endif %}
-
 {% endif %}
 
 {% endblock %}
