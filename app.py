@@ -26,6 +26,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import db
 import currency
 import geo
+import reference_prices
 import trends
 from pricing_model import PricingModel
 from translator.translate_api import translate_bp, to_english, from_english
@@ -273,9 +274,43 @@ def market():
             return d if d is not None else float("inf")
         listings = sorted(listings, key=distance_or_far)
 
+    # A country filter with no local listings must never feel empty: show
+    # estimated reference prices for that country, plus the closest matching
+    # listings from other countries, so first-time users still see value.
+    reference_board = []
+    nearby_listings = []
+    if region and not listings:
+        if category != "livestock":   # reference estimates cover crops only
+            for ref_crop in reference_prices.REFERENCE_CROPS:
+                if crop and ref_crop != crop:
+                    continue          # respect the product filter
+                est = reference_prices.estimate(ref_crop, region)
+                if est:
+                    reference_board.append({"crop": ref_crop, **est})
+
+        sql2 = (
+            "SELECT l.*, u.name AS farmer_name FROM listings l "
+            "JOIN users u ON u.id = l.farmer_id "
+            "WHERE l.status = 'active' AND l.region != ?"
+        )
+        params2 = [region]
+        if crop:
+            sql2 += " AND l.crop = ?"
+            params2.append(crop)
+        if category:
+            sql2 += " AND l.category = ?"
+            params2.append(category)
+        nearby_listings = db.query_all(sql2, tuple(params2))
+
+        def distance_to_selected(l):
+            d = geo.distance_between_regions(region, l["region"])
+            return d if d is not None else float("inf")
+        nearby_listings = sorted(nearby_listings, key=distance_to_selected)[:6]
+
     return render_template(
         "market.html", listings=listings, crops=CROPS, livestock=LIVESTOCK, regions=REGIONS,
         sel_crop=crop, sel_region=region, sel_category=category,
+        reference_board=reference_board, nearby_listings=nearby_listings,
     )
 
 

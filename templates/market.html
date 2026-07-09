@@ -71,11 +71,78 @@
       {% endfor %}
     </div>
   {% else %}
-    <div class="card">
-      <h3>No crops match yet</h3>
-      <p class="muted">Try clearing the filters, or check back soon — new crops
-      are listed every day.</p>
-    </div>
+
+    {% if reference_board or nearby_listings %}
+      <div class="card">
+        <h3>Nobody has listed this in {{ sel_region }} yet — here's what it's worth</h3>
+        <p class="muted">No local listings match your filters so far. Below are
+        estimated market prices for {{ sel_region }}
+        {%- if nearby_listings %} and the closest matching listings from other countries{% endif -%}.
+        {% if user and user['role'] == 'farmer' %}
+          <a href="{{ url_for('new_listing') }}">Be the first to list here</a> —
+          early sellers get seen first.
+        {% endif %}</p>
+      </div>
+
+      {% if reference_board %}
+      <div class="card" style="margin-top:18px;">
+        <h3>💹 Estimated market prices in {{ sel_region }}</h3>
+        <p class="muted" style="margin-top:8px;">Rough reference prices per kg,
+        in {{ sel_region }}'s own currency — shown until local farmers list these crops.</p>
+        <div class="table-wrap">
+          <table class="trend-table">
+            <thead><tr><th>Product</th><th>Typical</th><th>Range</th></tr></thead>
+            <tbody>
+              {% for r in reference_board %}
+              <tr class="row-est">
+                <td><b>{{ r.crop }}</b> <span class="chip chip-est">Estimated</span></td>
+                <td><b>{{ r.symbol }}{{ "%.2f"|format(r.mid) }}</b></td>
+                <td class="muted">{{ r.symbol }}{{ "%.2f"|format(r.low) }} – {{ r.symbol }}{{ "%.2f"|format(r.high) }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <p class="muted" style="font-size:0.78rem;margin-top:10px;">
+          Estimates are reference figures converted into local currency — not a live
+          market feed. Always check local markets before you buy or sell.
+        </p>
+      </div>
+      {% endif %}
+
+      {% if nearby_listings %}
+      <h3 style="margin-top:24px;">Closest matching listings from other countries</h3>
+      <div class="grid grid-3" style="margin-top:12px;">
+        {% for l in nearby_listings %}
+          <a class="card listing-card" href="{{ url_for('listing_detail', listing_id=l['id']) }}" style="text-decoration:none;color:inherit;">
+            <div class="crop">{{ l['crop'] }}</div>
+            <div class="meta">{{ l['region'] }} · {{ l['quantity_kg'] | int }} kg available</div>
+            {% set d = distance_to(l['region']) %}
+            {% if d is not none %}
+              <div class="meta">{{ "%.0f"|format(d) }} km from you</div>
+            {% endif %}
+            <span class="tag" style="align-self:flex-start;">
+              <span class="amount">{{ "%.2f"|format(l['price_per_kg']) }}<span class="tag-currency">{{ currency_symbol(l['region']) }}</span></span>
+              <span class="unit">per kg</span>
+            </span>
+            {% set conv = converted_price(l['price_per_kg'], l['region']) %}
+            {% if conv %}
+              <div class="meta">≈ {{ conv.symbol }}{{ "%.2f"|format(conv.amount) }} {{ conv.code }} for you</div>
+            {% endif %}
+            <div class="meta">by {{ l['farmer_name'] }}</div>
+          </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+    {% else %}
+      <div class="card">
+        <h3>No crops match yet</h3>
+        <p class="muted">Try clearing the filters, or check back soon — new crops
+        are listed every day.</p>
+      </div>
+    {% endif %}
+
   {% endif %}
 </section>
 

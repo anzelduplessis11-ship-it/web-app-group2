@@ -1,5 +1,5 @@
 altair==5.5.0
-altgraph @ file:///AppleInternal/Library/BuildRoots/4~CQH2ugAdEkxx3ZkrZolIWlkoB3pJrxMjVv7CK8s/Library/Caches/com.apple.xbs/TemporaryDirectory.1I3Zwu/Sources/python3/altgraph-0.17.2-py2.py3-none-any.whl
+altgraph
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anthropic==0.116.0
