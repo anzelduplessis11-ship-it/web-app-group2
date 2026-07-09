@@ -23,6 +23,7 @@ from flask import (
 )
 from werkzeug.security import generate_password_hash, check_password_hash
 
+import config
 import db
 import currency
 import geo
@@ -34,9 +35,9 @@ from rag import answer as ai_answer, health as ai_health, get_kb
 
 app = Flask(__name__)
 app.register_blueprint(translate_bp)
-# The secret key signs the login cookie. CHANGE THIS to a long random string
-# before putting the site online.
-app.secret_key = "change-me-to-a-long-random-secret"
+# The secret key signs the login cookie. It comes from the FLASK_SECRET_KEY
+# environment variable (see .env.example); the fallback is for local dev only.
+app.secret_key = config.FLASK_SECRET_KEY
 
 # Load the trained AI pricing model once, when the server starts.
 # If it hasn't been trained yet, the price tool is simply disabled.

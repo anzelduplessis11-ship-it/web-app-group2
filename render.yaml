@@ -1,0 +1,36 @@
+# Render blueprint for FarmConnect.
+# In Render: New > Blueprint > pick this repo, and it configures everything
+# below automatically. You only fill in the secret env values when prompted.
+services:
+  - type: web
+    name: farmconnect
+    runtime: python
+    plan: free
+    # Install dependencies, then train the AI pricing model (the .joblib is
+    # gitignored, so it is built fresh on every deploy - takes ~1 minute).
+    buildCommand: pip install -r requirements.txt && python train_model.py
+    # One worker with threads: the trained model is large, and the free tier
+    # has 512 MB RAM - a second worker would risk running out of memory.
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 120
+    healthCheckPath: /
+    envVars:
+      # numpy 2.0.x has no Python 3.13 wheels - pin 3.12.
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      # sync: false = Render asks you for the value (kept out of git).
+      - key: FLASK_SECRET_KEY
+        generateValue: true          # Render generates a strong random key
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_DB_URL          # use the SESSION POOLER URI (see .env.example)
+        sync: false
+      - key: HF_TOKEN
+        sync: false
+      - key: FARMCONNECT_RAG_BACKEND
+        value: supabase
+      - key: FARMCONNECT_LLM_BACKEND
+        value: hf
